@@ -11,17 +11,24 @@ chrome.runtime.onInstalled.addListener(function()
     });
 	
     menuCreateRootItem("Диагностика", "diagnosticsRoot");
-    menuCreateItem("Жесткий диск","errorsOnHdd","diagnosticsRoot");
-    menuCreateItem("Чистка","сleaningIsNecessary","diagnosticsRoot");
-    menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
-	        
+		menuCreateItem("Жесткий диск","errorsOnHdd","diagnosticsRoot");
+		menuCreateItem("Чистка","сleaningIsNecessary","diagnosticsRoot");
+		menuCreateItem("Клавиатура","diagnosticsKeyboard","diagnosticsRoot");
+		menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
+
+	////////////////// ремонт ////////////////////
     menuCreateRootItem("Ремонт", "repairRoot");
-    menuCreateItem("Жесткий диск","hddIsChanched","repairRoot");
-    menuCreateItem("Чистка","сleaned","repairRoot");
+		menuCreateItem("Жесткий диск","repairHDD","repairRoot");
+		menuCreateItem("Чистка","сleaned","repairRoot");
+		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
+		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
 	
+	////////////////// работы //////////////////////////
 	menuCreateRootItem("Работы", "AddWorks");
-    menuCreateItem("Чистка","workCleaning","AddWorks");
-	menuCreateItem("BGA пайка","workBGA","AddWorks");
+		menuCreateItem("Жесткий диск","workHDD","AddWorks");
+		menuCreateItem("Чистка","workCleaning","AddWorks");
+		menuCreateItem("Клавиатура","workKeyboard","AddWorks");
+		menuCreateItem("BGA пайка","workBGA","AddWorks");
   
 });
 
@@ -34,34 +41,57 @@ chrome.contextMenus.onClicked.addListener
                 menuSendMessage("separator");
             break;
 			
-            case "hddIsChanched":
-                menuSendMessage("hddIsChanched");
+			//............... диагностка ...............
+			case "diagnosticsKeyboard":
+                menuSendMessage("diagnosticsKeyboard");
             break;
-        
-            case "errorsOnHdd":
+			
+			case "errorsOnHdd":
                 menuSendMessage("errorsOnHdd");
             break;
-
-            case "сleaningIsNecessary":
+			
+			case "сleaningIsNecessary":
                 menuSendMessage("сleaningIsNecessary");
-            break;
-
-            case "сleaned":
-                menuSendMessage("сleaned");
-            break;
+            break;           
 			
 			case "DoesNotTurnOn":
                 menuSendMessage("DoesNotTurnOn");
             break;
 			
+			//............ ремонт .....................
+            case "repairHDD":
+                menuSendMessage("repairHDD");
+            break;
+			
+			case "repairCleaning":
+                menuSendMessage("repairCleaning");
+            break;
+			
+			case "repairKeyboard":
+                menuSendMessage("repairKeyboard");
+            break;
+			
+			case "repairInstallOs":
+                menuSendMessage("repairInstallOs");
+            break;
+					
+			
+			//............... работы ...................
+			case "workBGA":
+                menuSendMessage("workBGA");
+            break;
+			
+			case "workKeyboard":
+                menuSendMessage("workKeyboard");
+            break;		
+			
+			case "workHDD":
+                menuSendMessage("workHDD");
+            break;	
+			
 			case "workCleaning":
                 menuSendMessage("workCleaning");
             break;
-			
-			case "workBGA":
-                menuSendMessage("workBGA");
-            break;		
-			
         }        
 
         /*if (info.menuItemId == "1")
