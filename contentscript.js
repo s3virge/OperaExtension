@@ -113,9 +113,17 @@ chrome.runtime.onMessage.addListener(
 			$('#prise-id141').click();	//замена hdd			
 			$(".prise-raboti form").submit();
 			break;	
-	}    
+	}
 	
 	$("#form-save-btn").click();
+
+    if (msg.message == "search") {
+        alert(msg.number);
+    }
+
+    if (msg.number == "123"){
+    	alert("qwe-qwe-qwe");
+	}
   }
 );
 
