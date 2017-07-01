@@ -15,6 +15,7 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Чистка","сleaningIsNecessary","diagnosticsRoot");
 		menuCreateItem("Клавиатура","diagnosticsKeyboard","diagnosticsRoot");
 		menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
+		menuCreateItem("Следы залития","diagnosticsPour","diagnosticsRoot");
 
     ////////////////// работы //////////////////////////
     menuCreateRootItem("Добавить Работы", "AddWorks");
@@ -31,8 +32,6 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
 		menuCreateItem("Прошивка BIOS","repairBIOS","repairRoot");
 		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
-	
-
 });
 
 chrome.contextMenus.onClicked.addListener
@@ -59,6 +58,10 @@ chrome.contextMenus.onClicked.addListener
 			
 			case "DoesNotTurnOn":
                 menuSendMessage("DoesNotTurnOn");
+            break;
+			
+			case "diagnosticsPour":
+                menuSendMessage("diagnosticsPour");
             break;
 			
 			//............ ремонт .....................

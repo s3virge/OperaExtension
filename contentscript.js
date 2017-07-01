@@ -69,6 +69,10 @@ chrome.runtime.onMessage.addListener(
               case "diagnosticsKeyboard":
                   $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена клавиатуры.");
                   break;
+			
+				case "diagnosticsPour":
+					$("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы пападания жидкости.");
+					break;
 
               //................ ремонт .................
               case "repairKeyboard":
