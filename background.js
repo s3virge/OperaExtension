@@ -14,6 +14,7 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Жесткий диск","errorsOnHdd","diagnosticsRoot");
 		menuCreateItem("Чистка","сleaningIsNecessary","diagnosticsRoot");
 		menuCreateItem("Клавиатура","diagnosticsKeyboard","diagnosticsRoot");
+		menuCreateItem("Прошивка BIOS","diagnosticsBIOS","diagnosticsRoot");
 		menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
 		menuCreateItem("Следы залития","diagnosticsPour","diagnosticsRoot");
 
@@ -62,6 +63,10 @@ chrome.contextMenus.onClicked.addListener
 			
 			case "diagnosticsPour":
                 menuSendMessage("diagnosticsPour");
+            break;
+			
+			case "diagnosticsBIOS":
+                menuSendMessage("diagnosticsBIOS");
             break;
 			
 			//............ ремонт .....................

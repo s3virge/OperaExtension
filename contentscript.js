@@ -71,7 +71,11 @@ chrome.runtime.onMessage.addListener(
                   break;
 			
 				case "diagnosticsPour":
-					$("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы пападания жидкости.");
+					$("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы попадания жидкости. Для дальнейшей диагностики необходимо устранить последствия попадания жидкости.");
+					break;
+				
+				case "diagnosticsBIOS":
+					$("#diag_rez_input, #rem_rez_input").append(" Необходимо восстановление прошивки BIOS.");
 					break;
 
               //................ ремонт .................
