@@ -15,6 +15,7 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Чистка","сleaningIsNecessary","diagnosticsRoot");
 		menuCreateItem("Клавиатура","diagnosticsKeyboard","diagnosticsRoot");
 		menuCreateItem("Прошивка BIOS","diagnosticsBIOS","diagnosticsRoot");
+		menuCreateItem("Матрица","diagnosticsMatrix","diagnosticsRoot");
 		menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
 		menuCreateItem("Следы залития","diagnosticsPour","diagnosticsRoot");
 
@@ -32,6 +33,7 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Чистка","repairCleaning","repairRoot");
 		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
 		menuCreateItem("Прошивка BIOS","repairBIOS","repairRoot");
+        menuCreateItem("Матрица","repairMatrix","diagnosticsRoot");
 		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
 });
 
@@ -68,6 +70,10 @@ chrome.contextMenus.onClicked.addListener
 			case "diagnosticsBIOS":
                 menuSendMessage("diagnosticsBIOS");
             break;
+
+            case "diagnosticsMatrix":
+                menuSendMessage("diagnosticsMatrix");
+            break;
 			
 			//............ ремонт .....................
             case "repairHDD":
@@ -89,7 +95,10 @@ chrome.contextMenus.onClicked.addListener
             case "repairBIOS":
                 menuSendMessage("repairBIOS");
                 break;
-					
+
+            case "repairMatrix":
+                menuSendMessage("repairMatrix");
+                break;
 			
 			//............... работы ...................
 			case "workBGA":
@@ -161,7 +170,7 @@ function menuSendMessage(messageId){
                     chrome.tabs.sendMessage
                     (
                         tabs[0].id, 
-                        {"menuItem":messageId}
+                        {"menuItem": messageId}
                     );
                 }
             );
