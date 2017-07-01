@@ -47,11 +47,12 @@ chrome.runtime.onMessage.addListener(
     
     //console.log(sender.tab ? "from a content script: " + sender.tab.url : "from the extension");
 
-    switch (msg){
-		
+
+      switch (msg.menuItem){
+
         case "separator":
             $(':focus').append("\n------------------------------------------------------\n");
-			break;		
+			break;
 
 		//................ даигностика ..............
         case "errorsOnHdd":
@@ -60,40 +61,40 @@ chrome.runtime.onMessage.addListener(
 
         case "сleaningIsNecessary":
             $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения сильно запылена. Необходима чистка.");
-			break;       		
-		
+			break;
+
 		case "DoesNotTurnOn":
             $("#diag_rez_input, #rem_rez_input").append(" При нажатии на кнопку включения индикация на корпусе не включается, изображение на матрице не появляется.");
 			break;
-		
+
 		case "diagnosticsKeyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена клавиатуры.");
 			break;
-		
+
 		//................ ремонт .................
 		case "repairKeyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
 			break;
-		
+
 		case "repairCleaning":
             $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения почищена, заменена термопаста на чипах.");
-			break;	
-		
+			break;
+
 		case "repairInstallOs":
             $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
 			break;
-		
+
 		case "repairHDD":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправные жесткий диск заменён на новый.");
-			break;	
-		
+			break;
+
 		//................ работы ................
 		case "workCleaning":
             $('#prise-id154').click();  //чистка
 			$('#prise-id116').click();	//разборка
 			$(".prise-raboti form").submit();
-			break;		
-			
+			break;
+
 		case "workBGA":
 			$('#prise-id154').click();  //чистка
 			$('#prise-id116').click();	//разборка
@@ -101,29 +102,30 @@ chrome.runtime.onMessage.addListener(
 			$('#prise-id133').click();	//пайка BGA
 			$(".prise-raboti form").submit();
 			break;
-			
+
 		case "workKeyboard":
 			$('#prise-id116').click();	//разборка
-			$('#prise-id123').click();	//замена клавы			
+			$('#prise-id123').click();	//замена клавы
 			$(".prise-raboti form").submit();
 			break;
-			
+
 		case "workHDD":
 			$('#prise-id116').click();	//разборка
-			$('#prise-id141').click();	//замена hdd			
+			$('#prise-id141').click();	//замена hdd
 			$(".prise-raboti form").submit();
-			break;	
+			break;
+
+		$("#form-save-btn").click();
 	}
-	
-	$("#form-save-btn").click();
+
 
     if (msg.message == "search") {
-        alert(msg.number);
+      	//запустить поиск
+        //alert(msg.number);
+        //$('.global-search input[type="search"]').attr("value", msg.number);
+        $('.global-search input').attr("value", msg.number);
+        $('.global-search form').submit();
     }
-
-    if (msg.number == "123"){
-    	alert("qwe-qwe-qwe");
-	}
   }
 );
 

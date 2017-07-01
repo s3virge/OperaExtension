@@ -19,7 +19,7 @@ chrome.runtime.onInstalled.addListener(function()
 	////////////////// ремонт ////////////////////
     menuCreateRootItem("Ремонт", "repairRoot");
 		menuCreateItem("Жесткий диск","repairHDD","repairRoot");
-		menuCreateItem("Чистка","сleaned","repairRoot");
+		menuCreateItem("Чистка","repairCleaning","repairRoot");
 		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
 		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
 	
@@ -142,7 +142,7 @@ function menuSendMessage(messageId){
                     chrome.tabs.sendMessage
                     (
                         tabs[0].id, 
-                        messageId
+                        {"menuItem":messageId}
                     );
                 }
             );

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
 <html>
   <body style="width: 300px"> 
-    <h2>test</h2>
-    <input type='text' placeholder='Search by name..'/>
-    <button id="btnSearch">Search</button>
+    <h2>Найти ремонт</h2>
+    <style> .error { border-color: red; } </style>
+    <div id="error"></div>
+    <input type='text' id="search" placeholder='Search by name..' autofocus />
+    <button id="btnSearch">Искать</button>
     <script type="text/javascript" src="popup.js"></script>
   </body>
 </html>
