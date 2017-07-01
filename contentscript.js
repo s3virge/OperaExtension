@@ -46,78 +46,87 @@ chrome.runtime.onMessage.addListener(
   function(msg, sender, sendResponse) {
     
     //console.log(sender.tab ? "from a content script: " + sender.tab.url : "from the extension");
+	  if (msg.menuItem){
+          switch (msg.menuItem){
 
+              case "separator":
+                  $(':focus').append("\n------------------------------------------------------\n");
+                  break;
 
-      switch (msg.menuItem){
+              //................ даигностика ..............
+              case "errorsOnHdd":
+                  $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
+                  break;
 
-        case "separator":
-            $(':focus').append("\n------------------------------------------------------\n");
-			break;
+              case "сleaningIsNecessary":
+                  $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения сильно запылена. Необходима чистка.");
+                  break;
 
-		//................ даигностика ..............
-        case "errorsOnHdd":
-            $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
-			break;
+              case "DoesNotTurnOn":
+                  $("#diag_rez_input, #rem_rez_input").append(" При нажатии на кнопку включения индикация на корпусе не включается, изображение на матрице не появляется.");
+                  break;
 
-        case "сleaningIsNecessary":
-            $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения сильно запылена. Необходима чистка.");
-			break;
+              case "diagnosticsKeyboard":
+                  $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена клавиатуры.");
+                  break;
 
-		case "DoesNotTurnOn":
-            $("#diag_rez_input, #rem_rez_input").append(" При нажатии на кнопку включения индикация на корпусе не включается, изображение на матрице не появляется.");
-			break;
+              //................ ремонт .................
+              case "repairKeyboard":
+                  $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
+                  break;
 
-		case "diagnosticsKeyboard":
-            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена клавиатуры.");
-			break;
+              case "repairCleaning":
+                  $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения почищена, заменена термопаста на чипах.");
+                  break;
 
-		//................ ремонт .................
-		case "repairKeyboard":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
-			break;
+              case "repairInstallOs":
+                  $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
+                  break;
 
-		case "repairCleaning":
-            $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения почищена, заменена термопаста на чипах.");
-			break;
+              case "repairHDD":
+                  $("#diag_rez_input, #rem_rez_input").append(" Неисправные жесткий диск заменён на новый.");
+                  break;
 
-		case "repairInstallOs":
-            $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
-			break;
+              case "repairBIOS":
+                  $("#diag_rez_input, #rem_rez_input").append(" Выполнено восстановление прошивки BIOS на программаторе.");
+                  break;
 
-		case "repairHDD":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправные жесткий диск заменён на новый.");
-			break;
+              //................ работы ................
+              case "workCleaning":
+                  $('#prise-id154').click();  //чистка
+                  $('#prise-id116').click();	//разборка
+                  $(".prise-raboti form").submit();
+                  break;
 
-		//................ работы ................
-		case "workCleaning":
-            $('#prise-id154').click();  //чистка
-			$('#prise-id116').click();	//разборка
-			$(".prise-raboti form").submit();
-			break;
+              case "workBGA":
+                  $('#prise-id154').click();  //чистка
+                  $('#prise-id116').click();	//разборка
+                  $('#prise-id534').click();	//снятие компаунда
+                  $('#prise-id133').click();	//пайка BGA
+                  $(".prise-raboti form").submit();
+                  break;
 
-		case "workBGA":
-			$('#prise-id154').click();  //чистка
-			$('#prise-id116').click();	//разборка
-			$('#prise-id534').click();	//снятие компаунда
-			$('#prise-id133').click();	//пайка BGA
-			$(".prise-raboti form").submit();
-			break;
+              case "workKeyboard":
+                  $('#prise-id116').click();	//разборка
+                  $('#prise-id123').click();	//замена клавы
+                  $(".prise-raboti form").submit();
+                  break;
 
-		case "workKeyboard":
-			$('#prise-id116').click();	//разборка
-			$('#prise-id123').click();	//замена клавы
-			$(".prise-raboti form").submit();
-			break;
+              case "workHDD":
+                  $('#prise-id116').click();	//разборка
+                  $('#prise-id141').click();	//замена hdd
+                  $(".prise-raboti form").submit();
+                  break;
 
-		case "workHDD":
-			$('#prise-id116').click();	//разборка
-			$('#prise-id141').click();	//замена hdd
-			$(".prise-raboti form").submit();
-			break;
+              case "workBIOS":
+                  $('#prise-id116').click();	//разборка
+                  $('#prise-id162').click();	//восстановление биос
+                  $(".prise-raboti form").submit();
+                  break;
+          }
 
-		$("#form-save-btn").click();
-	}
-
+          $("#form-save-btn").click();
+	  }
 
     if (msg.message == "search") {
       	//запустить поиск

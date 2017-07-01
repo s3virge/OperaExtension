@@ -16,20 +16,23 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Клавиатура","diagnosticsKeyboard","diagnosticsRoot");
 		menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
 
+    ////////////////// работы //////////////////////////
+    menuCreateRootItem("Добавить Работы", "AddWorks");
+        menuCreateItem("Жесткий диск","workHDD","AddWorks");
+        menuCreateItem("Чистка","workCleaning","AddWorks");
+        menuCreateItem("Клавиатура","workKeyboard","AddWorks");
+        menuCreateItem("Прошивка BIOS","workBIOS","AddWorks");
+        menuCreateItem("BGA пайка","workBGA","AddWorks");
+
 	////////////////// ремонт ////////////////////
     menuCreateRootItem("Ремонт", "repairRoot");
 		menuCreateItem("Жесткий диск","repairHDD","repairRoot");
 		menuCreateItem("Чистка","repairCleaning","repairRoot");
 		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
+		menuCreateItem("Прошивка BIOS","repairBIOS","repairRoot");
 		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
 	
-	////////////////// работы //////////////////////////
-	menuCreateRootItem("Работы", "AddWorks");
-		menuCreateItem("Жесткий диск","workHDD","AddWorks");
-		menuCreateItem("Чистка","workCleaning","AddWorks");
-		menuCreateItem("Клавиатура","workKeyboard","AddWorks");
-		menuCreateItem("BGA пайка","workBGA","AddWorks");
-  
+
 });
 
 chrome.contextMenus.onClicked.addListener
@@ -74,6 +77,10 @@ chrome.contextMenus.onClicked.addListener
 			case "repairInstallOs":
                 menuSendMessage("repairInstallOs");
             break;
+
+            case "repairBIOS":
+                menuSendMessage("repairBIOS");
+                break;
 					
 			
 			//............... работы ...................
@@ -91,6 +98,10 @@ chrome.contextMenus.onClicked.addListener
 			
 			case "workCleaning":
                 menuSendMessage("workCleaning");
+            break;
+
+            case "workBIOS":
+                menuSendMessage("workBIOS");
             break;
         }        
 
