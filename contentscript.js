@@ -56,26 +56,45 @@ chrome.runtime.onMessage.addListener(
               //................ даигностика ..............
               case "errorsOnHdd":
                   $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
+                  $("#form-save-btn").click();
+                  
+                  $('#prise-id116').click();	//разборка
+                  $('#prise-id141').click();	//замена hdd
+                  $(".prise-raboti form").submit();
                   break;
 
               case "сleaningIsNecessary":
                   $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения сильно запылена. Необходима чистка.");
+                  $("#form-save-btn").click();
+                  $('#prise-id154').click();  //чистка
+                  $('#prise-id116').click();	//разборка
+                  $(".prise-raboti form").submit();
                   break;
 
               case "DoesNotTurnOn":
                   $("#diag_rez_input, #rem_rez_input").append(" При нажатии на кнопку включения индикация на корпусе не включается, изображение на матрице не появляется.");
+                  $("#form-save-btn").click();
+                  $('#prise-id154').click();  //чистка
+                  $('#prise-id116').click();	//разборка
+                  $(".prise-raboti form").submit();
                   break;
 
               case "diagnosticsKeyboard":
                   $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена клавиатуры.");
+                  $("#form-save-btn").click();
+                  $('#prise-id116').click();	//разборка
+                  $('#prise-id123').click();	//замена клавы
+                  $(".prise-raboti form").submit();
                   break;
 			
 				case "diagnosticsPour":
 					$("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы попадания жидкости. Для дальнейшей диагностики необходимо устранить последствия попадания жидкости.");
+                    $("#form-save-btn").click();
 					break;
 				
 				case "diagnosticsBIOS":
 					$("#diag_rez_input, #rem_rez_input").append(" Необходимо восстановление прошивки BIOS.");
+                    $("#form-save-btn").click();
 					break;
 
               //................ ремонт .................
