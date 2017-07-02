@@ -33,7 +33,7 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Чистка","repairCleaning","repairRoot");
 		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
 		menuCreateItem("Прошивка BIOS","repairBIOS","repairRoot");
-        menuCreateItem("Матрица","repairMatrix","diagnosticsRoot");
+        menuCreateItem("Матрица","repairMatrix","repairRoot");
 		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
 });
 
