@@ -16,16 +16,17 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Клавиатура","diagnosticsKeyboard","diagnosticsRoot");
 		menuCreateItem("Прошивка BIOS","diagnosticsBIOS","diagnosticsRoot");
 		menuCreateItem("Матрица","diagnosticsMatrix","diagnosticsRoot");
+		menuCreateItem("Гнездо питания","diagnosticsPowerSupplyConnector","diagnosticsRoot");
 		menuCreateItem("Не включается","DoesNotTurnOn","diagnosticsRoot");
 		menuCreateItem("Следы залития","diagnosticsPour","diagnosticsRoot");
 
     ////////////////// работы //////////////////////////
-    menuCreateRootItem("Добавить Работы", "AddWorks");
+   /* menuCreateRootItem("Добавить Работы", "AddWorks");
         menuCreateItem("Жесткий диск","workHDD","AddWorks");
         menuCreateItem("Чистка","workCleaning","AddWorks");
         menuCreateItem("Клавиатура","workKeyboard","AddWorks");
         menuCreateItem("Прошивка BIOS","workBIOS","AddWorks");
-        menuCreateItem("BGA пайка","workBGA","AddWorks");
+        menuCreateItem("BGA пайка","workBGA","AddWorks");*/
 
 	////////////////// ремонт ////////////////////
     menuCreateRootItem("Ремонт", "repairRoot");
@@ -34,6 +35,7 @@ chrome.runtime.onInstalled.addListener(function()
 		menuCreateItem("Клавиатура","repairKeyboard","repairRoot");
 		menuCreateItem("Прошивка BIOS","repairBIOS","repairRoot");
         menuCreateItem("Матрица","repairMatrix","repairRoot");
+        menuCreateItem("Гнездо питания","repairPowerSupplyConnector","repairRoot");
 		menuCreateItem("Установка ОС","repairInstallOs","repairRoot");
 });
 
@@ -74,7 +76,11 @@ chrome.contextMenus.onClicked.addListener
             case "diagnosticsMatrix":
                 menuSendMessage("diagnosticsMatrix");
             break;
-			
+
+            case "diagnosticsPowerSupplyConnector":
+                menuSendMessage("diagnosticsPowerSupplyConnector");
+            break;
+
 			//............ ремонт .....................
             case "repairHDD":
                 menuSendMessage("repairHDD");
@@ -99,9 +105,13 @@ chrome.contextMenus.onClicked.addListener
             case "repairMatrix":
                 menuSendMessage("repairMatrix");
                 break;
-			
+
+            case "repairPowerSupplyConnector":
+                menuSendMessage("repairPowerSupplyConnector");
+                break;
+
 			//............... работы ...................
-			case "workBGA":
+			/*case "workBGA":
                 menuSendMessage("workBGA");
             break;
 			
@@ -119,7 +129,7 @@ chrome.contextMenus.onClicked.addListener
 
             case "workBIOS":
                 menuSendMessage("workBIOS");
-            break;
+            break;*/
         }        
 
         /*if (info.menuItemId == "1")

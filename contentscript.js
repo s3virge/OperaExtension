@@ -50,7 +50,8 @@ chrome.runtime.onMessage.addListener(
             switch (msg.menuItem) {
 
                 case "separator":
-                    $(':focus').append("\n------------------------------------------------------\n");
+                    $(':focus').append("------------------------------------------------------\n");
+                    $("#form-save-btn").click();
                     break;
 
                 //................ даигностика ..............
@@ -64,7 +65,7 @@ chrome.runtime.onMessage.addListener(
                     break;
 
                 case "сleaningIsNecessary":
-                    $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения сильно запылена. Необходима чистка.");
+                    $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения запылена. Необходима чистка.");
                     $("#form-save-btn").click();
                     $('#prise-id154').click();  //чистка
                     $('#prise-id116').click();	//разборка
@@ -90,6 +91,12 @@ chrome.runtime.onMessage.addListener(
                 case "diagnosticsPour":
                     $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы попадания жидкости. Для дальнейшей диагностики необходимо устранить последствия попадания жидкости.");
                     $("#form-save-btn").click();
+
+                    $('#prise-id116').click();	//разборка
+                    $('#prise-id154').click();  //чистка
+                    $('#prise-id157').click();	//отмывка после залития
+                    //$('#prise-id123').click();	//замена клавы
+                    $(".prise-raboti form").submit();
                     break;
 
                 case "diagnosticsBIOS":
@@ -100,8 +107,17 @@ chrome.runtime.onMessage.addListener(
                 case "diagnosticsMatrix":
                     $("#diag_rez_input, #rem_rez_input").append(" Неисправную матрицу необходимо заменить.");
                     $("#form-save-btn").click();
-                    $('#prise-id117').click();	//разборка рышки
+                    $('#prise-id117').click();	//разборка крышки
                     $('#prise-id119').click();	//замена матрицы
+                    $(".prise-raboti form").submit();
+                    break;
+
+                case "diagnosticsPowerSupplyConnector":
+                    $("#diag_rez_input, #rem_rez_input").append(" Сломанно гнездо подключения блока питания." +
+                        "Необходима его замена.");
+                    $("#form-save-btn").click();
+                    $('#prise-id116').click();	//разборка
+                    $('#prise-id128').click();	//замена гнезда питания
                     $(".prise-raboti form").submit();
                     break;
 
@@ -114,6 +130,11 @@ chrome.runtime.onMessage.addListener(
                 case "repairCleaning":
                     $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения почищена, заменена термопаста на чипах.");
                     $("#form-save-btn").click();
+
+                    $("#form-save-btn").click();
+                    $('#prise-id154').click();  //чистка
+                    $('#prise-id116').click();	//разборка
+                    $(".prise-raboti form").submit();
                     break;
 
                 case "repairInstallOs":
@@ -136,8 +157,13 @@ chrome.runtime.onMessage.addListener(
                     $("#form-save-btn").click();
                     break;
 
+                case "repairPowerSupplyConnector":
+                    $("#diag_rez_input, #rem_rez_input").append(" Сломанное гнездо подключения блока питания заменено.");
+                    $("#form-save-btn").click();
+                    break;
+
                 //................ работы ................
-                case "workCleaning":
+                /*case "workCleaning":
                     $('#prise-id154').click();  //чистка
                     $('#prise-id116').click();	//разборка
                     $(".prise-raboti form").submit();
@@ -167,7 +193,7 @@ chrome.runtime.onMessage.addListener(
                     $('#prise-id116').click();	//разборка
                     $('#prise-id162').click();	//восстановление биос
                     $(".prise-raboti form").submit();
-                    break;
+                    break;*/
             }
         }
 
