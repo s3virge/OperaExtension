@@ -81,6 +81,10 @@ chrome.contextMenus.onClicked.addListener(function (info) {
                 menuSendMessage("repair","repairPowerSupplyConnector");
                 break;
 
+            case "repairPour":
+                menuSendMessage("repair","repairPour");
+                break;
+
             //............... работы ...................
             /*case "workBGA":
              menuSendMessage("workBGA");
@@ -198,8 +202,8 @@ function CreateDiagnosticsMenu() {
     menuCreateItem("Прошивка BIOS", "diagnosticsBIOS", "diagnosticsRoot");
     menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
     menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
-    menuCreateItem("Не включается", "DoesNotTurnOn", "diagnosticsRoot");
     menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
+    menuCreateItem("Не включается", "DoesNotTurnOn", "diagnosticsRoot");
 }
 
 function CreateRepairMenu() {
@@ -210,6 +214,7 @@ function CreateRepairMenu() {
     menuCreateItem("Прошивка BIOS", "repairBIOS", "repairRoot");
     menuCreateItem("Матрица", "repairMatrix", "repairRoot");
     menuCreateItem("Гнездо питания", "repairPowerSupplyConnector", "repairRoot");
+    menuCreateItem("Следы залития", "repairPour", "repairRoot");
     menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
 }
 

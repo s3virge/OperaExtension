@@ -185,5 +185,10 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Сломанное гнездо подключения блока питания заменено.");
             $("#form-save-btn").click();
             break;
+
+        case "repairPour":
+            $("#diag_rez_input, #rem_rez_input").append(" Материнская плата помыта. Удалены окислы с деталей.");
+            $("#form-save-btn").click();
+            break;
     }
 }
