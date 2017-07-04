@@ -19,8 +19,9 @@ if (remontNumber != null) {
     remontNumber.style.fontSize = "24px";
 }
 
-$(".login-header img").css("display", "none");
-$("#leftBlock, .mLine, #_data").css("display", "none");
+// $(".login-header img").css("display", "none");
+$(".login-header img").hide();
+$("#leftBlock, .mLine, #_data").hide();
 
 function updateCSS() {
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
