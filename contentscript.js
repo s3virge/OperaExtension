@@ -117,6 +117,9 @@ function processDiagnosisMessage(message){
         case "diagnosticsBIOS":
             $("#diag_rez_input, #rem_rez_input").append(" Необходимо восстановление прошивки BIOS.");
             $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id162').click();	//Прошивка биос
+            $(".prise-raboti form").submit();
             break;
 
         case "diagnosticsMatrix":
@@ -149,8 +152,6 @@ function processRepairMessage(message){
         case "repairCleaning":
             $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения почищена, заменена термопаста на чипах.");
             $("#form-save-btn").click();
-
-            $("#form-save-btn").click();
             $('#prise-id154').click();  //чистка
             $('#prise-id116').click();	//разборка
             $(".prise-raboti form").submit();
@@ -169,6 +170,9 @@ function processRepairMessage(message){
         case "repairBIOS":
             $("#diag_rez_input, #rem_rez_input").append(" Выполнено восстановление прошивки BIOS на программаторе.");
             $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id162').click();	//Прошивка биос
+            $(".prise-raboti form").submit();
             break;
 
         case "repairMatrix":
