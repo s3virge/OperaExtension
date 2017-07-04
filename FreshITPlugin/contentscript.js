@@ -159,6 +159,8 @@ function processRepairMessage(message){
         case "repairInstallOs":
             $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
             $("#form-save-btn").click();
+            $('#prise-id424').click();	//установка ос
+            $(".prise-raboti form").submit();
             break;
 
         case "repairHDD":
