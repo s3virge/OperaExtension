@@ -5,17 +5,23 @@
 <html>
   <body>
     <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
       #btnSearch{
-        width: 100%; margin: 5px 0px;
+        width: 98%; margin: 5px 0px;
         padding: 2px;
       }
     </style>
-    <h2>Найти на vlab.su</h2>
-    <form>
-      <input type='text' id="search" placeholder='' autofocus />
-      <br>
-      <button id="btnSearch" >Искать</button>
-    </form>
+    <div style="width: 250px; align-content: center;">
+      <h2>Найти на vlab.su</h2>
+      <form>
+        <input type='text' id="search" placeholder='' autofocus style="width: 98%;"/>
+        <br>
+        <button id="btnSearch">Искать</button>
+      </form>
+    </div>
     <script type="text/javascript" src="popupwnd.js"></script>
   </body>
 </html>
