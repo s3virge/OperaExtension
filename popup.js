@@ -1,4 +1,4 @@
-function popup() {
+function search() {
     var searchValue = document.getElementById("search").value;
 
     //открыть новую вкладку
@@ -12,7 +12,6 @@ function popup() {
     });*/
 	
 	//подождать пока она загрузится.
-	
 
 	//отправить сообщение
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
@@ -50,5 +49,5 @@ search.onfocus = function() {
 };*/
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("btnSearch").addEventListener("click", popup);
+    document.getElementById("btnSearch").addEventListener("click", search);
 });

@@ -20,8 +20,10 @@ if (remontNumber != null) {
 }
 
 // $(".login-header img").css("display", "none");
-$(".login-header img").hide();
-$("#leftBlock, .mLine, #_data").hide();
+//$(".login-header img").hide();
+$(".login-header img").remove();
+$(".mLine").hide();
+$("#leftBlock, #_data").remove();
 
 function updateCSS() {
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
