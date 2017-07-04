@@ -58,8 +58,7 @@ chrome.runtime.onMessage.addListener(
         }
         else if (msg.notype == "separator"){
             $(':focus').append("------------------------------------------------------\n");
-            $("#form-save-btn").click();
-
+            // $("#form-save-btn").click();
         }
         else if (msg.message == "search") {
             $('.global-search input').attr("value", msg.number);
