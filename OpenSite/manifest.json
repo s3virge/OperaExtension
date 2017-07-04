@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+
+	"name": "Opera Extensions — Getting Started",
+	"description": "Sample extension for the “Making your first extension” article",
+	"version": "1.0",
+	"background": {
+		"scripts": ["background.js"]
+	},
+
+	"permissions": ["tabs"],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Go to Dev.Opera!"
+	}
+}
