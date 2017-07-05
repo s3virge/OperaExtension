@@ -137,8 +137,22 @@ function processDiagnosisMessage(message){
             $('#prise-id128').click();	//замена гнезда питания
             $(".prise-raboti form").submit();
             break;
-    }
 
+        case "diagnosticsTest":
+            $("#diag_rez_input, #rem_rez_input").append(" Программа стресс тест выполняется с ошибками.");
+            $("#form-save-btn").click();
+            break;
+
+        case "diagnosticsTracesOfRepair":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы предыдущего ремонта.");
+            $("#form-save-btn").click();
+            break;
+
+        case "diagnosticsDamagedThermalPads":
+            $("#diag_rez_input, #rem_rez_input").append(" Чипы охлаждаются через поврежденные термопрокладки.");
+            $("#form-save-btn").click();
+            break;
+    }
 }
 
 function processRepairMessage(message){

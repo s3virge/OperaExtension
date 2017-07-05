@@ -52,6 +52,18 @@ chrome.contextMenus.onClicked.addListener(function (info) {
                 menuSendMessage("diagnostics","diagnosticsPowerSupplyConnector");
                 break;
 
+            case "diagnosticsTest":
+                menuSendMessage("diagnostics","diagnosticsTest");
+                break;
+
+            case "diagnosticsTracesOfRepair":
+                menuSendMessage("diagnostics","diagnosticsTracesOfRepair");
+                break;
+
+            case "diagnosticsDamagedThermalPads":
+                menuSendMessage("diagnostics","diagnosticsDamagedThermalPads");
+                break;
+
             //............ ремонт .....................
             case "repairHDD":
                 menuSendMessage("repair","repairHDD");
@@ -84,45 +96,7 @@ chrome.contextMenus.onClicked.addListener(function (info) {
             case "repairPour":
                 menuSendMessage("repair","repairPour");
                 break;
-
-            //............... работы ...................
-            /*case "workBGA":
-             menuSendMessage("workBGA");
-             break;
-
-             case "workKeyboard":
-             menuSendMessage("workKeyboard");
-             break;
-
-             case "workHDD":
-             menuSendMessage("workHDD");
-             break;
-
-             case "workCleaning":
-             menuSendMessage("workCleaning");
-             break;
-
-             case "workBIOS":
-             menuSendMessage("workBIOS");
-             break;*/
         }
-
-        /*if (info.menuItemId == "1")
-         {
-         //alert("info.menuItemId == 1");
-         chrome.tabs.executeScript
-         (
-         {file: 'jquery-3.2.1.js'},
-         function()
-         {
-         chrome.tabs.executeScript({file: 'myscript.js'});
-         }
-         )
-         }
-         else if (info.menuItemId == "2"){
-         //alert("info.menuItemId == 2");
-         chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="#b3ffb3"'});
-         }*/
     }
 );
 
@@ -203,7 +177,9 @@ function CreateDiagnosticsMenu() {
     menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
     menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
     menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
-    menuCreateItem("Не включается", "DoesNotTurnOn", "diagnosticsRoot");
+    menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
+    menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
+    menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
 }
 
 function CreateRepairMenu() {
