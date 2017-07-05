@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 
 	"name": "Искать на vlab.su",
-	"description": "Sample extension for the “Making your first extension” article",
+	"description": "С помощью Google выполняем поиск на Vlab.su",
 	"version": "1.0",
 	"background": {
 		"scripts": ["background.js"],
