@@ -204,5 +204,10 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Материнская плата помыта. Удалены окислы с деталей.");
             $("#form-save-btn").click();
             break;
+			
+		case "repairUMA":
+            $("#diag_rez_input, #rem_rez_input").append(" Материнская плата переделана для работы без дополнительной видеокарты.");
+            $("#form-save-btn").click();
+            break;
     }
 }

@@ -96,6 +96,10 @@ chrome.contextMenus.onClicked.addListener(function (info) {
             case "repairPour":
                 menuSendMessage("repair","repairPour");
                 break;
+			
+			case "repairUMA":
+                menuSendMessage("repair","repairUMA");
+                break;				
         }
     }
 );
@@ -192,5 +196,6 @@ function CreateRepairMenu() {
     menuCreateItem("Гнездо питания", "repairPowerSupplyConnector", "repairRoot");
     menuCreateItem("Следы залития", "repairPour", "repairRoot");
     menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
+    menuCreateItem("В UMA", "repairUMA", "repairRoot");
 }
 
