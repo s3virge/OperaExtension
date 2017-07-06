@@ -178,7 +178,7 @@ function processRepairMessage(message){
             break;
 
         case "repairHDD":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправные жесткий диск заменён на новый.");
+            $("#diag_rez_input, #rem_rez_input").append(" Установлен новый жесткий диск.");
             $("#form-save-btn").click();
             break;
 
