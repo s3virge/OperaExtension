@@ -95,7 +95,7 @@ function processDiagnosisMessage(message){
             break;
 
         case "diagnosticsKeyboard":
-            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена клавиатуры.");
+            $("#diag_rez_input, #rem_rez_input").append(" Не все клавиши на клавиатуре работают, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id123').click();	//замена клавы
@@ -148,9 +148,26 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             break;
 
-        case "diagnosticsDamagedThermalPads":
+        /* case "diagnosticsDamagedThermalPads":
             $("#diag_rez_input, #rem_rez_input").append(" Чипы охлаждаются через поврежденные термопрокладки.");
             $("#form-save-btn").click();
+            break; */
+		
+		case "diagnosticsBgaVga":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+			$('#prise-id534').click();	//снятие компаунда
+			$('#prise-id133').click();	//пайка BGA    
+			$('#prise-id154').click();  //чистка	
+            $(".prise-raboti form").submit();			
+            break;
+			
+		case "diagnosticsNoReaction":
+            $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука не включается. Реакции на кнопку включения нет.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+            $(".prise-raboti form").submit();			
             break;
     }
 }

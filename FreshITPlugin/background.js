@@ -63,6 +63,14 @@ chrome.contextMenus.onClicked.addListener(function (info) {
             case "diagnosticsDamagedThermalPads":
                 menuSendMessage("diagnostics","diagnosticsDamagedThermalPads");
                 break;
+				
+			case "diagnosticsBgaVga":
+                menuSendMessage("diagnostics","diagnosticsBgaVga");
+                break;
+			
+			case "diagnosticsNoReaction":
+                menuSendMessage("diagnostics","diagnosticsNoReaction");
+                break;
 
             //............ ремонт .....................
             case "repairHDD":
@@ -183,7 +191,9 @@ function CreateDiagnosticsMenu() {
     menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
     menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
     menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
-    menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
+    //menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
+    menuCreateItem("BGA видеочип", "diagnosticsBgaVga", "diagnosticsRoot");
+    menuCreateItem("Нет реакции", "diagnosticsNoReaction", "diagnosticsRoot");
 }
 
 function CreateRepairMenu() {
