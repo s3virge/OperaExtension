@@ -14,7 +14,18 @@ chrome.runtime.onInstalled.addListener(function () {
 });
 
 chrome.contextMenus.onClicked.addListener(function (info) {
-        switch (info.menuItemId) {
+	
+	if (info.menuItemId == "separator"){
+		menuSendMessage("notype", "separator");
+	}
+	else if (~info.menuItemId.indexOf("diagnostics")){
+		menuSendMessage("diagnostics",info.menuItemId);
+	}
+	else if (~info.menuItemId.indexOf("repair")){
+		menuSendMessage("repair",info.menuItemId);
+	}
+        
+		/* switch (info.menuItemId) {
             case "separator":
                 menuSendMessage("notype", "separator");
                 break;
@@ -30,10 +41,6 @@ chrome.contextMenus.onClicked.addListener(function (info) {
 
             case "сleaningIsNecessary":
                 menuSendMessage("diagnostics","сleaningIsNecessary");
-                break;
-
-            case "DoesNotTurnOn":
-                menuSendMessage("diagnostics","DoesNotTurnOn");
                 break;
 
             case "diagnosticsPour":
@@ -70,6 +77,22 @@ chrome.contextMenus.onClicked.addListener(function (info) {
 			
 			case "diagnosticsNoReaction":
                 menuSendMessage("diagnostics","diagnosticsNoReaction");
+                break;
+			
+			case "diagnostics_HaveLite_NoReaction":
+                menuSendMessage("diagnostics","diagnostics_HaveLite_NoReaction");
+                break;
+			
+			case "diagnostics_HaveLite_NoPicture":
+                menuSendMessage("diagnostics","diagnostics_HaveLite_NoPicture");
+                break;
+								
+			case "diagnosticsNotRepair":
+                menuSendMessage("diagnostics","diagnosticsNotRepair");
+                break;
+				
+			case "diagnosticsInstallOs":
+                menuSendMessage("diagnostics","diagnosticsInstallOs");
                 break;
 
             //............ ремонт .....................
@@ -108,7 +131,7 @@ chrome.contextMenus.onClicked.addListener(function (info) {
 			case "repairUMA":
                 menuSendMessage("repair","repairUMA");
                 break;				
-        }
+        } */
     }
 );
 
@@ -182,18 +205,25 @@ function menuCreateItem(itemTitle, itemId, parentId) {
 
 function CreateDiagnosticsMenu() {
     menuCreateRootItem("Диагностика", "diagnosticsRoot");
-    menuCreateItem("Жесткий диск", "errorsOnHdd", "diagnosticsRoot");
-    menuCreateItem("Чистка", "сleaningIsNecessary", "diagnosticsRoot");
-    menuCreateItem("Клавиатура", "diagnosticsKeyboard", "diagnosticsRoot");
-    menuCreateItem("Прошивка BIOS", "diagnosticsBIOS", "diagnosticsRoot");
-    menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
-    menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
-    menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
-    menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
-    menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
-    //menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
-    menuCreateItem("BGA видеочип", "diagnosticsBgaVga", "diagnosticsRoot");
-    menuCreateItem("Нет реакции", "diagnosticsNoReaction", "diagnosticsRoot");
+		menuCreateItem("Жесткий диск", "diagnostics_ErrorsOnHdd", "diagnosticsRoot");
+		menuCreateItem("Чистка", "diagnostics_Cleaning", "diagnosticsRoot");
+		menuCreateItem("Клавиатура", "diagnosticsKeyboard", "diagnosticsRoot");
+		menuCreateItem("Прошивка BIOS", "diagnosticsBIOS", "diagnosticsRoot");
+		menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
+		menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+		menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
+		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");	
+		menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
+		menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
+		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
+		menuCreateItem("BGA видеочип", "diagnosticsBgaVga", "diagnosticsRoot");
+		
+		menuCreateItem("Индикация на корпусе", "Root_DiagnosticsNoReaction", "diagnosticsRoot");
+			menuCreateItem("Нет индикации, нет реакции", "diagnosticsNoReaction", "Root_DiagnosticsNoReaction");	
+			menuCreateItem("Есть индикация, нет реакции", "diagnostics_HaveLite_NoReaction", "Root_DiagnosticsNoReaction");	
+			menuCreateItem("Есть индикация, реакция, нет картинки ", "diagnostics_HaveLite_NoPicture", "Root_DiagnosticsNoReaction");	
+		
+		menuCreateItem("Не ремонт", "diagnosticsNotRepair", "diagnosticsRoot");
 }
 
 function CreateRepairMenu() {

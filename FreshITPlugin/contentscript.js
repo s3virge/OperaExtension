@@ -69,7 +69,7 @@ chrome.runtime.onMessage.addListener(
 
 function processDiagnosisMessage(message){
     switch(message){
-        case "errorsOnHdd":
+        case "diagnostics_ErrorsOnHdd":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
             $("#form-save-btn").click();
 
@@ -78,19 +78,18 @@ function processDiagnosisMessage(message){
             $(".prise-raboti form").submit();
             break;
 
-        case "сleaningIsNecessary":
+        case "diagnostics_Cleaning":
             $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения запылена. Необходима чистка.");
             $("#form-save-btn").click();
             $('#prise-id154').click();  //чистка
             $('#prise-id116').click();	//разборка
             $(".prise-raboti form").submit();
             break;
-
-        case "DoesNotTurnOn":
-            $("#diag_rez_input, #rem_rez_input").append(" При нажатии на кнопку включения индикация на корпусе не включается, изображение на матрице не появляется.");
+			
+		case "diagnosticsInstallOs":
+            $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, насройка операционной системы.");
             $("#form-save-btn").click();
-            $('#prise-id154').click();  //чистка
-            $('#prise-id116').click();	//разборка
+            $('#prise-id424').click();	//установка ос
             $(".prise-raboti form").submit();
             break;
 
@@ -131,7 +130,7 @@ function processDiagnosisMessage(message){
 
         case "diagnosticsPowerSupplyConnector":
             $("#diag_rez_input, #rem_rez_input").append(" Сломанно гнездо подключения блока питания." +
-                "Необходима его замена.");
+                " Необходима его замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id128').click();	//замена гнезда питания
@@ -168,6 +167,25 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
             $(".prise-raboti form").submit();			
+            break;
+			
+		case "diagnostics_HaveLite_NoReaction":
+            $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. Реакции на кнопку включения нет.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+            $(".prise-raboti form").submit();			
+            break;
+			
+		case "diagnostics_HaveLite_NoPicture":
+            $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. После нажатия на кнопку включения ноутбук включается. Изображение на экране не появляется.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+            $(".prise-raboti form").submit();			
+            break;
+		
+		case "diagnosticsNotRepair":
+            $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
+            $("#form-save-btn").click();	
             break;
     }
 }
