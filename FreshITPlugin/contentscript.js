@@ -177,7 +177,7 @@ function processDiagnosisMessage(message){
             break;
 			
 		case "diagnostics_HaveLite_NoPicture":
-            $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. После нажатия на кнопку включения ноутбук включается. Изображение на экране не появляется.");
+            $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. После нажатия на кнопку включения ноутбук включается, но изображение на экране не появляется.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
             $(".prise-raboti form").submit();			
