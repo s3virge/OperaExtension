@@ -17,7 +17,7 @@
     "content_scripts": [ {
         "js": [ "jquery-3.2.1.js", "contentscript.js" ],
         "matches": ["*://base.freshit.ua/*"],
-        "run_at": "document_end"	
+        "run_at": "document_end"
     }],
 
 	"permissions": ["activeTab", "contextMenus", "tabs"]

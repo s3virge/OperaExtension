@@ -19,11 +19,15 @@ if (remontNumber != null) {
     remontNumber.style.fontSize = "24px";
 }
 
-// $(".login-header img").css("display", "none");
-//$(".login-header img").hide();
 $(".login-header img").remove();
-$(".mLine").hide();
+
+$(".mLine").hide(); //global search
+$(".mLine2").css("height", "1px");
+$(".menu").remove();
 $("#leftBlock, #_data").remove();
+$("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
+$("#rightBlock").css("height", "100%"); //размер окна загрузки файлов
+$("#breadcrumbs").remove();
 
 function updateCSS() {
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
@@ -68,6 +72,7 @@ chrome.runtime.onMessage.addListener(
 );
 
 function processDiagnosisMessage(message){
+
     switch(message){
         case "diagnostics_ErrorsOnHdd":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
@@ -161,6 +166,36 @@ function processDiagnosisMessage(message){
 			$('#prise-id154').click();  //чистка	
             $(".prise-raboti form").submit();			
             break;
+
+        case "diagnosticsBgaHUB":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы контроллера платформы.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id534').click();	//снятие компаунда
+            $('#prise-id133').click();	//пайка BGA
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnosticsBgaNorthBridge":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы северный мост.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id534').click();	//снятие компаунда
+            $('#prise-id133').click();	//пайка BGA
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnosticsBgaSouthBridge":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы южный мост.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id534').click();	//снятие компаунда
+            $('#prise-id133').click();	//пайка BGA
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
+            break;
 			
 		case "diagnosticsNoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука не включается. Реакции на кнопку включения нет.");
@@ -186,6 +221,11 @@ function processDiagnosisMessage(message){
 		case "diagnosticsNotRepair":
             $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
             $("#form-save-btn").click();	
+            break;
+
+        case "diagnosticsBrokenBody":
+            $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы сломаны, необходимо их восстановление.");
+            $("#form-save-btn").click();
             break;
     }
 }

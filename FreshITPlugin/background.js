@@ -20,10 +20,10 @@ chrome.contextMenus.onClicked.addListener(function (info) {
 		menuSendMessage("notype", "separator");
 	}
 	else if (~info.menuItemId.indexOf("diagnostics")){
-		menuSendMessage("diagnostics",info.menuItemId);
+		menuSendMessage("diagnostics", info.menuItemId);
 	}
 	else if (~info.menuItemId.indexOf("repair")){
-		menuSendMessage("repair",info.menuItemId);
+		menuSendMessage("repair", info.menuItemId);
 	}
 });
 
@@ -104,12 +104,18 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
 		menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
 		menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
-		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");	
-		menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
-		menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
+        menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
+        menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
+        menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
+		menuCreateItem("Крепление петель", "diagnosticsBrokenBody", "diagnosticsRoot");
 		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
-		menuCreateItem("BGA видеочип", "diagnosticsBgaVga", "diagnosticsRoot");
-		
+
+        menuCreateItem("BGA", "Root_diagnosticsBga", "diagnosticsRoot");
+            menuCreateItem("BGA видеочип", "diagnosticsBgaVga", "Root_diagnosticsBga");
+            menuCreateItem("BGA хаб", "diagnosticsBgaHUB", "Root_diagnosticsBga");
+            menuCreateItem("BGA север", "diagnosticsBgaNorthBridge", "Root_diagnosticsBga");
+            menuCreateItem("BGA юг", "diagnosticsBgaSouthBridge", "Root_diagnosticsBga");
+
 		menuCreateItem("Индикация на корпусе", "Root_DiagnosticsNoReaction", "diagnosticsRoot");
 			menuCreateItem("Нет индикации, нет реакции", "diagnosticsNoReaction", "Root_DiagnosticsNoReaction");	
 			menuCreateItem("Есть индикация, нет реакции", "diagnostics_HaveLite_NoReaction", "Root_DiagnosticsNoReaction");	
