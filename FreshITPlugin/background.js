@@ -2,6 +2,7 @@
  * Created by s3virge on 21.06.17.
  */
 chrome.runtime.onInstalled.addListener(function () {
+
     chrome.contextMenus.create({
         title: "Вставить разделитель",
         contexts: ["editable"],
@@ -24,116 +25,7 @@ chrome.contextMenus.onClicked.addListener(function (info) {
 	else if (~info.menuItemId.indexOf("repair")){
 		menuSendMessage("repair",info.menuItemId);
 	}
-        
-		/* switch (info.menuItemId) {
-            case "separator":
-                menuSendMessage("notype", "separator");
-                break;
-
-            //............... диагностка ...............
-            case "diagnosticsKeyboard":
-                menuSendMessage("diagnostics","diagnosticsKeyboard");
-                break;
-
-            case "errorsOnHdd":
-                menuSendMessage("diagnostics","errorsOnHdd");
-                break;
-
-            case "сleaningIsNecessary":
-                menuSendMessage("diagnostics","сleaningIsNecessary");
-                break;
-
-            case "diagnosticsPour":
-                menuSendMessage("diagnostics","diagnosticsPour");
-                break;
-
-            case "diagnosticsBIOS":
-                menuSendMessage("diagnostics","diagnosticsBIOS");
-                break;
-
-            case "diagnosticsMatrix":
-                menuSendMessage("diagnostics","diagnosticsMatrix");
-                break;
-
-            case "diagnosticsPowerSupplyConnector":
-                menuSendMessage("diagnostics","diagnosticsPowerSupplyConnector");
-                break;
-
-            case "diagnosticsTest":
-                menuSendMessage("diagnostics","diagnosticsTest");
-                break;
-
-            case "diagnosticsTracesOfRepair":
-                menuSendMessage("diagnostics","diagnosticsTracesOfRepair");
-                break;
-
-            case "diagnosticsDamagedThermalPads":
-                menuSendMessage("diagnostics","diagnosticsDamagedThermalPads");
-                break;
-				
-			case "diagnosticsBgaVga":
-                menuSendMessage("diagnostics","diagnosticsBgaVga");
-                break;
-			
-			case "diagnosticsNoReaction":
-                menuSendMessage("diagnostics","diagnosticsNoReaction");
-                break;
-			
-			case "diagnostics_HaveLite_NoReaction":
-                menuSendMessage("diagnostics","diagnostics_HaveLite_NoReaction");
-                break;
-			
-			case "diagnostics_HaveLite_NoPicture":
-                menuSendMessage("diagnostics","diagnostics_HaveLite_NoPicture");
-                break;
-								
-			case "diagnosticsNotRepair":
-                menuSendMessage("diagnostics","diagnosticsNotRepair");
-                break;
-				
-			case "diagnosticsInstallOs":
-                menuSendMessage("diagnostics","diagnosticsInstallOs");
-                break;
-
-            //............ ремонт .....................
-            case "repairHDD":
-                menuSendMessage("repair","repairHDD");
-                break;
-
-            case "repairCleaning":
-                menuSendMessage("repair","repairCleaning");
-                break;
-
-            case "repairKeyboard":
-                menuSendMessage("repair","repairKeyboard");
-                break;
-
-            case "repairInstallOs":
-                menuSendMessage("repair","repairInstallOs");
-                break;
-
-            case "repairBIOS":
-                menuSendMessage("repair","repairBIOS");
-                break;
-
-            case "repairMatrix":
-                menuSendMessage("repair", "repairMatrix");
-                break;
-
-            case "repairPowerSupplyConnector":
-                menuSendMessage("repair","repairPowerSupplyConnector");
-                break;
-
-            case "repairPour":
-                menuSendMessage("repair","repairPour");
-                break;
-			
-			case "repairUMA":
-                menuSendMessage("repair","repairUMA");
-                break;				
-        } */
-    }
-);
+});
 
 
 //принимаем сообщение от contentscript
