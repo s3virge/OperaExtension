@@ -3,12 +3,12 @@
  */
 chrome.runtime.onInstalled.addListener(function () {
 
-    chrome.contextMenus.create({
+    /* chrome.contextMenus.create({
         title: "Вставить разделитель",
         contexts: ["editable"],
         id: "separator",
         documentUrlPatterns: ["*://base.freshit.ua/*"]
-    });
+    }); */
 
     CreateDiagnosticsMenu();
     CreateRepairMenu();
