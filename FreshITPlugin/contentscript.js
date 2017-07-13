@@ -39,13 +39,16 @@ function updateCSS() {
     $(".changes-confirm").css("font-size", "14px");
 
     var rightBlHeight = $("#rightBlock").height();
+	
     $("#rightBlock").height(rightBlHeight + 50);
+	 
+	console.log("updateCSS");
 }
 
 $(document).ready(updateCSS);
 
 // just listen changes on #mydiv content
-$("#rightBlock").bind("DOMSubtreeModified", updateCSS);
+$("#rightBlock").bind("DOMSubtreeModified", updateCSS() );
 
 //посылаем сообщение из этого файла в background.js и получаем ответ
 //chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
