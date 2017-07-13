@@ -103,9 +103,13 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Прошивка BIOS", "diagnosticsBIOS", "diagnosticsRoot");
 		menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
 		menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
-		menuCreateItem("Следы залития", "diagnosticsPour", "diagnosticsRoot");
-        menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "diagnosticsRoot");
-        menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
+		
+		
+		menuCreateItem("Следы ...", "Root_diagnosticsTraces", "diagnosticsRoot");
+			menuCreateItem("Следы залития", "diagnosticsPour", "Root_diagnosticsTraces");
+			menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "Root_diagnosticsTraces");
+        
+		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
         menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
 		menuCreateItem("Крепление петель", "diagnosticsBrokenBody", "diagnosticsRoot");
 		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
@@ -121,7 +125,10 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Есть индикация, нет реакции", "diagnostics_HaveLite_NoReaction", "Root_DiagnosticsNoReaction");	
 			menuCreateItem("Есть индикация, реакция, нет картинки ", "diagnostics_HaveLite_NoPicture", "Root_DiagnosticsNoReaction");	
 		
-		menuCreateItem("Не ремонт", "diagnosticsNotRepair", "diagnosticsRoot");
+		menuCreateItem("Не ...", "Root_diagnosticsNot", "diagnosticsRoot");
+		menuCreateItem("Не ремонт", "diagnosticsNotRepair", "Root_diagnosticsNot");
+		menuCreateItem("Не гарантия", "diagnostics_NotAGuarantee", "Root_diagnosticsNot");
+		menuCreateItem("Не проявилась", "diagnostics_DontManifested", "Root_diagnosticsNot");
 }
 
 function CreateRepairMenu() {

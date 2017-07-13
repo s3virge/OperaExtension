@@ -234,6 +234,16 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы сломаны, необходимо их восстановление.");
             $("#form-save-btn").click();
             break;
+			
+		case "diagnostics_NotAGuarantee":
+            $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 3.1 условий гарантийного обслуживания данный ремонт не является гарантийным.");
+            $("#form-save-btn").click();
+            break;
+			
+		case "diagnostics_DontManifested":
+            $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась.");
+            $("#form-save-btn").click();
+            break;
     }
 }
 
