@@ -48,7 +48,7 @@ function updateCSS() {
 $(document).ready(updateCSS);
 
 // just listen changes on #mydiv content
-$("#rightBlock").bind("DOMSubtreeModified", updateCSS() );
+$("#rightBlock").bind("DOMSubtreeModified", updateCSS );
 
 //посылаем сообщение из этого файла в background.js и получаем ответ
 //chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
