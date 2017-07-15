@@ -99,7 +99,9 @@ function CreateDiagnosticsMenu() {
     menuCreateRootItem("Диагностика", "diagnosticsRoot");
 		menuCreateItem("Жесткий диск", "diagnostics_ErrorsOnHdd", "diagnosticsRoot");
 		menuCreateItem("Чистка", "diagnostics_Cleaning", "diagnosticsRoot");
+		menuCreateItem("Сломан корпус", "diagnosticsBrokenBody", "diagnosticsRoot");
 		menuCreateItem("Клавиатура", "diagnosticsKeyboard", "diagnosticsRoot");
+		menuCreateItem("Короткое замыкание", "diagnostics_ShortCircuit", "diagnosticsRoot");
 		menuCreateItem("Прошивка BIOS", "diagnosticsBIOS", "diagnosticsRoot");
 		menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
 		menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
@@ -111,7 +113,7 @@ function CreateDiagnosticsMenu() {
         
 		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
         menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
-		menuCreateItem("Крепление петель", "diagnosticsBrokenBody", "diagnosticsRoot");
+		
 		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
 
         menuCreateItem("BGA", "Root_diagnosticsBga", "diagnosticsRoot");
@@ -135,7 +137,9 @@ function CreateRepairMenu() {
     menuCreateRootItem("Ремонт", "repairRoot");
     menuCreateItem("Жесткий диск", "repairHDD", "repairRoot");
     menuCreateItem("Чистка", "repairCleaning", "repairRoot");
+	menuCreateItem("Сломан корпус", "repairBrokenBody", "repairRoot");
     menuCreateItem("Клавиатура", "repairKeyboard", "repairRoot");
+	menuCreateItem("Короткое замыкание", "repair_ShortCircuit", "repairRoot");
     menuCreateItem("Прошивка BIOS", "repairBIOS", "repairRoot");
     menuCreateItem("Матрица", "repairMatrix", "repairRoot");
     menuCreateItem("Гнездо питания", "repairPowerSupplyConnector", "repairRoot");

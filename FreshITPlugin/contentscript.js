@@ -167,6 +167,7 @@ function processDiagnosisMessage(message){
 		case "diagnosticsBgaVga":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа.");
             $("#form-save-btn").click();
+			
 			$('#prise-id116').click();	//разборка
 			$('#prise-id534').click();	//снятие компаунда
 			$('#prise-id133').click();	//пайка BGA    
@@ -233,6 +234,9 @@ function processDiagnosisMessage(message){
         case "diagnosticsBrokenBody":
             $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы сломаны, необходимо их восстановление.");
             $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+			$('#prise-id140').click();	//Восстановление корпуса
+			$(".prise-raboti form").submit();		
             break;
 			
 		case "diagnostics_NotAGuarantee":
@@ -244,6 +248,16 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась.");
             $("#form-save-btn").click();
             break;
+		
+		case "diagnostics_ShortCircuit":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходимо найти и устранить короткое замыкание.");
+            $("#form-save-btn").click();			
+			
+            $('#prise-id116').click();	//разборка
+            $('#prise-id137').click();	// Восстановление цепи питания материнской платы
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
+            break;
     }
 }
 
@@ -251,6 +265,11 @@ function processRepairMessage(message){
     switch(message){
         case "repairKeyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
+            $("#form-save-btn").click();
+            break;
+			
+		case "repairBrokenBody":
+            $("#diag_rez_input, #rem_rez_input").append(" Корпус восстановлен.");
             $("#form-save-btn").click();
             break;
 
@@ -299,6 +318,11 @@ function processRepairMessage(message){
 			
 		case "repairUMA":
             $("#diag_rez_input, #rem_rez_input").append(" Материнская плата переделана для работы без дополнительной видеокарты.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "repair_ShortCircuit":
+            $("#diag_rez_input, #rem_rez_input").append(" Устранено короткое замыкание на материнсой плате.");
             $("#form-save-btn").click();
             break;
     }
