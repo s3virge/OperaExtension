@@ -325,5 +325,25 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Устранено короткое замыкание на материнсой плате.");
             $("#form-save-btn").click();
             break;
+			
+		case "repair_BgaVga":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена видеочипа.");
+            $("#form-save-btn").click();
+            break;
+			
+		case "repair_BgaHUB":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена микросхемы контроллера платформы.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "repair_BgaNorthBridge":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена микросхемы северный мост.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "repair_BgaSouthBridge":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена микросхемы южный мост.");
+            $("#form-save-btn").click();
+            break;
     }
 }

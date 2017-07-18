@@ -106,6 +106,12 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Матрица", "diagnosticsMatrix", "diagnosticsRoot");
 		menuCreateItem("Гнездо питания", "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
 		
+		menuCreateItem("BGA", 				"Root_diagnosticsBga", 			"diagnosticsRoot");
+            menuCreateItem("BGA видеочип", 	"diagnosticsBgaVga", 			"Root_diagnosticsBga");
+            menuCreateItem("BGA хаб", 		"diagnosticsBgaHUB", 			"Root_diagnosticsBga");
+            menuCreateItem("BGA север", 	"diagnosticsBgaNorthBridge", 	"Root_diagnosticsBga");
+            menuCreateItem("BGA юг", 		"diagnosticsBgaSouthBridge", 	"Root_diagnosticsBga");
+
 		
 		menuCreateItem("Следы ...", "Root_diagnosticsTraces", "diagnosticsRoot");
 			menuCreateItem("Следы залития", "diagnosticsPour", "Root_diagnosticsTraces");
@@ -116,12 +122,7 @@ function CreateDiagnosticsMenu() {
 		
 		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
 
-        menuCreateItem("BGA", "Root_diagnosticsBga", "diagnosticsRoot");
-            menuCreateItem("BGA видеочип", "diagnosticsBgaVga", "Root_diagnosticsBga");
-            menuCreateItem("BGA хаб", "diagnosticsBgaHUB", "Root_diagnosticsBga");
-            menuCreateItem("BGA север", "diagnosticsBgaNorthBridge", "Root_diagnosticsBga");
-            menuCreateItem("BGA юг", "diagnosticsBgaSouthBridge", "Root_diagnosticsBga");
-
+        
 		menuCreateItem("Индикация на корпусе", "Root_DiagnosticsNoReaction", "diagnosticsRoot");
 			menuCreateItem("Нет индикации, нет реакции", "diagnosticsNoReaction", "Root_DiagnosticsNoReaction");	
 			menuCreateItem("Есть индикация, нет реакции", "diagnostics_HaveLite_NoReaction", "Root_DiagnosticsNoReaction");	
@@ -143,8 +144,17 @@ function CreateRepairMenu() {
     menuCreateItem("Прошивка BIOS", "repairBIOS", "repairRoot");
     menuCreateItem("Матрица", "repairMatrix", "repairRoot");
     menuCreateItem("Гнездо питания", "repairPowerSupplyConnector", "repairRoot");
-    menuCreateItem("Следы залития", "repairPour", "repairRoot");
-    menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
+    
+	menuCreateItem("BGA", "Root_repairBga", "repairRoot");
+            menuCreateItem("BGA видеочип", 	"repair_BgaVga",			"Root_repairBga");
+            menuCreateItem("BGA хаб", 		"repair_BgaHUB", 		 	"Root_repairBga");
+            menuCreateItem("BGA север", 	"repair_BgaNorthBridge", 	"Root_repairBga");
+            menuCreateItem("BGA юг", 		"repair_BgaSouthBridge", 	"Root_repairBga");
+
+	
+	menuCreateItem("Следы залития", "repairPour", "repairRoot");
+   
+   menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
     menuCreateItem("В UMA", "repairUMA", "repairRoot");
 }
 
