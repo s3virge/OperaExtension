@@ -154,7 +154,7 @@ function CreateRepairMenu() {
 	
 	menuCreateItem("Следы залития", "repairPour", "repairRoot");
    
-   menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
+    menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
     menuCreateItem("В UMA", "repairUMA", "repairRoot");
 }
 
