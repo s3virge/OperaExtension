@@ -16,10 +16,7 @@ chrome.runtime.onInstalled.addListener(function () {
 
 chrome.contextMenus.onClicked.addListener(function (info) {
 	
-	if (info.menuItemId == "separator"){
-		menuSendMessage("notype", "separator");
-	}
-	else if (~info.menuItemId.indexOf("diagnostics")){
+	if (~info.menuItemId.indexOf("diagnostics")){
 		menuSendMessage("diagnostics", info.menuItemId);
 	}
 	else if (~info.menuItemId.indexOf("repair")){
