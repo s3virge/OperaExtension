@@ -250,7 +250,7 @@ function processDiagnosisMessage(message){
             break;
 		
 		case "diagnostics_ShortCircuit":
-            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходимо найти и устранить короткое замыкание.");
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
             $("#form-save-btn").click();			
 			
             $('#prise-id116').click();	//разборка
