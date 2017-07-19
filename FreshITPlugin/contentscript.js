@@ -26,7 +26,6 @@ $(".mLine2").css("height", "1px");
 $(".menu").remove();
 $("#leftBlock, #_data").remove();
 $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
-$("#rightBlock").css("height", "100%"); //размер окна загрузки файлов
 $("#breadcrumbs").remove();
 $(".line2").css("margin-bottom", "0");
 
@@ -37,12 +36,6 @@ function updateCSS() {
     $(".changes-confirm:first").css("height", "20em");
     $(".block-content").css("font-size", "1.15em");
     $(".changes-confirm").css("font-size", "14px");
-
-    var rightBlHeight = $("#rightBlock").height();
-	
-    $("#rightBlock").height(rightBlHeight + 50);
-	 
-	console.log("updateCSS");
 }
 
 $(document).ready(updateCSS);
