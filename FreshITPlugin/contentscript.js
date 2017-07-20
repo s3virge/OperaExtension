@@ -29,6 +29,7 @@ $("#files-tool-bar").css("height", "50%"); //размер окна загруз�
 $("#breadcrumbs").remove();
 $(".line2").css("margin-bottom", "0");
 
+
 function updateCSS() {
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
