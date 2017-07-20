@@ -129,6 +129,7 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Не ремонт", "diagnosticsNotRepair", "Root_diagnosticsNot");
 		menuCreateItem("Не гарантия", "diagnostics_NotAGuarantee", "Root_diagnosticsNot");
 		menuCreateItem("Не проявилась", "diagnostics_DontManifested", "Root_diagnosticsNot");
+		menuCreateItem("Не деталь", "diagnostics_NotAPart", "Root_diagnosticsNot");
 }
 
 function CreateRepairMenu() {

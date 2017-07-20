@@ -251,6 +251,11 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $(".prise-raboti form").submit();
             break;
+
+        case "diagnostics_NotAPart":
+            $("#diag_rez_input, #rem_rez_input").append(" Данная деталь снята с производства. Заменить её на новую нельзя.");
+            $("#form-save-btn").click();
+            break;
     }
 }
 
