@@ -108,6 +108,7 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("BGA хаб", 		"diagnosticsBgaHUB", 			"Root_diagnosticsBga");
             menuCreateItem("BGA север", 	"diagnosticsBgaNorthBridge", 	"Root_diagnosticsBga");
             menuCreateItem("BGA юг", 		"diagnosticsBgaSouthBridge", 	"Root_diagnosticsBga");
+            menuCreateItem("BGA проц", 		"diagnosticsBgaCPU", 	        "Root_diagnosticsBga");
 
 		
 		menuCreateItem("Следы ...", "Root_diagnosticsTraces", "diagnosticsRoot");
@@ -148,6 +149,7 @@ function CreateRepairMenu() {
             menuCreateItem("BGA хаб", 		"repair_BgaHUB", 		 	"Root_repairBga");
             menuCreateItem("BGA север", 	"repair_BgaNorthBridge", 	"Root_repairBga");
             menuCreateItem("BGA юг", 		"repair_BgaSouthBridge", 	"Root_repairBga");
+            menuCreateItem("BGA проц",      "repair_BgaCPU", 	        "Root_repairBga");
 
 	
 	menuCreateItem("Следы залития", "repairPour", "repairRoot");

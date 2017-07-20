@@ -198,6 +198,16 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $(".prise-raboti form").submit();
             break;
+
+        case "diagnosticsBgaCPU":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена процессора.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id534').click();	//снятие компаунда
+            $('#prise-id133').click();	//пайка BGA
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
+            break;
 			
 		case "diagnosticsNoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука не включается. Реакции на кнопку включения нет.");
@@ -342,6 +352,11 @@ function processRepairMessage(message){
 		
 		case "repair_BgaSouthBridge":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена микросхемы южный мост.");
+            $("#form-save-btn").click();
+            break;
+
+        case "repair_BgaCPU":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена процессора.");
             $("#form-save-btn").click();
             break;
     }
