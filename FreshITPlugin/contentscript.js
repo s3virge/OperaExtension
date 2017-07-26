@@ -153,8 +153,13 @@ function processDiagnosisMessage(message){
             $(".prise-raboti form").submit();
             break;
 
-        case "diagnosticsTest":
+        case "diagnostics_Test_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа стресс тест выполняется с ошибками.");
+            $("#form-save-btn").click();
+            break;
+
+        case "diagnostics_Test_No_Errors":
+            $("#diag_rez_input, #rem_rez_input").append(" Программа стресс тест выполняется без ошибок.");
             $("#form-save-btn").click();
             break;
 

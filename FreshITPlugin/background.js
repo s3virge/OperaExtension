@@ -116,8 +116,11 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "Root_diagnosticsTraces");
         
 		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
-        menuCreateItem("Стресс тест", "diagnosticsTest", "diagnosticsRoot");
-		
+
+		menuCreateItem("Стресс тест...", "Root_diagnosticsTest", "diagnosticsRoot");
+		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", "Root_diagnosticsTest");
+		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", "Root_diagnosticsTest");
+
 		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
 
         
