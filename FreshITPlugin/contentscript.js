@@ -28,8 +28,9 @@ $("#leftBlock, #_data").remove();
 $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
 $("#breadcrumbs").remove();
 $(".line2").css("margin-bottom", "0");
+// $("#rightBlock").css("height", "598px");
 
-
+/*updateCSS не вызывается когда меняется содержимое #rightBlock */
 function updateCSS() {
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
@@ -37,12 +38,21 @@ function updateCSS() {
     $(".changes-confirm:first").css("height", "20em");
     $(".block-content").css("font-size", "1.15em");
     $(".changes-confirm").css("font-size", "14px");
+
+    $(".footer").hide();
+    $("#rightBlock").css("height", "598px");
+    // $("#right-block-container").css("height", "598px");
+    // $("#loader").css("height", "598px");
+
+    console.log("#rightBlock -> updateCss");
 }
 
 $(document).ready(updateCSS);
 
 // just listen changes on #mydiv content
-$("#rightBlock").bind("DOMSubtreeModified", updateCSS );
+// $("#rightBlock").bind("DOMSubtreeModified", updateCSS );
+$("#right-block-container").bind("DOMSubtreeModified", updateCSS );
+//$("#loader").bind("DOMSubtreeModified", updateCSS );
 
 //посылаем сообщение из этого файла в background.js и получаем ответ
 //chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
