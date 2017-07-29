@@ -124,7 +124,6 @@ function CreateDiagnosticsMenu() {
 		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", "Root_diagnosticsTest");
 
 		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
-
         
 		menuCreateItem("Индикация на корпусе", "Root_DiagnosticsNoReaction", "diagnosticsRoot");
 			menuCreateItem("Нет индикации, нет реакции", "diagnosticsNoReaction", "Root_DiagnosticsNoReaction");	
@@ -141,15 +140,15 @@ function CreateDiagnosticsMenu() {
 function CreateRepairMenu() {
     menuCreateRootItem("Ремонт", "repairRoot");
 
-        menuCreateItem("Жесткий диск", "repairHDD",     "repairRoot");
-        menuCreateItem("Чистка", "repairCleaning",      "repairRoot");
-        menuCreateItem("Вентилятор",         "repair_Fan",             "repairRoot");
-        menuCreateItem("Корпус", "repairBrokenBody", "repairRoot");
-        menuCreateItem("Клавиатура", "repairKeyboard", "repairRoot");
-        menuCreateItem("Короткое замыкание", "repair_ShortCircuit", "repairRoot");
-        menuCreateItem("Прошивка BIOS", "repairBIOS", "repairRoot");
-        menuCreateItem("Матрица", "repairMatrix", "repairRoot");
-        menuCreateItem("Гнездо питания", "repairPowerSupplyConnector", "repairRoot");
+        menuCreateItem("Жесткий диск",          "repairHDD",                    "repairRoot");
+        menuCreateItem("Чистка",                "repairCleaning",               "repairRoot");
+        menuCreateItem("Вентилятор",            "repair_Fan",                   "repairRoot");
+        menuCreateItem("Корпус",                "repairBrokenBody",             "repairRoot");
+        menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
+        menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
+        menuCreateItem("Прошивка BIOS",         "repairBIOS",                   "repairRoot");
+        menuCreateItem("Матрица",               "repairMatrix",                 "repairRoot");
+        menuCreateItem("Гнездо питания",        "repairPowerSupplyConnector",   "repairRoot");
     
 	menuCreateItem("BGA", "Root_repairBga", "repairRoot");
             menuCreateItem("BGA видеочип", 	"repair_BgaVga",			"Root_repairBga");
