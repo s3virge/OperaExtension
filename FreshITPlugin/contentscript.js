@@ -21,10 +21,26 @@ if (remontNumber != null) {
 
 $(".login-header img").remove();
 
-$(".mLine").hide(); //global search
-$(".mLine2").css("height", "1px");
-$(".menu").remove();
-$("#leftBlock, #_data").remove();
+/*-----------------------------------------*/
+//закоментить эту строку если нужно отображать левую колонку и вернюю полосу
+const PERFORM = "Закоментить";
+
+var Perfom = true;
+
+//если PERFORM не определено
+if (typeof(PERFORM) == "undefined"){
+    //то не выполнять блок
+    Perfom = false;
+}
+
+if (Perfom){
+    $(".mLine").hide(); //global search
+    $(".mLine2").css("height", "1px");
+    $(".menu").remove();
+    $("#leftBlock, #_data").remove();
+}
+/*-------------------------------------------*/
+
 $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
 $("#breadcrumbs").remove();
 $(".line2").css("margin-bottom", "0");
@@ -40,7 +56,8 @@ function updateCSS() {
     $(".changes-confirm").css("font-size", "14px");
 
     $(".footer").hide();
-    $("#rightBlock").css("height", "598px");
+
+    //$("#rightBlock").css("height", "598px");
     // $("#right-block-container").css("height", "598px");
     // $("#loader").css("height", "598px");
 
@@ -268,7 +285,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             break;
 		
-		case "diagnostics_ShortCircuit":
+        case "diagnostics_ShortCircuit":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
             $("#form-save-btn").click();			
 			
@@ -278,9 +295,19 @@ function processDiagnosisMessage(message){
             $(".prise-raboti form").submit();
             break;
 
+            //не деталь
         case "diagnostics_NotAPart":
             $("#diag_rez_input, #rem_rez_input").append(" Данная деталь снята с производства. Заменить её на новую нельзя.");
             $("#form-save-btn").click();
+            break;
+
+        case "diagnostics_Fan":
+            $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения неисправен, необходима его замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
             break;
     }
 }
@@ -372,6 +399,11 @@ function processRepairMessage(message){
 
         case "repair_BgaCPU":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате выполнена замена процессора.");
+            $("#form-save-btn").click();
+            break;
+
+        case "repair_Fan":
+            $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения заменён на новый.");
             $("#form-save-btn").click();
             break;
     }
