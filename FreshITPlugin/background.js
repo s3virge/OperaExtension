@@ -141,9 +141,9 @@ function CreateDiagnosticsMenu() {
 function CreateRepairMenu() {
     menuCreateRootItem("Ремонт", "repairRoot");
 
-        menuCreateItem("Жесткий диск", "repairHDD", "repairRoot");
-        menuCreateItem("Чистка", "repairCleaning", "repairRoot");
-        menuCreateItem("Вентилятор",         "repair_Fan",             "diagnosticsRoot");
+        menuCreateItem("Жесткий диск", "repairHDD",     "repairRoot");
+        menuCreateItem("Чистка", "repairCleaning",      "repairRoot");
+        menuCreateItem("Вентилятор",         "repair_Fan",             "repairRoot");
         menuCreateItem("Корпус", "repairBrokenBody", "repairRoot");
         menuCreateItem("Клавиатура", "repairKeyboard", "repairRoot");
         menuCreateItem("Короткое замыкание", "repair_ShortCircuit", "repairRoot");
