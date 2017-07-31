@@ -167,6 +167,14 @@ function processDiagnosisMessage(message){
             $(".prise-raboti form").submit();
             break;
 
+        case "diagnostics_Broken_SCREEN_CABLE":
+            $("#diag_rez_input, #rem_rez_input").append(" Поврежден кабель матрицы, необходима его замена.");
+            $("#form-save-btn").click();
+            $('#prise-id117').click();	//разборка крышки
+            $('#prise-id122').click();	//замена шлейфа
+            $(".prise-raboti form").submit();
+            break;
+
         case "diagnosticsPowerSupplyConnector":
             $("#diag_rez_input, #rem_rez_input").append(" Сломанно гнездо подключения блока питания." +
                 " Необходима его замена.");

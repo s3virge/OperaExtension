@@ -105,6 +105,7 @@ function CreateDiagnosticsMenu() {
 
 		menuCreateItem("Матрица",           "Root_diagnosticsMatrix",       "diagnosticsRoot");
             menuCreateItem("Разбита", 	    "diagnostics_Broken_Matrix",	"Root_diagnosticsMatrix");
+            menuCreateItem("Поврежден кабель","diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
             menuCreateItem("Неисправна",    "diagnosticsMatrix",            "Root_diagnosticsMatrix");
 
     menuCreateItem("Гнездо питания",     "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
