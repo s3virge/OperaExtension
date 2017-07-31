@@ -102,8 +102,12 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
 		menuCreateItem("Короткое замыкание", "diagnostics_ShortCircuit",    "diagnosticsRoot");
 		menuCreateItem("Прошивка BIOS",      "diagnosticsBIOS",             "diagnosticsRoot");
-		menuCreateItem("Матрица",            "diagnosticsMatrix",           "diagnosticsRoot");
-		menuCreateItem("Гнездо питания",     "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+
+		menuCreateItem("Матрица",           "Root_diagnosticsMatrix",       "diagnosticsRoot");
+            menuCreateItem("Разбита", 	    "diagnostics_Broken_Matrix",	"Root_diagnosticsMatrix");
+            menuCreateItem("Неисправна",    "diagnosticsMatrix",            "Root_diagnosticsMatrix");
+
+    menuCreateItem("Гнездо питания",     "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
 
 		menuCreateItem("BGA", 				"Root_diagnosticsBga", 			"diagnosticsRoot");
             menuCreateItem("BGA видеочип", 	"diagnosticsBgaVga", 			"Root_diagnosticsBga");

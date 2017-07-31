@@ -152,7 +152,15 @@ function processDiagnosisMessage(message){
             break;
 
         case "diagnosticsMatrix":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправную матрицу необходимо заменить.");
+            $("#diag_rez_input, #rem_rez_input").append(" Не работает матрица, необходима её замена.");
+            $("#form-save-btn").click();
+            $('#prise-id117').click();	//разборка крышки
+            $('#prise-id119').click();	//замена матрицы
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnostics_Broken_Matrix":
+            $("#diag_rez_input, #rem_rez_input").append(" Разбита матрица, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id119').click();	//замена матрицы
