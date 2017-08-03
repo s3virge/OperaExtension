@@ -108,7 +108,11 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("Поврежден кабель","diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
             menuCreateItem("Неисправна",    "diagnosticsMatrix",            "Root_diagnosticsMatrix");
 
-    menuCreateItem("Гнездо питания",     "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+        menuCreateItem("Гнездо питания",    "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+
+        menuCreateItem("Мульт", 				"Root_diagnostics_Mult", 			    "diagnosticsRoot");
+            menuCreateItem("Замена мульта", 	"diagnostics_Mult_Replacing", 			"Root_diagnostics_Mult");
+            menuCreateItem("Прошивка мульта", 	"diagnostics_Mult_Firmware_Recovery", 	"Root_diagnostics_Mult");
 
 		menuCreateItem("BGA", 				"Root_diagnosticsBga", 			"diagnosticsRoot");
             menuCreateItem("BGA видеочип", 	"diagnosticsBgaVga", 			"Root_diagnosticsBga");
@@ -128,7 +132,11 @@ function CreateDiagnosticsMenu() {
 		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", "Root_diagnosticsTest");
 		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", "Root_diagnosticsTest");
 
-		//menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
+        menuCreateItem("ОЗУ", "Root_diagnostics_MemTest",        "diagnosticsRoot");
+            menuCreateItem("Тест с ошибками", "diagnostics_MemTest_Errors",      "Root_diagnostics_MemTest");
+            menuCreateItem("Тест без ошибок", "diagnostics_MemTest_No_Errors",   "Root_diagnostics_MemTest");
+
+    //menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
         
 		menuCreateItem("Индикация на корпусе", "Root_DiagnosticsNoReaction", "diagnosticsRoot");
 			menuCreateItem("Нет индикации, нет реакции", "diagnosticsNoReaction", "Root_DiagnosticsNoReaction");	
@@ -154,8 +162,13 @@ function CreateRepairMenu() {
         menuCreateItem("Прошивка BIOS",         "repairBIOS",                   "repairRoot");
         menuCreateItem("Матрица",               "repairMatrix",                 "repairRoot");
         menuCreateItem("Гнездо питания",        "repairPowerSupplyConnector",   "repairRoot");
-    
-	menuCreateItem("BGA", "Root_repairBga", "repairRoot");
+
+    menuCreateItem("Мульт", 				"Root_repair_Mult", 			    "repairRoot");
+        menuCreateItem("Замена мульта", 	"repair_Mult_Replacing", 			"Root_repair_Mult");
+        menuCreateItem("Прошивка мульта", 	"repair_Mult_Firmware_Recovery", 	"Root_repair_Mult");
+
+
+    menuCreateItem("BGA", "Root_repairBga", "repairRoot");
             menuCreateItem("BGA видеочип", 	"repair_BgaVga",			"Root_repairBga");
             menuCreateItem("BGA хаб", 		"repair_BgaHUB", 		 	"Root_repairBga");
             menuCreateItem("BGA север", 	"repair_BgaNorthBridge", 	"Root_repairBga");
@@ -166,6 +179,9 @@ function CreateRepairMenu() {
 	menuCreateItem("Следы залития", "repairPour", "repairRoot");
    
     menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
+
+    menuCreateItem("ОЗУ", "repairMemory",  "repairRoot");
+
     menuCreateItem("В UMA", "repairUMA", "repairRoot");
 }
 

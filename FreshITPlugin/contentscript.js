@@ -323,6 +323,32 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $(".prise-raboti form").submit();
             break;
+
+        case "diagnostics_Mult_Replacing":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы мультиконтроллера.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id135').click();  //пайка планарной микросхемы
+
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnostics_MemTest_Errors":
+            $("#diag_rez_input, #rem_rez_input").append(" Программа проверки оперативной памяти обнаружила ошибки. Необходима её замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id142').click();  //замена озу
+
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnostics_MemTest_No_Errors":
+            $("#diag_rez_input, #rem_rez_input").append(" Программа проверки оперативной памяти ошибок не обнаружила.");
+            $("#form-save-btn").click();
+            break;
     }
 }
 
@@ -420,5 +446,39 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения заменён на новый.");
             $("#form-save-btn").click();
             break;
+
+        case "repair_Mult_Replacing":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате заменеа микросхема мультиконтроллер.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id135').click();  //пайка планарной микросхемы
+
+            $(".prise-raboti form").submit();
+            break;
+
+        case "repair_Mult_Firmware_Recovery":
+            $("#diag_rez_input, #rem_rez_input").append(" Прошивка микросхемы мультиконтроллера восстановлена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+
+            $(".prise-raboti form").submit();
+            break;
+
+        case "repairMemory":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправный модуль оперативной памяти заменён на новый.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id142').click();  //замена озу
+
+            $(".prise-raboti form").submit();
+            break;
+
+
+
     }
 }
