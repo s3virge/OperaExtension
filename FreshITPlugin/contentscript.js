@@ -100,13 +100,18 @@ chrome.runtime.onMessage.addListener(
 function processDiagnosisMessage(message){
 
     switch(message){
-        case "diagnostics_ErrorsOnHdd":
+        case "diagnostics_Hdd_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
             $('#prise-id141').click();	//замена hdd
             $(".prise-raboti form").submit();
+            break;
+		
+		case "diagnostics_Hdd_No_Errors":
+            $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска ошибок не обнаружила.");
+            $("#form-save-btn").click();
             break;
 
         case "diagnostics_Cleaning":
@@ -117,6 +122,16 @@ function processDiagnosisMessage(message){
             $(".prise-raboti form").submit();
             break;
 			
+		case "diagnostics_DamagedThermalPads":
+            $("#diag_rez_input, #rem_rez_input").append(" Термопрокладки повреждены.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "diagnostics_Thermal_Compaund":
+            $("#diag_rez_input, #rem_rez_input").append(" Термопаста пересохла.");
+            $("#form-save-btn").click();
+            break;
+						
 		case "diagnosticsInstallOs":
             $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы.");
             $("#form-save-btn").click();
@@ -349,6 +364,11 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки оперативной памяти ошибок не обнаружила.");
             $("#form-save-btn").click();
             break;
+			
+		case "diagnostics_Compaund":
+            $("#diag_rez_input, #rem_rez_input").append(" Чипы на материнской плате зафиксированы с помощью компаунда не размягчающегося при нагревании. При демонтаже микросхемы возможно повреждение токопроводящих дорожек.");
+            $("#form-save-btn").click();
+            break;
     }
 }
 
@@ -371,7 +391,12 @@ function processRepairMessage(message){
             $('#prise-id116').click();	//разборка
             $(".prise-raboti form").submit();
             break;
-
+			
+		case "repair_DamagedThermalPads":
+            $("#diag_rez_input, #rem_rez_input").append(" Поврежденные термопрокладки заменены на новые.");
+            $("#form-save-btn").click();
+            break;
+			
         case "repairInstallOs":
             $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
             $("#form-save-btn").click();
@@ -477,8 +502,5 @@ function processRepairMessage(message){
 
             $(".prise-raboti form").submit();
             break;
-
-
-
     }
 }

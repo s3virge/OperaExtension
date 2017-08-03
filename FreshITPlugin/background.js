@@ -95,18 +95,25 @@ function menuCreateItem(itemTitle, itemId, parentId) {
 function CreateDiagnosticsMenu() {
     menuCreateRootItem("Диагностика",        "diagnosticsRoot");
 
-		menuCreateItem("Жесткий диск",       "diagnostics_ErrorsOnHdd",     "diagnosticsRoot");
-		menuCreateItem("Чистка",             "diagnostics_Cleaning",        "diagnosticsRoot");
-		menuCreateItem("Вентилятор",         "diagnostics_Fan",             "diagnosticsRoot");
+		menuCreateItem("Жесткий диск",       	"Root_diagnostics_Hdd",     	"diagnosticsRoot");
+			menuCreateItem("Тест с ошибками",	"diagnostics_Hdd_Errors",		"Root_diagnostics_Hdd");
+			menuCreateItem("Тест без ошибок", 	"diagnostics_Hdd_No_Errors",	"Root_diagnostics_Hdd");		
+		
+		menuCreateItem("Охлада",             			"Root_diagnostics_Cleaning", 		"diagnosticsRoot");
+			menuCreateItem("Чистка", 					"diagnostics_Cleaning", 			"Root_diagnostics_Cleaning");
+			menuCreateItem("Термопрокладки повреждены", "diagnostics_DamagedThermalPads", 	"Root_diagnostics_Cleaning");
+			menuCreateItem("Термопаста пересохла", 		"diagnostics_Thermal_Compaund",		"Root_diagnostics_Cleaning");
+			menuCreateItem("Вентилятор",         		"diagnostics_Fan",             		"Root_diagnostics_Cleaning");		
+		
 		menuCreateItem("Корпус",             "diagnosticsBrokenBody",       "diagnosticsRoot");
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
 		menuCreateItem("Короткое замыкание", "diagnostics_ShortCircuit",    "diagnosticsRoot");
 		menuCreateItem("Прошивка BIOS",      "diagnosticsBIOS",             "diagnosticsRoot");
 
-		menuCreateItem("Матрица",           "Root_diagnosticsMatrix",       "diagnosticsRoot");
-            menuCreateItem("Разбита", 	    "diagnostics_Broken_Matrix",	"Root_diagnosticsMatrix");
-            menuCreateItem("Поврежден кабель","diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
-            menuCreateItem("Неисправна",    "diagnosticsMatrix",            "Root_diagnosticsMatrix");
+		menuCreateItem("Матрица",           	"Root_diagnosticsMatrix",       	"diagnosticsRoot");
+            menuCreateItem("Разбита", 	    	"diagnostics_Broken_Matrix",		"Root_diagnosticsMatrix");
+            menuCreateItem("Поврежден кабель",	"diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
+            menuCreateItem("Неисправна",    	"diagnosticsMatrix",            	"Root_diagnosticsMatrix");
 
         menuCreateItem("Гнездо питания",    "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
 
@@ -120,42 +127,44 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("BGA север", 	"diagnosticsBgaNorthBridge", 	"Root_diagnosticsBga");
             menuCreateItem("BGA юг", 		"diagnosticsBgaSouthBridge", 	"Root_diagnosticsBga");
             menuCreateItem("BGA проц", 		"diagnosticsBgaCPU", 	        "Root_diagnosticsBga");
-
-		
-		menuCreateItem("Следы ...", "Root_diagnosticsTraces", "diagnosticsRoot");
-			menuCreateItem("Следы залития", "diagnosticsPour", "Root_diagnosticsTraces");
-			menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", "Root_diagnosticsTraces");
+            menuCreateItem("Черный компаунд", "diagnostics_Compaund", 	    "Root_diagnosticsBga");
+			
+		menuCreateItem("Следы ...", 		"Root_diagnosticsTraces", 		"diagnosticsRoot");
+			menuCreateItem("Следы залития", "diagnosticsPour", 				"Root_diagnosticsTraces");
+			menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", 	"Root_diagnosticsTraces");
         
 		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
 
-		menuCreateItem("Стресс тест...", "Root_diagnosticsTest", "diagnosticsRoot");
-		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", "Root_diagnosticsTest");
-		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", "Root_diagnosticsTest");
+		menuCreateItem("Стресс тест...", "Root_diagnosticsTest", 		"diagnosticsRoot");
+		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", 	"Root_diagnosticsTest");
+		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", 	"Root_diagnosticsTest");
 
         menuCreateItem("ОЗУ", "Root_diagnostics_MemTest",        "diagnosticsRoot");
             menuCreateItem("Тест с ошибками", "diagnostics_MemTest_Errors",      "Root_diagnostics_MemTest");
             menuCreateItem("Тест без ошибок", "diagnostics_MemTest_No_Errors",   "Root_diagnostics_MemTest");
-
-    //menuCreateItem("Термопрокладки", "diagnosticsDamagedThermalPads", "diagnosticsRoot");
-        
-		menuCreateItem("Индикация на корпусе", "Root_DiagnosticsNoReaction", "diagnosticsRoot");
-			menuCreateItem("Нет индикации, нет реакции", "diagnosticsNoReaction", "Root_DiagnosticsNoReaction");	
-			menuCreateItem("Есть индикация, нет реакции", "diagnostics_HaveLite_NoReaction", "Root_DiagnosticsNoReaction");	
-			menuCreateItem("Есть индикация, реакция, нет картинки ", "diagnostics_HaveLite_NoPicture", "Root_DiagnosticsNoReaction");	
+			
+		menuCreateItem("Индикация на корпусе", 							"Root_DiagnosticsNoReaction", 		"diagnosticsRoot");
+			menuCreateItem("Нет индикации, нет реакции", 				"diagnosticsNoReaction", 			"Root_DiagnosticsNoReaction");	
+			menuCreateItem("Есть индикация, нет реакции", 				"diagnostics_HaveLite_NoReaction", 	"Root_DiagnosticsNoReaction");	
+			menuCreateItem("Есть индикация, реакция, нет картинки ", 	"diagnostics_HaveLite_NoPicture", 	"Root_DiagnosticsNoReaction");	
 		
-		menuCreateItem("Не ...", "Root_diagnosticsNot", "diagnosticsRoot");
-		menuCreateItem("Не ремонт", "diagnosticsNotRepair", "Root_diagnosticsNot");
-		menuCreateItem("Не гарантия", "diagnostics_NotAGuarantee", "Root_diagnosticsNot");
-		menuCreateItem("Не проявилась", "diagnostics_DontManifested", "Root_diagnosticsNot");
-		menuCreateItem("Не деталь", "diagnostics_NotAPart", "Root_diagnosticsNot");
+		menuCreateItem("Не ...", 		"Root_diagnosticsNot", 			"diagnosticsRoot");
+		menuCreateItem("Не ремонт", 	"diagnosticsNotRepair", 		"Root_diagnosticsNot");
+		menuCreateItem("Не гарантия", 	"diagnostics_NotAGuarantee", 	"Root_diagnosticsNot");
+		menuCreateItem("Не проявилась", "diagnostics_DontManifested",	"Root_diagnosticsNot");
+		menuCreateItem("Не деталь", 	"diagnostics_NotAPart", 		"Root_diagnosticsNot");
 }
 
 function CreateRepairMenu() {
     menuCreateRootItem("Ремонт", "repairRoot");
 
         menuCreateItem("Жесткий диск",          "repairHDD",                    "repairRoot");
-        menuCreateItem("Чистка",                "repairCleaning",               "repairRoot");
-        menuCreateItem("Вентилятор",            "repair_Fan",                   "repairRoot");
+        
+		menuCreateItem("Охлада",            	"Root_repairCleaning",			"repairRoot");
+			menuCreateItem("Чистка",        	"repairCleaning",       		"Root_repairCleaning");
+			menuCreateItem("Термопрокладки",    "repair_DamagedThermalPads",	"Root_repairCleaning");
+			menuCreateItem("Вентилятор",		"repair_Fan",           		"Root_repairCleaning");
+			
         menuCreateItem("Корпус",                "repairBrokenBody",             "repairRoot");
         menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
@@ -167,21 +176,16 @@ function CreateRepairMenu() {
         menuCreateItem("Замена мульта", 	"repair_Mult_Replacing", 			"Root_repair_Mult");
         menuCreateItem("Прошивка мульта", 	"repair_Mult_Firmware_Recovery", 	"Root_repair_Mult");
 
-
     menuCreateItem("BGA", "Root_repairBga", "repairRoot");
             menuCreateItem("BGA видеочип", 	"repair_BgaVga",			"Root_repairBga");
             menuCreateItem("BGA хаб", 		"repair_BgaHUB", 		 	"Root_repairBga");
             menuCreateItem("BGA север", 	"repair_BgaNorthBridge", 	"Root_repairBga");
             menuCreateItem("BGA юг", 		"repair_BgaSouthBridge", 	"Root_repairBga");
             menuCreateItem("BGA проц",      "repair_BgaCPU", 	        "Root_repairBga");
-
 	
-	menuCreateItem("Следы залития", "repairPour", "repairRoot");
-   
+	menuCreateItem("Следы залития", "repairPour", "repairRoot");   
     menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
-
     menuCreateItem("ОЗУ", "repairMemory",  "repairRoot");
-
     menuCreateItem("В UMA", "repairUMA", "repairRoot");
 }
 
