@@ -356,7 +356,6 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id142').click();  //замена озу
-
             $(".prise-raboti form").submit();
             break;
 
@@ -479,7 +478,6 @@ function processRepairMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id135').click();  //пайка планарной микросхемы
-
             $(".prise-raboti form").submit();
             break;
 
@@ -499,7 +497,6 @@ function processRepairMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id142').click();  //замена озу
-
             $(".prise-raboti form").submit();
             break;
     }
