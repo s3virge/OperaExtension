@@ -15,7 +15,7 @@
         padding: 8px;
       }
         
-      #btnSearch{
+      .btnSearch{
         padding: 3px;
         width: 35%;
       }
@@ -27,10 +27,11 @@
     </style>
 
     <div style="width: 250px; text-align: center;">
-      <h2>Найти на vlab.su</h2>
+      <h2></h2>
       <form>
         <input type='text' id="search" placeholder='' autofocus style="width: 98%;"/>
-        <button id="btnSearch">Искать</button>
+        <button class="btnSearch" id="btnSearchVlab">Искать на Vlab</button>
+		<button class="btnSearch" id="btnSearchBadCaps">Искать на BadCap</button>
       </form>
     </div>
     <script type="text/javascript" src="popupwnd.js"></script>
