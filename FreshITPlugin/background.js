@@ -132,7 +132,7 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("BGA север", 	"diagnosticsBgaNorthBridge", 	"Root_diagnosticsBga");
             menuCreateItem("BGA юг", 		"diagnosticsBgaSouthBridge", 	"Root_diagnosticsBga");
             menuCreateItem("BGA проц", 		"diagnosticsBgaCPU", 	        "Root_diagnosticsBga");
-            menuCreateItem("Черный компаунд", "diagnostics_Compaund", 	    "Root_diagnosticsBga");
+            menuCreateItem("Компаунд",      "diagnostics_Compaund", 	    "Root_diagnosticsBga");
 			
 		menuCreateItem("Следы", 		"Root_diagnosticsTraces", 		"diagnosticsRoot");
 			menuCreateItem("Следы залития", "diagnosticsPour", 				"Root_diagnosticsTraces");
