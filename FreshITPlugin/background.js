@@ -105,7 +105,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Термопаста пересохла", 		"diagnostics_Thermal_Compaund",		"Root_diagnostics_Cleaning");
 			menuCreateItem("Вентилятор",         		"diagnostics_Fan",             		"Root_diagnostics_Cleaning");		
 		
-		menuCreateItem("Корпус",             "diagnosticsBrokenBody",       "diagnosticsRoot");
+		menuCreateItem("Корпус сломан",             "diagnosticsBrokenBody",       "diagnosticsRoot");
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
 		menuCreateItem("Короткое замыкание", "diagnostics_ShortCircuit",    "diagnosticsRoot");
 		menuCreateItem("Прошивка BIOS",      "diagnosticsBIOS",             "diagnosticsRoot");
@@ -116,6 +116,11 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("Неисправна",    	"diagnosticsMatrix",            	"Root_diagnosticsMatrix");
 
         menuCreateItem("Гнездо питания",    "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+
+        menuCreateItem("Звук",      "Root_diagnostics_Audio", "diagnosticsRoot");
+            menuCreateItem("Аудио гнездо сломано",  "diagnostics_Audio_Socket_Broken",  "Root_diagnostics_Audio");
+            menuCreateItem("Не работаю динамики",   "diagnostics_Speakers_Broken",      "Root_diagnostics_Audio");
+            menuCreateItem("Аудиокодек",            "diagnostics_Audio_Сodec",          "Root_diagnostics_Audio");
 
         menuCreateItem("Мульт", 				"Root_diagnostics_Mult", 			    "diagnosticsRoot");
             menuCreateItem("Замена мульта", 	"diagnostics_Mult_Replacing", 			"Root_diagnostics_Mult");
@@ -165,7 +170,7 @@ function CreateRepairMenu() {
 			menuCreateItem("Термопрокладки",    "repair_DamagedThermalPads",	"Root_repairCleaning");
 			menuCreateItem("Вентилятор",		"repair_Fan",           		"Root_repairCleaning");
 			
-        menuCreateItem("Корпус",                "repairBrokenBody",             "repairRoot");
+        menuCreateItem("Корпус сломан",                "repairBrokenBody",             "repairRoot");
         menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
         menuCreateItem("Прошивка BIOS",         "repairBIOS",                   "repairRoot");

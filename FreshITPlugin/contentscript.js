@@ -213,11 +213,6 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы предыдущего ремонта.");
             $("#form-save-btn").click();
             break;
-
-        /* case "diagnosticsDamagedThermalPads":
-            $("#diag_rez_input, #rem_rez_input").append(" Чипы охлаждаются через поврежденные термопрокладки.");
-            $("#form-save-btn").click();
-            break; */
 		
 		case "diagnosticsBgaVga":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа.");
@@ -368,6 +363,37 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Чипы на материнской плате зафиксированы с помощью компаунда не размягчающегося при нагревании. При демонтаже микросхемы возможно повреждение токопроводящих дорожек.");
             $("#form-save-btn").click();
             break;
+
+        case "diagnostics_Audio_Socket_Broken":
+            $("#diag_rez_input, #rem_rez_input").append(" Гнездо подключения наушников сломано. Необходима его замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id127').click();  //Замена аудио
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnostics_Speakers_Broken":
+            $("#diag_rez_input, #rem_rez_input").append(" Динамики не работают, необходима их замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id539').click();  //Замена динамиков
+            $(".prise-raboti form").submit();
+            break;
+
+        case "diagnostics_Audio_Сodec":
+            $("#diag_rez_input, #rem_rez_input").append(" Аудио система не работает. Для дальнейшей диагностики необходима замена микросхемы аудио кодека.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id134').click();  //пайка qfn чипа
+
+            $(".prise-raboti form").submit();
+            break;
+
     }
 }
 
@@ -392,7 +418,7 @@ function processRepairMessage(message){
             break;
 			
 		case "repair_DamagedThermalPads":
-            $("#diag_rez_input, #rem_rez_input").append(" Поврежденные термопрокладки заменены на новые.");
+            $("#diag_rez_input, #rem_rez_input").append(" Термопрокладки заменены на новые.");
             $("#form-save-btn").click();
             break;
 			
