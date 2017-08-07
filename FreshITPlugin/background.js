@@ -103,7 +103,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Чистка", 					"diagnostics_Cleaning", 			"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопрокладки повреждены", "diagnostics_DamagedThermalPads", 	"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопаста пересохла", 		"diagnostics_Thermal_Compaund",		"Root_diagnostics_Cleaning");
-			menuCreateItem("Вентилятор",         		"diagnostics_Fan",             		"Root_diagnostics_Cleaning");		
+			menuCreateItem("Вентилятор",         		"diagnostics_Fan",             		"Root_diagnostics_Cleaning");
 		
 		menuCreateItem("Корпус сломан",             "diagnosticsBrokenBody",       "diagnosticsRoot");
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
@@ -134,13 +134,13 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("BGA проц", 		"diagnosticsBgaCPU", 	        "Root_diagnosticsBga");
             menuCreateItem("Черный компаунд", "diagnostics_Compaund", 	    "Root_diagnosticsBga");
 			
-		menuCreateItem("Следы ...", 		"Root_diagnosticsTraces", 		"diagnosticsRoot");
+		menuCreateItem("Следы", 		"Root_diagnosticsTraces", 		"diagnosticsRoot");
 			menuCreateItem("Следы залития", "diagnosticsPour", 				"Root_diagnosticsTraces");
 			menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", 	"Root_diagnosticsTraces");
         
 		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
 
-		menuCreateItem("Стресс тест...", "Root_diagnosticsTest", 		"diagnosticsRoot");
+		menuCreateItem("Стресс тест", "Root_diagnosticsTest", 		"diagnosticsRoot");
 		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", 	"Root_diagnosticsTest");
 		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", 	"Root_diagnosticsTest");
 

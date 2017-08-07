@@ -4,7 +4,6 @@
     <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FreshITPlugin/background.js" afterPath="$PROJECT_DIR$/FreshITPlugin/background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
           <file leaf-file-name="background.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1649">
-                  <caret line="172" column="30" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="37" />
+                <state relative-caret-position="-29">
+                  <caret line="167" column="30" lean-forward="false" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#42#0" expanded="false" />
                   </folding>
@@ -37,7 +36,7 @@
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
+                <state relative-caret-position="335">
                   <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
                   <folding />
                 </state>
@@ -53,6 +52,7 @@
       <find>diagnosticsTest</find>
       <find>diagnosticsMatrix</find>
       <find>прок</find>
+      <find>Корпус</find>
     </findStrings>
     <replaceStrings>
       <replace>Корпус сломан</replace>
@@ -584,7 +584,7 @@
       <workItem from="1501772966270" duration="26000" />
       <workItem from="1501861467470" duration="591000" />
       <workItem from="1501920847827" duration="593000" />
-      <workItem from="1502112572449" duration="2092000" />
+      <workItem from="1502112572449" duration="2328000" />
     </task>
     <task id="LOCAL-00001" summary="My opera extension.">
       <created>1499264079888</created>
@@ -817,11 +817,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501861644724</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="i`m was add search on badcaps site">
+      <created>1502114922492</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1502114922492</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45552000" />
+    <option name="totallyTimeSpent" value="45788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1309,21 +1316,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="172" column="30" lean-forward="false" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="335">
+          <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="-29">
+          <caret line="167" column="30" lean-forward="false" selection-start-line="167" selection-start-column="30" selection-end-line="167" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
