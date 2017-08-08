@@ -128,7 +128,7 @@ function processDiagnosisMessage(message){
             break;
 		
 		case "diagnostics_Thermal_Compaund":
-            $("#diag_rez_input, #rem_rez_input").append(" Термопаста пересохла.");
+            $("#diag_rez_input, #rem_rez_input").append(" Термопаста на чипах пересохла.");
             $("#form-save-btn").click();
             break;
 						
