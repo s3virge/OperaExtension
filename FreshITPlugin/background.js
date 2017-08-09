@@ -62,13 +62,13 @@ function menuSendMessage(messageType, messageId) {
                     {diagnostics: messageId}
                 );
             }
-            else if (messageType == "notype"){
+            /* else if (messageType == "notype"){
                 chrome.tabs.sendMessage
                 (
                     tabs[0].id,
                     {notype: messageId}
                 );
-            }
+            } */
         }
     );
 }
@@ -103,7 +103,9 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Чистка", 					"diagnostics_Cleaning", 			"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопрокладки повреждены", "diagnostics_DamagedThermalPads", 	"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопаста пересохла", 		"diagnostics_Thermal_Compaund",		"Root_diagnostics_Cleaning");
-			menuCreateItem("Вентилятор",         		"diagnostics_Fan",             		"Root_diagnostics_Cleaning");
+			menuCreateItem("Вентилятор",         		"ROOT_diagnostics_Fan",             "Root_diagnostics_Cleaning");
+				menuCreateItem("Не вращается",         	"diagnostics_Fan",             		"ROOT_diagnostics_Fan");
+				menuCreateItem("Трещит",         		"diagnostics_Fan_Strange_Sounds",   "ROOT_diagnostics_Fan");
 		
 		menuCreateItem("Корпус сломан",             "diagnosticsBrokenBody",       "diagnosticsRoot");
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
@@ -158,6 +160,7 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Не гарантия", 	"diagnostics_NotAGuarantee", 	"Root_diagnosticsNot");
 		menuCreateItem("Не проявилась", "diagnostics_DontManifested",	"Root_diagnosticsNot");
 		menuCreateItem("Не деталь", 	"diagnostics_NotAPart", 		"Root_diagnosticsNot");
+		menuCreateItem("Фатальные повреждения", 	"diagnostics_Fatal_Damage", 		"Root_diagnosticsNot");
 }
 
 function CreateRepairMenu() {

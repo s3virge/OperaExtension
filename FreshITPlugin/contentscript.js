@@ -333,6 +333,15 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $(".prise-raboti form").submit();
             break;
+			
+		case "diagnostics_Fan_Strange_Sounds":
+            $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения издает посторонние звуки во время работы. Необходима его замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $(".prise-raboti form").submit();
+            break;
 
         case "diagnostics_Mult_Replacing":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы мультиконтроллера.");
@@ -392,6 +401,11 @@ function processDiagnosisMessage(message){
             $('#prise-id134').click();  //пайка qfn чипа
 
             $(".prise-raboti form").submit();
+            break;
+			
+		case "diagnostics_Fatal_Damage":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате фатальные повреждения не совместимые с дальнейшей эксплуатацией.");
+            $("#form-save-btn").click();
             break;
 
     }
