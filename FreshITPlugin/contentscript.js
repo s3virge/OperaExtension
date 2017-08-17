@@ -189,6 +189,22 @@ function processDiagnosisMessage(message){
             $('#prise-id122').click();	//замена шлейфа
             $(".prise-raboti form").submit();
             break;
+			
+		case "diagnostics_Matrix_Distortion":
+            $("#diag_rez_input, #rem_rez_input").append(" Изображение на матрице отображается с искажениями, необходима её замена.");
+            $("#form-save-btn").click();
+            $('#prise-id117').click();	//разборка крышки
+            $('#prise-id119').click();	//замена матрицы
+            $(".prise-raboti form").submit();
+            break;
+			
+		case "diagnostics_Matrix_NoBacklight":
+            $("#diag_rez_input, #rem_rez_input").append(" Изображение на матрицу выводится, но подсветка не работает.");
+            $("#form-save-btn").click();
+            $('#prise-id117').click();	//разборка крышки
+            // $('#prise-id119').click();	//замена матрицы
+            $(".prise-raboti form").submit();
+            break;
 
         case "diagnosticsPowerSupplyConnector":
             $("#diag_rez_input, #rem_rez_input").append(" Сломанно гнездо подключения блока питания." +
