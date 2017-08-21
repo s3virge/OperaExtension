@@ -473,7 +473,7 @@ function processRepairMessage(message){
             break;
 
         case "repairMatrix":
-            $("#diag_rez_input, #rem_rez_input").append(" Выполнена замена неисправной матрицы.");
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправная матрица заменена на новую.");
             $("#form-save-btn").click();
             break;
 
