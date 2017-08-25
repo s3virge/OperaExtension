@@ -110,8 +110,9 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Корпус сломан",             "diagnosticsBrokenBody",       "diagnosticsRoot");
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
 		menuCreateItem("Короткое замыкание", "diagnostics_ShortCircuit",    "diagnosticsRoot");
-		menuCreateItem("Прошивка BIOS",      "diagnosticsBIOS",             "diagnosticsRoot");
-
+		menuCreateItem("BIOS",      "diagnosticsBIOS",             "diagnosticsRoot");
+		menuCreateItem("Батарейка CMOS",      "diagnostics_CMOS_Battery",             "diagnosticsRoot");
+		
 		menuCreateItem("Матрица",           	"Root_diagnosticsMatrix",       	"diagnosticsRoot");
             menuCreateItem("Разбита", 	    	"diagnostics_Broken_Matrix",		"Root_diagnosticsMatrix");
             menuCreateItem("Поврежден кабель",	"diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
@@ -178,7 +179,8 @@ function CreateRepairMenu() {
         menuCreateItem("Корпус сломан",                "repairBrokenBody",             "repairRoot");
         menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
-        menuCreateItem("Прошивка BIOS",         "repairBIOS",                   "repairRoot");
+        menuCreateItem("BIOS",         "repairBIOS",                   "repairRoot");
+		menuCreateItem("Батарейка CMOS",      "repair_CMOS_Battery",             "diagnosticsRoot");
         menuCreateItem("Матрица",               "repairMatrix",                 "repairRoot");
         menuCreateItem("Гнездо питания",        "repairPowerSupplyConnector",   "repairRoot");
 

@@ -423,7 +423,15 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате фатальные повреждения не совместимые с дальнейшей эксплуатацией.");
             $("#form-save-btn").click();
             break;
-
+			
+		case "diagnostics_CMOS_Battery":
+            $("#diag_rez_input, #rem_rez_input").append(" Батарейка cmos разряжена, необходима её замена.");
+            $("#form-save-btn").click();			
+			
+            $('#prise-id116').click();	//разборка 
+			$('#prise-id704').click();	//замена батарейки смос
+			$(".prise-raboti form").submit();
+            break;
     }
 }
 
@@ -555,5 +563,14 @@ function processRepairMessage(message){
             $('#prise-id142').click();  //замена озу
             $(".prise-raboti form").submit();
             break;
+			
+		case "repair_CMOS_Battery":
+            $("#diag_rez_input, #rem_rez_input").append(" Батарейка cmos заменена на новую.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка 
+			$('#prise-id704').click();	//замена батарейки смос
+            $(".prise-raboti form").submit();
+            break;			
     }
 }
