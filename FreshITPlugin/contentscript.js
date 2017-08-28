@@ -307,8 +307,16 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();	
             break;
 
-        case "diagnosticsBrokenBody":
+        case "diagnostics_Fastening_of_loops":
             $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы сломаны, необходимо их восстановление.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+			$('#prise-id140').click();	//Восстановление корпуса
+			$(".prise-raboti form").submit();		
+            break;
+			
+		case "diagnosticsBrokenBody":
+            $("#diag_rez_input, #rem_rez_input").append(" Корпус ноутбука поврежден, необходимо его восстановление.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
 			$('#prise-id140').click();	//Восстановление корпуса
@@ -442,8 +450,13 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             break;
 			
+		case "repair_Fastening_of_loops":
+            $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы восстановлены.");
+            $("#form-save-btn").click();
+            break;
+			
 		case "repairBrokenBody":
-            $("#diag_rez_input, #rem_rez_input").append(" Корпус восстановлен.");
+            $("#diag_rez_input, #rem_rez_input").append(" Выполнено восстановление корпуса.");
             $("#form-save-btn").click();
             break;
 

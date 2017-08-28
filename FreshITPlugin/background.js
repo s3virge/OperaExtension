@@ -107,7 +107,11 @@ function CreateDiagnosticsMenu() {
 				menuCreateItem("Не вращается",         	"diagnostics_Fan",             		"ROOT_diagnostics_Fan");
 				menuCreateItem("Трещит",         		"diagnostics_Fan_Strange_Sounds",   "ROOT_diagnostics_Fan");
 		
-		menuCreateItem("Корпус сломан",             "diagnosticsBrokenBody",       "diagnosticsRoot");
+		
+		menuCreateItem("Корпус",             	"Root_diagnostics_Body",       		"diagnosticsRoot");
+			menuCreateItem("Крепление петель",  "diagnostics_Fastening_of_loops",   "Root_diagnostics_Body");
+			menuCreateItem("Сломан",            "diagnosticsBrokenBody",       		"Root_diagnostics_Body");
+		
 		menuCreateItem("Клавиатура",         "diagnosticsKeyboard",         "diagnosticsRoot");
 		menuCreateItem("Короткое замыкание", "diagnostics_ShortCircuit",    "diagnosticsRoot");
 		menuCreateItem("BIOS",      "diagnosticsBIOS",             "diagnosticsRoot");
@@ -176,11 +180,14 @@ function CreateRepairMenu() {
 			menuCreateItem("Термопрокладки",    "repair_DamagedThermalPads",	"Root_repairCleaning");
 			menuCreateItem("Вентилятор",		"repair_Fan",           		"Root_repairCleaning");
 			
-        menuCreateItem("Корпус сломан",                "repairBrokenBody",             "repairRoot");
-        menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
+		menuCreateItem("Корпус",             	"Root_repair_Body",       		"repairRoot");
+			menuCreateItem("Крепление петель",  "repair_Fastening_of_loops", 	"Root_repair_Body");
+			menuCreateItem("Сломан",            "repairBrokenBody",             "Root_repair_Body");
+        
+		menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
         menuCreateItem("BIOS",         "repairBIOS",                   "repairRoot");
-		menuCreateItem("Батарейка CMOS",      "repair_CMOS_Battery",             "diagnosticsRoot");
+		menuCreateItem("Батарейка CMOS",      "repair_CMOS_Battery",             "repairRoot");
         menuCreateItem("Матрица",               "repairMatrix",                 "repairRoot");
         menuCreateItem("Гнездо питания",        "repairPowerSupplyConnector",   "repairRoot");
 
