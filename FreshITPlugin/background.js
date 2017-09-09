@@ -143,9 +143,11 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("BGA проц", 		"diagnosticsBgaCPU", 	        "Root_diagnosticsBga");
             menuCreateItem("Компаунд",      "diagnostics_Compaund", 	    "Root_diagnosticsBga");
 			
-		menuCreateItem("Следы", 		"Root_diagnosticsTraces", 		"diagnosticsRoot");
-			menuCreateItem("Следы залития", "diagnosticsPour", 				"Root_diagnosticsTraces");
-			menuCreateItem("Следы ремонта", "diagnosticsTracesOfRepair", 	"Root_diagnosticsTraces");
+		menuCreateItem("Следы", 			"Root_diagnosticsTraces", 		"diagnosticsRoot");
+			menuCreateItem("Залития", 		"diagnosticsPour", 				"Root_diagnosticsTraces");
+			menuCreateItem("Ремонта", 		"diagnosticsTracesOfRepair", 	"Root_diagnosticsTraces");
+			menuCreateItem("Прусаки", 		"diagnostics_cockroach", 		"Root_diagnosticsTraces");
+			
         
 		menuCreateItem("Установка ОС", "diagnosticsInstallOs", "diagnosticsRoot");
 
@@ -156,6 +158,8 @@ function CreateDiagnosticsMenu() {
         menuCreateItem("ОЗУ", "Root_diagnostics_MemTest",        "diagnosticsRoot");
             menuCreateItem("Тест с ошибками", "diagnostics_MemTest_Errors",      "Root_diagnostics_MemTest");
             menuCreateItem("Тест без ошибок", "diagnostics_MemTest_No_Errors",   "Root_diagnostics_MemTest");
+		
+		menuCreateItem("В UMA", "diagnostics_UMA", "diagnosticsRoot");
 			
 		menuCreateItem("Индикация на корпусе", 							"Root_DiagnosticsNoReaction", 		"diagnosticsRoot");
 			menuCreateItem("Нет индикации, нет реакции", 				"diagnosticsNoReaction", 			"Root_DiagnosticsNoReaction");	
@@ -168,6 +172,7 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Не проявилась", "diagnostics_DontManifested",	"Root_diagnosticsNot");
 		menuCreateItem("Не деталь", 	"diagnostics_NotAPart", 		"Root_diagnosticsNot");
 		menuCreateItem("Фатальные повреждения", 	"diagnostics_Fatal_Damage", 		"Root_diagnosticsNot");
+		menuCreateItem("Неудачный конструктив", 	"diagnostics_NOT_a_good_design", 		"Root_diagnosticsNot");
 }
 
 function CreateRepairMenu() {
@@ -178,7 +183,10 @@ function CreateRepairMenu() {
 		menuCreateItem("Охлада",            	"Root_repairCleaning",			"repairRoot");
 			menuCreateItem("Чистка",        	"repairCleaning",       		"Root_repairCleaning");
 			menuCreateItem("Термопрокладки",    "repair_DamagedThermalPads",	"Root_repairCleaning");
-			menuCreateItem("Вентилятор",		"repair_Fan",           		"Root_repairCleaning");
+			
+		menuCreateItem("Вентилятор ",		"ROOT_repair_Fan",           		"Root_repairCleaning");
+			menuCreateItem("Смазан",         	"repair_Fan_is_oiled",          "ROOT_repair_Fan");
+			menuCreateItem("Заменён",         	"repair_Fan",   				"ROOT_repair_Fan");
 			
 		menuCreateItem("Корпус",             	"Root_repair_Body",       		"repairRoot");
 			menuCreateItem("Крепление петель",  "repair_Fastening_of_loops", 	"Root_repair_Body");

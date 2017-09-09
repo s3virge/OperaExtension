@@ -24,6 +24,11 @@ if (remontNumber != null) {
 
 $(".login-header img").remove();
 
+//убрать стиль у первого дочернего элемента div вложенного в div#auth
+$("div#auth > div").attr("style", "");
+//увеличить размер шрифта в поле ввода вложенном в .no-ajax
+$(".no-ajax input").css("font-size","2em");
+
 var Perfom = true;
 //если PERFORM не определено
 if (typeof(PERFORM) == "undefined"){
@@ -37,7 +42,6 @@ if (Perfom){
     $(".menu").remove();
     $("#leftBlock, #_data").remove();
 }
-/*-------------------------------------------*/
 
 $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
 $("#breadcrumbs").remove();
@@ -54,6 +58,9 @@ function updateCSS() {
     $(".changes-confirm").css("font-size", "14px");
 
     $(".footer").hide();
+	
+	$(".table_list td:first-of-type").css("font-size", "1.2em");
+	$(".table_list td:first-of-type").css("background-color", "rgba(251, 175, 3, 0.16)");
 
     //$("#rightBlock").css("height", "598px");
     // $("#right-block-container").css("height", "598px");
@@ -73,6 +80,8 @@ $("#right-block-container").bind("DOMSubtreeModified", updateCSS );
 //chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
 //  console.log(response.farewell);
 //});
+
+//==================================================================================
 
 //принимаем сообщение из background.js
 chrome.runtime.onMessage.addListener(
@@ -154,7 +163,18 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id157').click();	//отмывка после залития
+            $('#prise-id136').click();	//пайка смд компонентов
             //$('#prise-id123').click();	//замена клавы
+            $(".prise-raboti form").submit();
+            break;
+		
+		//тараканы
+		case "diagnostics_cockroach":
+            $("#diag_rez_input, #rem_rez_input").append(" В корпусе ноутбука обнаружены насекомые и следы их жизнедеятельности. ");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
             $(".prise-raboti form").submit();
             break;
 
@@ -377,6 +397,17 @@ function processDiagnosisMessage(message){
 
             $(".prise-raboti form").submit();
             break;
+			
+		case "diagnostics_Mult_Firmware_Recovery":
+            $("#diag_rez_input, #rem_rez_input").append(" Необходимо восстановление прошивки микросхемы мультиконтроллера.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id688').click();  //Прошивка мульта
+
+            $(".prise-raboti form").submit();
+            break;
 
         case "diagnostics_MemTest_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки оперативной памяти обнаружила ошибки. Необходима её замена.");
@@ -439,6 +470,22 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка 
 			$('#prise-id704').click();	//замена батарейки смос
 			$(".prise-raboti form").submit();
+            break;
+			
+		case "diagnostics_UMA":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима переделка материнской платы для работы без дополнительной видеокарты.");
+            $("#form-save-btn").click();			
+			
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+			$('#prise-id136').click();	//пайка смд компонентов
+			$(".prise-raboti form").submit();
+            break;
+			
+		case "diagnostics_NOT_a_good_design":
+            $("#diag_rez_input, #rem_rez_input").append(" В результате неудачного конструктивного решения в данной модели ноутбука...");
+            $("#form-save-btn").click();			
+			
             break;
     }
 }
@@ -545,6 +592,11 @@ function processRepairMessage(message){
 
         case "repair_Fan":
             $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения заменён на новый.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "repair_Fan_is_oiled":
+            $("#diag_rez_input, #rem_rez_input").append(" Смазан вентилятор.");
             $("#form-save-btn").click();
             break;
 
