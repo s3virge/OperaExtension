@@ -117,6 +117,15 @@ function processDiagnosisMessage(message){
             $('#prise-id141').click();	//замена hdd
             $(".prise-raboti form").submit();
             break;
+			
+		case "diagnostics_Hdd_Not_determined":
+            $("#diag_rez_input, #rem_rez_input").append(" Жесткий диск не определяется в системе. Необходима его замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id141').click();	//замена hdd
+            $(".prise-raboti form").submit();
+            break;
 		
 		case "diagnostics_Hdd_No_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска ошибок не обнаружила.");
@@ -141,11 +150,31 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             break;
 						
-		case "diagnosticsInstallOs":
+		case "diagnostics_Install_Os":
             $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы.");
             $("#form-save-btn").click();
             $('#prise-id424').click();	//установка ос
             $(".prise-raboti form").submit();
+            break;
+			
+		case "diagnostics_os_Not_loading":
+            $("#diag_rez_input, #rem_rez_input").append(" Операционная система не загружается.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "diagnostics_os_Slowly_loaded":
+            $("#diag_rez_input, #rem_rez_input").append(" Операционная система загружается медленно.");
+            $("#form-save-btn").click();
+            break;
+		
+		case "diagnostics_Blue_Screen":
+            $("#diag_rez_input, #rem_rez_input").append(" Появляется синий экран.");
+            $("#form-save-btn").click();
+            break;
+			
+		case "diagnostics_Not_all_drivers":
+            $("#diag_rez_input, #rem_rez_input").append(" Не на все устройства установлены драйвера в операционной системе.");
+            $("#form-save-btn").click();
             break;
 
         case "diagnosticsKeyboard":
@@ -165,6 +194,14 @@ function processDiagnosisMessage(message){
             $('#prise-id157').click();	//отмывка после залития
             $('#prise-id136').click();	//пайка смд компонентов
             //$('#prise-id123').click();	//замена клавы
+            $(".prise-raboti form").submit();
+            break;
+			
+		case "diagnosticsPour_Case":
+            $("#diag_rez_input, #rem_rez_input").append(" В корпусе ноутбука следы попадания жидкости.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
             $(".prise-raboti form").submit();
             break;
 		
@@ -227,7 +264,7 @@ function processDiagnosisMessage(message){
             break;
 
         case "diagnosticsPowerSupplyConnector":
-            $("#diag_rez_input, #rem_rez_input").append(" Сломанно гнездо подключения блока питания." +
+            $("#diag_rez_input, #rem_rez_input").append(" Сломано гнездо подключения блока питания." +
                 " Необходима его замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
@@ -247,6 +284,11 @@ function processDiagnosisMessage(message){
 
         case "diagnosticsTracesOfRepair":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы предыдущего ремонта.");
+            $("#form-save-btn").click();
+            break;
+			
+		case "diagnostics_Traces_Of_Case_Repair":
+            $("#diag_rez_input, #rem_rez_input").append(" На корпусе следы предыдущего ремонта.");
             $("#form-save-btn").click();
             break;
 		
@@ -300,6 +342,17 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $(".prise-raboti form").submit();
             break;
+		
+		case "diagnostics_Vga_Or_UMA":
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id534').click();	//снятие компаунда
+            $('#prise-id133').click();	//пайка BGA
+            $('#prise-id154').click();  //чистка
+			$('#prise-id136').click();	//пайка смд компонентов
+            $(".prise-raboti form").submit();
+            break;
 			
 		case "diagnosticsNoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука не включается. Реакции на кнопку включения нет.");
@@ -343,6 +396,26 @@ function processDiagnosisMessage(message){
 			$(".prise-raboti form").submit();		
             break;
 			
+		case "diagnostics_Broken_Matrix_Loops_Replacement":
+            $("#diag_rez_input, #rem_rez_input").append(" Петли матрицы сломаны, необходима их замена.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+			$('#prise-id117').click();	//разборка крышки
+			$('#prise-id120').click();	//Замена петель			
+			$(".prise-raboti form").submit();		
+            break;
+		
+		case "diagnostics_Broken_Matrix_Loops_Repair":
+            $("#diag_rez_input, #rem_rez_input").append(" Петли матрицы сломаны необходимо их восстановление.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+			$('#prise-id117').click();	//разборка крышки
+			$('#prise-id555').click();	//восстановление петель	
+			$(".prise-raboti form").submit();	
+            break;
+			
+			
+			
 		case "diagnostics_NotAGuarantee":
             $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 3.1 условий гарантийного обслуживания данный ремонт не является гарантийным.");
             $("#form-save-btn").click();
@@ -354,7 +427,7 @@ function processDiagnosisMessage(message){
             break;
 		
         case "diagnostics_ShortCircuit":
-            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
+            $("#diag_rez_input, #rem_rez_input").append(" Блок питания при подключении к ноутбуку переключается в режим защиты от короткого замыкания. Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
             $("#form-save-btn").click();			
 			
             $('#prise-id116').click();	//разборка
@@ -423,6 +496,14 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             break;
 			
+		case "diagnostics_Mem_Does_not_work":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправен модуль оперативной памяти, необходима его замена.");
+            $("#form-save-btn").click();
+			$('#prise-id116').click();	//разборка
+            $('#prise-id142').click();  //замена озу
+            $(".prise-raboti form").submit();
+            break;
+			
 		case "diagnostics_Compaund":
             $("#diag_rez_input, #rem_rez_input").append(" Чипы на материнской плате зафиксированы с помощью компаунда не размягчающегося при нагревании. При демонтаже микросхемы возможно повреждение токопроводящих дорожек.");
             $("#form-save-btn").click();
@@ -472,6 +553,14 @@ function processDiagnosisMessage(message){
 			$(".prise-raboti form").submit();
             break;
 			
+		case "diagnostics_abruptly_turns_off":
+            $("#diag_rez_input, #rem_rez_input").append(" Ноутбук произвольно выключается во время работы.");
+            $("#form-save-btn").click();			
+			
+            $('#prise-id116').click();	//разборка 	
+			$(".prise-raboti form").submit();
+            break;
+			
 		case "diagnostics_UMA":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима переделка материнской платы для работы без дополнительной видеокарты.");
             $("#form-save-btn").click();			
@@ -485,11 +574,51 @@ function processDiagnosisMessage(message){
 		case "diagnostics_NOT_a_good_design":
             $("#diag_rez_input, #rem_rez_input").append(" В результате неудачного конструктивного решения в данной модели ноутбука...");
             $("#form-save-btn").click();			
-			
             break;
+			
+		case "diagnostics_PS_cable_is_damaged":
+            $("#diag_rez_input, #rem_rez_input").append(" Поврежден кабель в блоке питания. Необходима его замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id439').click();	//разборка бп
+            $('#prise-id381').click();  //замена кабеля
+			$(".prise-raboti form").submit();			
+            break;			
+		
+		case "diagnostics_Accumulator_Battery_Do_not_Charge":
+            $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея в ноутбуке определяется, но не заряжается. Для дальнейшей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+            break;			
+			
+		case "diagnostics_Accumulator_Battery_Worn_out":
+            $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея изношена, необходима её замена.");
+            $("#form-save-btn").click();		
+            break;
+		
+		case "diagnostics_WEb_camera_Not_determined":
+            $("#diag_rez_input, #rem_rez_input").append(" WEB камера не определяется как устройство в операционной системе. Для дальнешей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+			
+			//$('#prise-id116').click();	//разборка
+            $('#prise-id117').click();	//разборка крышки
+			$(".prise-raboti form").submit();			
+            break;
+		
+		case "diagnostics_WiFi_Not_determined":
+            $("#diag_rez_input, #rem_rez_input").append(" Беспроводная сетевая карта не определяется как устройство в операционной системе. Для дальнешей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+			
+			$('#prise-id116').click();	//разборка
+            $('#prise-id480').click();	//замена WiFI
+			$(".prise-raboti form").submit();			
+            break;				
     }
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function processRepairMessage(message){
     switch(message){
         case "repairKeyboard":
@@ -601,7 +730,7 @@ function processRepairMessage(message){
             break;
 
         case "repair_Mult_Replacing":
-            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате заменеа микросхема мультиконтроллер.");
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате заменена микросхема мультиконтроллер.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
@@ -636,6 +765,39 @@ function processRepairMessage(message){
             $('#prise-id116').click();	//разборка 
 			$('#prise-id704').click();	//замена батарейки смос
             $(".prise-raboti form").submit();
-            break;			
+            break;
+			
+		case "repair_PS_cable_is_damaged":
+            $("#diag_rez_input, #rem_rez_input").append(" Поврежденный кабель в блоке питания заменён на новый.");
+            $("#form-save-btn").click();
+
+            $('#prise-id439').click();	//разборка бп
+            $('#prise-id381').click();  //замена кабеля
+			$(".prise-raboti form").submit();			
+            break;
+			
+		case "repair_Accumulator_Battery":
+            $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея заменена на новую.");
+            $("#form-save-btn").click();		
+            break;
+
+		case "repair_WEb_camera":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправная WEB камера заменена на новую.");
+            $("#form-save-btn").click();
+			
+			//$('#prise-id116').click();	//разборка
+            $('#prise-id117').click();	//разборка крышки
+			$(".prise-raboti form").submit();			
+            break;	
+			
+		case "repair_WiFi":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправный модуль WiFi заменён на новый.");
+            $("#form-save-btn").click();
+			
+			$('#prise-id116').click();	//разборка
+            $('#prise-id480').click();	//замена WiFI
+			$(".prise-raboti form").submit();		
+            break;	
+			
     }
 }
