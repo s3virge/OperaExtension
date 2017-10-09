@@ -50,6 +50,11 @@ $(".line2").css("margin-bottom", "0");
 
 /*updateCSS не вызывается когда меняется содержимое #rightBlock */
 function updateCSS() {
+	$(".timer-btn").css("padding", "10px 50px");
+	$(".timer-btn").css("font-size", "1.5em");
+	$(".stop-action").css("background-color", "#dd0000");
+	$(".start-action").css("background-color", "#006400");
+	
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
     $("#form-save-btn").css("color", "red");
@@ -102,6 +107,14 @@ chrome.runtime.onMessage.addListener(
     }
 );
 
+function PushAddWorkBtn(){
+	$(".prise-raboti form").submit();
+    //когда использую submit() все работает...
+    //когда click() работы доблируются.
+	//$(".prise-raboti input[type='submit']").click();
+	//$(".prise-raboti").find("input[type='submit']").click();
+}
+
 function processDiagnosisMessage(message){
 
     switch(message){
@@ -110,36 +123,37 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id141').click();	//замена hdd
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id141').click();	//замена hdd            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Hdd_Not_determined":
             $("#diag_rez_input, #rem_rez_input").append(" Жесткий диск не определяется в системе. Необходима его замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id141').click();	//замена hdd
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id141').click();	//замена hdd            
+            PushAddWorkBtn();
+			break;
 		
 		case "diagnostics_Hdd_No_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска ошибок не обнаружила.");
             $("#form-save-btn").click();
-            break;
+			break;
 
         case "diagnostics_Cleaning":
             $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения запылена. Необходима чистка.");
             $("#form-save-btn").click();
             $('#prise-id154').click();  //чистка
-            $('#prise-id116').click();	//разборка
-            $(".prise-raboti form").submit();
+            $('#prise-id116').click();	//разборка    
+			
+			PushAddWorkBtn();			
             break;
 			
 		case "diagnostics_DamagedThermalPads":
             $("#diag_rez_input, #rem_rez_input").append(" Термопрокладки повреждены.");
             $("#form-save-btn").click();
-            break;
+			break;
 		
 		case "diagnostics_Thermal_Compaund":
             $("#diag_rez_input, #rem_rez_input").append(" Термопаста на чипах пересохла.");
@@ -149,9 +163,9 @@ function processDiagnosisMessage(message){
 		case "diagnostics_Install_Os":
             $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы.");
             $("#form-save-btn").click();
-            $('#prise-id424').click();	//установка ос
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id424').click();	//установка ос            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_os_Not_loading":
             $("#diag_rez_input, #rem_rez_input").append(" Операционная система не загружается.");
@@ -161,25 +175,25 @@ function processDiagnosisMessage(message){
 		case "diagnostics_os_Slowly_loaded":
             $("#diag_rez_input, #rem_rez_input").append(" Операционная система загружается медленно.");
             $("#form-save-btn").click();
-            break;
+			break;
 		
 		case "diagnostics_Blue_Screen":
             $("#diag_rez_input, #rem_rez_input").append(" Появляется синий экран.");
             $("#form-save-btn").click();
-            break;
+			break;
 			
 		case "diagnostics_Not_all_drivers":
             $("#diag_rez_input, #rem_rez_input").append(" Не на все устройства установлены драйвера в операционной системе.");
             $("#form-save-btn").click();
-            break;
+			break;
 
         case "diagnosticsKeyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Не все клавиши на клавиатуре работают, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
-            $('#prise-id123').click();	//замена клавы
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id123').click();	//замена клавы            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsPour":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы попадания жидкости. Для дальнейшей диагностики необходимо устранить последствия попадания жидкости.");
@@ -189,17 +203,17 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $('#prise-id157').click();	//отмывка после залития
             $('#prise-id136').click();	//пайка смд компонентов
-            //$('#prise-id123').click();	//замена клавы
-            $(".prise-raboti form").submit();
-            break;
+            //$('#prise-id123').click();	//замена клавы            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnosticsPour_Case":
             $("#diag_rez_input, #rem_rez_input").append(" В корпусе ноутбука следы попадания жидкости.");
             $("#form-save-btn").click();
 
-            $('#prise-id116').click();	//разборка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id116').click();	//разборка            
+            PushAddWorkBtn();
+			break;
 		
 		//тараканы
 		case "diagnostics_cockroach":
@@ -207,86 +221,86 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsBIOS":
             $("#diag_rez_input, #rem_rez_input").append(" Необходимо восстановление прошивки BIOS.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
-            $('#prise-id162').click();	//Прошивка биос
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id162').click();	//Прошивка биос            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsMatrix":
             $("#diag_rez_input, #rem_rez_input").append(" Не работает матрица, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
-            $('#prise-id119').click();	//замена матрицы
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id119').click();	//замена матрицы            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_Broken_Matrix":
             $("#diag_rez_input, #rem_rez_input").append(" Разбита матрица, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
-            $('#prise-id119').click();	//замена матрицы
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id119').click();	//замена матрицы            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_Broken_SCREEN_CABLE":
             $("#diag_rez_input, #rem_rez_input").append(" Поврежден кабель матрицы, необходима его замена.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
-            $('#prise-id122').click();	//замена шлейфа
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id122').click();	//замена шлейфа            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Matrix_Distortion":
             $("#diag_rez_input, #rem_rez_input").append(" Изображение на матрице отображается с искажениями, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
-            $('#prise-id119').click();	//замена матрицы
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id119').click();	//замена матрицы            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Matrix_NoBacklight":
             $("#diag_rez_input, #rem_rez_input").append(" Изображение на матрицу выводится, но подсветка не работает.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
-            // $('#prise-id119').click();	//замена матрицы
-            $(".prise-raboti form").submit();
-            break;
+            // $('#prise-id119').click();	//замена матрицы            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsPowerSupplyConnector":
             $("#diag_rez_input, #rem_rez_input").append(" Сломано гнездо подключения блока питания." +
                 " Необходима его замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
-            $('#prise-id128').click();	//замена гнезда питания
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id128').click();	//замена гнезда питания            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_Test_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа стресс тест выполняется с ошибками.");
             $("#form-save-btn").click();
-            break;
+			break;
 
         case "diagnostics_Test_No_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа стресс тест выполняется без ошибок.");
             $("#form-save-btn").click();
-            break;
+			break;
 
         case "diagnosticsTracesOfRepair":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы предыдущего ремонта.");
             $("#form-save-btn").click();
-            break;
+			break;
 			
 		case "diagnostics_Traces_Of_Case_Repair":
             $("#diag_rez_input, #rem_rez_input").append(" На корпусе следы предыдущего ремонта.");
             $("#form-save-btn").click();
-            break;
+			break;
 		
 		case "diagnosticsBgaVga":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа.");
@@ -296,8 +310,8 @@ function processDiagnosisMessage(message){
 			$('#prise-id534').click();	//снятие компаунда
 			$('#prise-id133').click();	//пайка BGA    
 			$('#prise-id154').click();  //чистка	
-            $(".prise-raboti form").submit();			
-            break;
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsBgaHUB":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы контроллера платформы.");
@@ -305,9 +319,9 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsBgaNorthBridge":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы северный мост.");
@@ -315,9 +329,9 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsBgaSouthBridge":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы южный мост.");
@@ -325,9 +339,9 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
         case "diagnosticsBgaCPU":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена процессора.");
@@ -335,9 +349,9 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 		
 		case "diagnostics_Vga_Or_UMA":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
@@ -346,81 +360,79 @@ function processDiagnosisMessage(message){
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
             $('#prise-id154').click();  //чистка
-			$('#prise-id136').click();	//пайка смд компонентов
-            $(".prise-raboti form").submit();
-            break;
+			$('#prise-id136').click();	//пайка смд компонентов            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnosticsNoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука не включается. Реакции на кнопку включения нет.");
             $("#form-save-btn").click();
-			$('#prise-id116').click();	//разборка
-            $(".prise-raboti form").submit();			
-            break;
+			$('#prise-id116').click();	//разборка            			
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_HaveLite_NoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. Реакции на кнопку включения нет.");
             $("#form-save-btn").click();
-			$('#prise-id116').click();	//разборка
-            $(".prise-raboti form").submit();			
-            break;
+			$('#prise-id116').click();	//разборка            			
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_HaveLite_NoPicture":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. После нажатия на кнопку включения ноутбук включается, но изображение на экране не появляется.");
             $("#form-save-btn").click();
-			$('#prise-id116').click();	//разборка
-            $(".prise-raboti form").submit();			
-            break;
+			$('#prise-id116').click();	//разборка            			
+            PushAddWorkBtn();
+			break;
 		
 		case "diagnosticsNotRepair":
             $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
-            $("#form-save-btn").click();	
-            break;
+            $("#form-save-btn").click();
+			break;
 
         case "diagnostics_Fastening_of_loops":
             $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы сломаны, необходимо их восстановление.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
-			$('#prise-id140').click();	//Восстановление корпуса
-			$(".prise-raboti form").submit();		
-            break;
+			$('#prise-id140').click();	//Восстановление корпуса					
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnosticsBrokenBody":
             $("#diag_rez_input, #rem_rez_input").append(" Корпус ноутбука поврежден, необходимо его восстановление.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
-			$('#prise-id140').click();	//Восстановление корпуса
-			$(".prise-raboti form").submit();		
-            break;
+			$('#prise-id140').click();	//Восстановление корпуса					
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Broken_Matrix_Loops_Replacement":
             $("#diag_rez_input, #rem_rez_input").append(" Петли матрицы сломаны, необходима их замена.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
 			$('#prise-id117').click();	//разборка крышки
-			$('#prise-id120').click();	//Замена петель			
-			$(".prise-raboti form").submit();		
-            break;
+			$('#prise-id120').click();	//Замена петель					
+            PushAddWorkBtn();
+			break;
 		
 		case "diagnostics_Broken_Matrix_Loops_Repair":
             $("#diag_rez_input, #rem_rez_input").append(" Петли матрицы сломаны необходимо их восстановление.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
 			$('#prise-id117').click();	//разборка крышки
-			$('#prise-id555').click();	//восстановление петель	
-			$(".prise-raboti form").submit();	
-            break;
-			
-			
-			
+			$('#prise-id555').click();	//восстановление петель				
+            PushAddWorkBtn();
+			break;
+						
 		case "diagnostics_NotAGuarantee":
             $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 3.1 условий гарантийного обслуживания данный ремонт не является гарантийным.");
             $("#form-save-btn").click();
-            break;
+			break;
 			
 		case "diagnostics_DontManifested":
             $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась.");
             $("#form-save-btn").click();
-            break;
+			break;
 		
         case "diagnostics_ShortCircuit":
             $("#diag_rez_input, #rem_rez_input").append(" Блок питания при подключении к ноутбуку переключается в режим защиты от короткого замыкания. Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
@@ -428,33 +440,33 @@ function processDiagnosisMessage(message){
 			
             $('#prise-id116').click();	//разборка
             $('#prise-id137').click();	// Восстановление цепи питания материнской платы
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
             //не деталь
         case "diagnostics_NotAPart":
             $("#diag_rez_input, #rem_rez_input").append(" Данная деталь снята с производства. Заменить её на новую нельзя.");
             $("#form-save-btn").click();
-            break;
+			break;
 
         case "diagnostics_Fan":
             $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения неисправен, необходима его замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Fan_Strange_Sounds":
             $("#diag_rez_input, #rem_rez_input").append(" Вентилятор системы охлаждения издает посторонние звуки во время работы. Необходима его замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id154').click();  //чистка
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_Mult_Replacing":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена микросхемы мультиконтроллера.");
@@ -462,10 +474,9 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
-            $('#prise-id135').click();  //пайка планарной микросхемы
-
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id135').click();  //пайка планарной микросхемы            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Mult_Firmware_Recovery":
             $("#diag_rez_input, #rem_rez_input").append(" Необходимо восстановление прошивки микросхемы мультиконтроллера.");
@@ -473,37 +484,36 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
-            $('#prise-id688').click();  //Прошивка мульта
-
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id688').click();  //Прошивка мульта            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_MemTest_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки оперативной памяти обнаружила ошибки. Необходима её замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id142').click();  //замена озу
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id142').click();  //замена озу            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_MemTest_No_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки оперативной памяти ошибок не обнаружила.");
             $("#form-save-btn").click();
-            break;
+			break;
 			
 		case "diagnostics_Mem_Does_not_work":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправен модуль оперативной памяти, необходима его замена.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
-            $('#prise-id142').click();  //замена озу
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id142').click();  //замена озу            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Compaund":
             $("#diag_rez_input, #rem_rez_input").append(" Чипы на материнской плате зафиксированы с помощью компаунда не размягчающегося при нагревании. При демонтаже микросхемы возможно повреждение токопроводящих дорожек.");
             $("#form-save-btn").click();
-            break;
+			break;
 
         case "diagnostics_Audio_Socket_Broken":
             $("#diag_rez_input, #rem_rez_input").append(" Гнездо подключения наушников сломано. Необходима его замена.");
@@ -511,18 +521,18 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
-            $('#prise-id127').click();  //Замена аудио
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id127').click();  //Замена аудио            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_Speakers_Broken":
             $("#diag_rez_input, #rem_rez_input").append(" Динамики не работают, необходима их замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id539').click();  //Замена динамиков
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id539').click();  //Замена динамиков            
+            PushAddWorkBtn();
+			break;
 
         case "diagnostics_Audio_Сodec":
             $("#diag_rez_input, #rem_rez_input").append(" Аудио система не работает. Для дальнейшей диагностики необходима замена микросхемы аудио кодека.");
@@ -530,32 +540,31 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
-            $('#prise-id134').click();  //пайка qfn чипа
-
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id134').click();  //пайка qfn чипа            
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_Fatal_Damage":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате фатальные повреждения не совместимые с дальнейшей эксплуатацией.");
             $("#form-save-btn").click();
-            break;
+			break;
 			
 		case "diagnostics_CMOS_Battery":
             $("#diag_rez_input, #rem_rez_input").append(" Батарейка cmos разряжена, необходима её замена.");
             $("#form-save-btn").click();			
 			
             $('#prise-id116').click();	//разборка 
-			$('#prise-id704').click();	//замена батарейки смос
-			$(".prise-raboti form").submit();
-            break;
+			$('#prise-id704').click();	//замена батарейки смос			
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_abruptly_turns_off":
             $("#diag_rez_input, #rem_rez_input").append(" Ноутбук произвольно выключается во время работы.");
             $("#form-save-btn").click();			
 			
-            $('#prise-id116').click();	//разборка 	
-			$(".prise-raboti form").submit();
-            break;
+            $('#prise-id116').click();	//разборка 			
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_UMA":
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима переделка материнской платы для работы без дополнительной видеокарты.");
@@ -563,51 +572,51 @@ function processDiagnosisMessage(message){
 			
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
-			$('#prise-id136').click();	//пайка смд компонентов
-			$(".prise-raboti form").submit();
-            break;
+			$('#prise-id136').click();	//пайка смд компонентов			
+            PushAddWorkBtn();
+			break;
 			
 		case "diagnostics_NOT_a_good_design":
             $("#diag_rez_input, #rem_rez_input").append(" В результате неудачного конструктивного решения в данной модели ноутбука...");
-            $("#form-save-btn").click();			
-            break;
+            $("#form-save-btn").click();
+			break;
 			
 		case "diagnostics_PS_cable_is_damaged":
             $("#diag_rez_input, #rem_rez_input").append(" Поврежден кабель в блоке питания. Необходима его замена.");
             $("#form-save-btn").click();
 
             $('#prise-id439').click();	//разборка бп
-            $('#prise-id381').click();  //замена кабеля
-			$(".prise-raboti form").submit();			
-            break;			
+            $('#prise-id381').click();  //замена кабеля						
+            PushAddWorkBtn();
+			break;			
 		
 		case "diagnostics_Accumulator_Battery_Do_not_Charge":
             $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея в ноутбуке определяется, но не заряжается. Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
-            break;			
+			break;			
 			
 		case "diagnostics_Accumulator_Battery_Worn_out":
             $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея изношена, необходима её замена.");
-            $("#form-save-btn").click();		
-            break;
+            $("#form-save-btn").click();
+			break;
 		
 		case "diagnostics_WEb_camera_Not_determined":
             $("#diag_rez_input, #rem_rez_input").append(" WEB камера не определяется как устройство в операционной системе. Для дальнешей диагностики необходима её замена.");
             $("#form-save-btn").click();
 			
 			//$('#prise-id116').click();	//разборка
-            $('#prise-id117').click();	//разборка крышки
-			$(".prise-raboti form").submit();			
-            break;
+            $('#prise-id117').click();	//разборка крышки						
+            PushAddWorkBtn();
+			break;
 		
 		case "diagnostics_WiFi_Not_determined":
             $("#diag_rez_input, #rem_rez_input").append(" Беспроводная сетевая карта не определяется как устройство в операционной системе. Для дальнешей диагностики необходима её замена.");
             $("#form-save-btn").click();
 			
 			$('#prise-id116').click();	//разборка
-            $('#prise-id480').click();	//замена WiFI
-			$(".prise-raboti form").submit();			
-            break;				
+            $('#prise-id480').click();	//замена WiFI						
+            PushAddWorkBtn();
+			break;
     }
 }
 
@@ -637,8 +646,8 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             $('#prise-id154').click();  //чистка
             $('#prise-id116').click();	//разборка
-            $(".prise-raboti form").submit();
-            break;
+            PushAddWorkBtn();
+			break;
 			
 		case "repair_DamagedThermalPads":
             $("#diag_rez_input, #rem_rez_input").append(" Термопрокладки заменены на новые.");
@@ -648,9 +657,9 @@ function processRepairMessage(message){
         case "repairInstallOs":
             $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
             $("#form-save-btn").click();
-            $('#prise-id424').click();	//установка ос
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id424').click();	//установка ос            
+            PushAddWorkBtn();
+			break;
 
         case "repairHDD":
             $("#diag_rez_input, #rem_rez_input").append(" Жесткий диск заменён на новый.");
@@ -661,9 +670,9 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Выполнено восстановление прошивки BIOS на программаторе.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
-            $('#prise-id162').click();	//Прошивка биос
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id162').click();	//Прошивка биос            
+            PushAddWorkBtn();
+			break;
 
         case "repairMatrix":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправная матрица заменена на новую.");
@@ -731,37 +740,36 @@ function processRepairMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
-            $('#prise-id135').click();  //пайка планарной микросхемы
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id135').click();  //пайка планарной микросхемы            
+            PushAddWorkBtn();
+			break;
 
         case "repair_Mult_Firmware_Recovery":
             $("#diag_rez_input, #rem_rez_input").append(" Прошивка микросхемы мультиконтроллера восстановлена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id154').click();  //чистка
-
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id154').click();  //чистка            
+            PushAddWorkBtn();
+			break;
 
         case "repairMemory":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправный модуль оперативной памяти заменён на новый.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id142').click();  //замена озу
-            $(".prise-raboti form").submit();
-            break;
+            $('#prise-id142').click();  //замена озу            
+            PushAddWorkBtn();
+			break;
 			
 		case "repair_CMOS_Battery":
             $("#diag_rez_input, #rem_rez_input").append(" Батарейка cmos заменена на новую.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка 
-			$('#prise-id704').click();	//замена батарейки смос
-            $(".prise-raboti form").submit();
-            break;
+			$('#prise-id704').click();	//замена батарейки смос            
+            PushAddWorkBtn();
+			break;
 			
 		case "repair_PS_cable_is_damaged":
             $("#diag_rez_input, #rem_rez_input").append(" Поврежденный кабель в блоке питания заменён на новый.");
@@ -769,8 +777,8 @@ function processRepairMessage(message){
 
             $('#prise-id439').click();	//разборка бп
             $('#prise-id381').click();  //замена кабеля
-			$(".prise-raboti form").submit();			
-            break;
+            PushAddWorkBtn();
+			break;
 			
 		case "repair_Accumulator_Battery":
             $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея заменена на новую.");
@@ -782,18 +790,17 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
 			
 			//$('#prise-id116').click();	//разборка
-            $('#prise-id117').click();	//разборка крышки
-			$(".prise-raboti form").submit();			
-            break;	
+            $('#prise-id117').click();	//разборка крышки						
+            PushAddWorkBtn();
+			break;	
 			
 		case "repair_WiFi":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправный модуль WiFi заменён на новый.");
             $("#form-save-btn").click();
 			
 			$('#prise-id116').click();	//разборка
-            $('#prise-id480').click();	//замена WiFI
-			$(".prise-raboti form").submit();		
-            break;	
-			
+            $('#prise-id480').click();	//замена WiFI					
+            PushAddWorkBtn();
+			break;
     }
 }
