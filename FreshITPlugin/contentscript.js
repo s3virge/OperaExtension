@@ -617,6 +617,16 @@ function processDiagnosisMessage(message){
             $('#prise-id480').click();	//замена WiFI						
             PushAddWorkBtn();
 			break;
+		
+		case "diagnostics_WiFi_Does_Not_Turn_On":
+            $("#diag_rez_input, #rem_rez_input").append(" Беспроводная сетевая карта определяется как устройство в операционной системе, но не включается.");
+            $("#diag_rez_input, #rem_rez_input").append(" Для дальнешей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+			
+			$('#prise-id116').click();	//разборка
+            $('#prise-id480').click();	//замена WiFI						
+            PushAddWorkBtn();
+			break;
     }
 }
 

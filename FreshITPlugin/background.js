@@ -134,6 +134,7 @@ function CreateDiagnosticsMenu() {
         			
 		menuCreateItem("WiFi",           	"Root_diagnostics_WiFi",       	"diagnosticsRoot");
 			menuCreateItem("Не определяется",   "diagnostics_WiFi_Not_determined",       	"Root_diagnostics_WiFi");
+			menuCreateItem("Не включается",   	"diagnostics_WiFi_Does_Not_Turn_On",       	"Root_diagnostics_WiFi");
         			
 		menuCreateItem("Блок питания",    		"ROOT_diagnostics_Power_Supply",   "diagnosticsRoot");
 			menuCreateItem("Кабель поврежден",	"diagnostics_PS_cable_is_damaged",   "ROOT_diagnostics_Power_Supply");
