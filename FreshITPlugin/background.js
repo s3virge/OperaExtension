@@ -112,19 +112,33 @@ function CreateDiagnosticsMenu() {
 				
 		menuCreateItem("Корпус",             	"Root_diagnostics_Body",       		"diagnosticsRoot");
 			menuCreateItem("Крепление петель",  "diagnostics_Fastening_of_loops",   "Root_diagnostics_Body");
+			/*DC Power Jack Socket Connector Charging Port*/
+			menuCreateItem("Крепление гнезда",  "diagnostics_Power_Jack_Socket",   "Root_diagnostics_Body");
 			menuCreateItem("Сломан",            "diagnosticsBrokenBody",       		"Root_diagnostics_Body");
 			menuCreateItem("Петли",           		"Root_diagnostics_Matrix_Loops",       	"Root_diagnostics_Body");
 				menuCreateItem("Замена", 	    	"diagnostics_Broken_Matrix_Loops_Replacement",		"Root_diagnostics_Matrix_Loops");
 				menuCreateItem("Восстановление", 	"diagnostics_Broken_Matrix_Loops_Repair",		"Root_diagnostics_Matrix_Loops");
 				
 		menuCreateItem("Клавиатура",         	"diagnosticsKeyboard",         "diagnosticsRoot");
+		
+		menuCreateItem("Тачпад",         		"Root_diagnosticsTachPad",         "diagnosticsRoot");
+			menuCreateItem("Не работает",   	"diagnostics_TachPad_Does_not_Work", 		"Root_diagnosticsTachPad");
+			menuCreateItem("Поврежден шлейф",   "diagnostics_TachPad_cable_broken", 		"Root_diagnosticsTachPad");
+			menuCreateItem("Не работают кнопки","diagnostics_TachPad_Btn_Does_not_Work", 	"Root_diagnosticsTachPad");
+		
 		menuCreateItem("Короткое замыкание", 	"diagnostics_ShortCircuit",    "diagnosticsRoot");
-		menuCreateItem("BIOS",      			"diagnosticsBIOS",             "diagnosticsRoot");
-		menuCreateItem("Батарейка CMOS",      	"diagnostics_CMOS_Battery",             "diagnosticsRoot");
+		
+		menuCreateItem("BIOS",      			"ROOT_diagnostics_BIOS",             "diagnosticsRoot");
+			menuCreateItem("Нужно шить",      		"diagnosticsBIOS",             "ROOT_diagnostics_BIOS");
+			menuCreateItem("Флэшка не шъётся",      "diagnostics_flash_doesn_t_write",  "ROOT_diagnostics_BIOS");
+			menuCreateItem("Батарейка села",      	"diagnostics_CMOS_Battery",    "ROOT_diagnostics_BIOS");
 		
 		menuCreateItem("Матрица",           	"Root_diagnosticsMatrix",       	"diagnosticsRoot");
             menuCreateItem("Разбита", 	    	"diagnostics_Broken_Matrix",		"Root_diagnosticsMatrix");
-            menuCreateItem("Поврежден кабель",	"diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
+            menuCreateItem("Пятна", 	    	"diagnostics_Matrix_Spots",			"Root_diagnosticsMatrix");			
+            menuCreateItem("Кабель LVDS",		"diagnostics_Broken_SCREEN_CABLE",	"Root_diagnosticsMatrix");
+				menuCreateItem("Замена",		"diagnostics_Broken_SCREEN_CABLE_change",	"diagnostics_Broken_SCREEN_CABLE");
+				menuCreateItem("Восстановление","diagnostics_Broken_SCREEN_CABLE_repair",	"diagnostics_Broken_SCREEN_CABLE");
             menuCreateItem("Неисправна",    	"diagnosticsMatrix",            	"Root_diagnosticsMatrix");
             menuCreateItem("Искажения",    		"diagnostics_Matrix_Distortion",    "Root_diagnosticsMatrix");
             menuCreateItem("Нет подсветки",    	"diagnostics_Matrix_NoBacklight",   "Root_diagnosticsMatrix");
@@ -136,9 +150,13 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Не определяется",   "diagnostics_WiFi_Not_determined",       	"Root_diagnostics_WiFi");
 			menuCreateItem("Не включается",   	"diagnostics_WiFi_Does_Not_Turn_On",       	"Root_diagnostics_WiFi");
         			
-		menuCreateItem("Блок питания",    		"ROOT_diagnostics_Power_Supply",   "diagnosticsRoot");
-			menuCreateItem("Кабель поврежден",	"diagnostics_PS_cable_is_damaged",   "ROOT_diagnostics_Power_Supply");
-				
+		menuCreateItem("Блок питания",    				"ROOT_diagnostics_Power_Supply",   "diagnosticsRoot");
+			menuCreateItem("Не держит нагрузку",	"diagnostics_PS_Does_not_hold_the_load",   "ROOT_diagnostics_Power_Supply");
+			menuCreateItem("Кабель поврежден",			"diagnostics_PS_cable",   "ROOT_diagnostics_Power_Supply");
+				menuCreateItem("Замена",			"diagnostics_PS_cable_is_damaged_change",   "diagnostics_PS_cable");
+				menuCreateItem("Восстановление",	"diagnostics_PS_cable_is_damaged_repair",   "diagnostics_PS_cable");
+			menuCreateItem("Нет напряжения",					"diagnostics_PS_no_supply_voltage",   "ROOT_diagnostics_Power_Supply");
+						
         menuCreateItem("Гнездо питания",    "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
         
 		menuCreateItem("Аккумуляторная батарея",    "ROOT_diagnostics_Accumulator_Battery", 		"diagnosticsRoot");
@@ -162,11 +180,11 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("Замена проц", 		"diagnosticsBgaCPU", 	        "Root_diagnosticsBga");
             menuCreateItem("Компаунд",      	"diagnostics_Compaund", 	    "Root_diagnosticsBga");
 			menuCreateItem("VGA или UMA", 		"diagnostics_Vga_Or_UMA", 		"Root_diagnosticsBga");
-			
-		menuCreateItem("В UMA", 		"diagnostics_UMA", 				"diagnosticsRoot");
+			menuCreateItem("В UMA", 			"diagnostics_UMA", 				"Root_diagnosticsBga");
 			
 		menuCreateItem("Следы", 			"Root_diagnosticsTraces", 		"diagnosticsRoot");
 			menuCreateItem("Жидкости на мамке", 		"diagnosticsPour", 						"Root_diagnosticsTraces");
+			menuCreateItem("Жидкости на мамке нет", 	"diagnostics_No_Pour", 						"Root_diagnosticsTraces");
 			menuCreateItem("Жидкости в корпусе", 	"diagnosticsPour_Case", 				"Root_diagnosticsTraces");
 			menuCreateItem("Ремонта мамки", 		"diagnosticsTracesOfRepair", 			"Root_diagnosticsTraces");
 			menuCreateItem("Ремонта на корпусе", 	"diagnostics_Traces_Of_Case_Repair", 	"Root_diagnosticsTraces");
@@ -176,12 +194,14 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Не загружается", 		"diagnostics_os_Not_loading", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Медленно загружается", 	"diagnostics_os_Slowly_loaded", "ROOT_diagnostics_Os");
 			menuCreateItem("Необходима установка", 	"diagnostics_Install_Os", 		"ROOT_diagnostics_Os");
-			menuCreateItem("Синий экран", 			"diagnostics_Blue_Screen", 		"ROOT_diagnostics_Os");
+			menuCreateItem("BSOD при загрузке", 			"diagnostics_Blue_Screen_on_load", 		"ROOT_diagnostics_Os");
+			menuCreateItem("BSOD при работе", 			"diagnostics_Blue_Screen", 		"ROOT_diagnostics_Os");
 			menuCreateItem("Не все драйвера", 		"diagnostics_Not_all_drivers", 	"ROOT_diagnostics_Os");
 
 		menuCreateItem("Стресс тест", "Root_diagnosticsTest", 		"diagnosticsRoot");
 		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", 	"Root_diagnosticsTest");
 		    menuCreateItem("без ошибок", "diagnostics_Test_No_Errors", 	"Root_diagnosticsTest");
+		    menuCreateItem("вырубается", "diagnostics_accidentally_turned_off", 	"Root_diagnosticsTest");
 
         menuCreateItem("ОЗУ", "Root_diagnostics_MemTest",        "diagnosticsRoot");
             menuCreateItem("Тест с ошибками", "diagnostics_MemTest_Errors",      "Root_diagnostics_MemTest");
@@ -225,15 +245,26 @@ function CreateRepairMenu() {
         
 		menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
-        menuCreateItem("BIOS",         "repairBIOS",                   "repairRoot");
-		menuCreateItem("Батарейка CMOS",      "repair_CMOS_Battery",             "repairRoot");
+		
+        menuCreateItem("BIOS",         "ROOT_repairBIOS",                   "repairRoot");
+			menuCreateItem("Прошита",         "repairBIOS",                   "ROOT_repairBIOS");
+			menuCreateItem("Флешка заменена",         "repair_flash_doesn_t_write",                   "ROOT_repairBIOS");
+			menuCreateItem("Заменена батарейка",      "repair_CMOS_Battery",             "ROOT_repairBIOS");
         
-		menuCreateItem("Матрица",               "repairMatrix",         "repairRoot");
-        menuCreateItem("WEb камера",           	"repair_WEb_camera",	"repairRoot");
+		menuCreateItem("Матрица",               "ROOT_repairMatrix",         "repairRoot");
+			menuCreateItem("Заменена",          "repairMatrix",         "ROOT_repairMatrix");			
+			menuCreateItem("Кабель LVDS",		"repair_Broken_SCREEN_CABLE",	"ROOT_repairMatrix");
+				menuCreateItem("Заменён",		"repair_Broken_SCREEN_CABLE_change",	"repair_Broken_SCREEN_CABLE");
+				menuCreateItem("Восстановлен","repair_Broken_SCREEN_CABLE_repair",	"repair_Broken_SCREEN_CABLE");
+          			
+		menuCreateItem("WEb камера",           	"repair_WEb_camera",	"repairRoot");
         menuCreateItem("WiFi",           		"repair_WiFi",       	"repairRoot");
 		
 		menuCreateItem("Блок питания",    		"ROOT_repair_Power_Supply",   "repairRoot");
-			menuCreateItem("Кабель поврежден",	"repair_PS_cable_is_damaged",   "ROOT_repair_Power_Supply");
+			menuCreateItem("Не держит нагрузку",	"repair_PS_Does_not_hold_the_load",   "ROOT_repair_Power_Supply");
+			menuCreateItem("Кабель поврежден",	"repair_PS_cable",   "ROOT_repair_Power_Supply");
+				menuCreateItem("Заменён",			"repair_PS_cable_is_damaged_change",   "repair_PS_cable");
+				menuCreateItem("Восстановлен",	"repair_PS_cable_is_damaged_repair",   "repair_PS_cable");
 				
 		menuCreateItem("Гнездо питания",        "repairPowerSupplyConnector",   "repairRoot");
 
@@ -249,8 +280,7 @@ function CreateRepairMenu() {
             menuCreateItem("BGA север", 	"repair_BgaNorthBridge", 	"Root_repairBga");
             menuCreateItem("BGA юг", 		"repair_BgaSouthBridge", 	"Root_repairBga");
             menuCreateItem("BGA проц",      "repair_BgaCPU", 	        "Root_repairBga");
-			
-	menuCreateItem("В UMA", "repairUMA", "repairRoot");
+			menuCreateItem("В UMA", 		"repairUMA", 				"Root_repairBga");
 	
 	menuCreateItem("Следы залития", "repairPour", "repairRoot");   
     menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");

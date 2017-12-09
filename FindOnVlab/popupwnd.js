@@ -21,10 +21,24 @@ function searchBadCaps() {
         chrome.tabs.create({
             "url": "https://www.google.com.ua/search?q=" + searchValue + "+site:badcaps.net&gws_rd=ssl"
         });
+    });	
+}
+
+function searchKeyBoards() {
+    var searchValue = document.getElementById("search").value;
+
+    chrome.tabs.query({
+        currentWindow: true,
+        active: true
+    }, function(tab) {
+        chrome.tabs.create({
+            "url": "https://www.google.com.ua/search?q=" + searchValue + "+site:keyboard.net.ua&gws_rd=ssl"
+        });
     });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("btnSearchVlab").addEventListener("click", searchVlab);
 	document.getElementById("btnSearchBadCaps").addEventListener("click", searchBadCaps);
+	document.getElementById("btnSearchKeyBoards").addEventListener("click", searchKeyBoards);
 });
