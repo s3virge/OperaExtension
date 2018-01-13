@@ -13,11 +13,11 @@ const PERFORM = "Закоментить";
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
 
-var imgURL = chrome.extension.getURL("eco-friendly-green-background.jpg");
+var imgURL = chrome.extension.getURL("images/eco.jpg");
 console.log(imgURL);
-document.body.style.backgroundImage = imgURL;
 
-//document.body.style.backgroundImage = url('chrome-extension://oidepbjanpjigicgphfafelkeglijphm/eco-friendly-green-background.jpg');
+document.body.style['background-image'] = 'url("' + imgURL + '")';
+document.body.style['background-image'] = 'url(chrome-extension://__MSG_@@extension_id__/images/eco.jpg)'; 
 
 document.body.style.backgroundColor = "#ccffcc";
 

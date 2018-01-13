@@ -20,5 +20,7 @@
         "run_at": "document_end"
     }],
 
-	"permissions": ["activeTab", "contextMenus", "tabs"]
+	"permissions": ["activeTab", "contextMenus", "tabs"],
+	
+	"web_accessible_resources": ["images/*"]
 }
