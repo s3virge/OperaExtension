@@ -12,10 +12,18 @@ const PERFORM = "Закоментить";
 // отключить все стили
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
-var imgURL = chrome.extension.getURL("images/eco.jpg");
-console.log(imgURL);
 
-document.body.style['background-image'] = 'url("' + imgURL + '")';
+var pathname = window.location.pathname; // Returns path only
+//var url      = window.location.href;     // Returns full URL
+
+if (pathname == '/auth/user/login/') {
+
+    var imgURL = chrome.extension.getURL("images/eco.jpg");
+    // document.body.style['background-image'] = 'url("' + imgURL + '")';
+    document.body.style.backgroundImage = 'url("' + imgURL + '")';
+    document.body.style.backgroundSize = "cover";
+}
+
 document.body.style.backgroundColor = "#ccffcc";
 
 var loginBug = document.getElementsByClassName("login-bug");
