@@ -13,12 +13,11 @@ const PERFORM = "Закоментить";
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
 
+if ()
 var imgURL = chrome.extension.getURL("images/eco.jpg");
 console.log(imgURL);
 
 document.body.style['background-image'] = 'url("' + imgURL + '")';
-document.body.style['background-image'] = 'url(chrome-extension://__MSG_@@extension_id__/images/eco.jpg)'; 
-
 document.body.style.backgroundColor = "#ccffcc";
 
 var loginBug = document.getElementsByClassName("login-bug");
