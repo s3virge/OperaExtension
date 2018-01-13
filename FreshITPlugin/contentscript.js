@@ -12,8 +12,6 @@ const PERFORM = "Закоментить";
 // отключить все стили
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
-
-if ()
 var imgURL = chrome.extension.getURL("images/eco.jpg");
 console.log(imgURL);
 
