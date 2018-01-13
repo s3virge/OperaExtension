@@ -240,8 +240,8 @@ function CreateRepairMenu() {
 			menuCreateItem("Крепление петель",  "repair_Fastening_of_loops", 	"Root_repair_Body");
 			menuCreateItem("Сломан",            "repairBrokenBody",             "Root_repair_Body");
 			menuCreateItem("Петли",           		"Root_Repair_Matrix_Loops",       	"Root_repair_Body");
-				menuCreateItem("Заменены", 	    	"Repair_Broken_Matrix_Loops_Replacement",		"Root_Repair_Matrix_Loops");
-				menuCreateItem("Восстановлены", 	"Repair_Broken_Matrix_Loops_Repair",		"Root_Repair_Matrix_Loops");
+				menuCreateItem("Заменены", 	    	"repair_Broken_Matrix_Loops_Replacement",		"Root_Repair_Matrix_Loops");
+				menuCreateItem("Восстановлены", 	"repair_Broken_Matrix_Loops_Repair",		"Root_Repair_Matrix_Loops");
         
 		menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
@@ -250,6 +250,7 @@ function CreateRepairMenu() {
 			menuCreateItem("Прошита",         "repairBIOS",                   "ROOT_repairBIOS");
 			menuCreateItem("Флешка заменена",         "repair_flash_doesn_t_write",                   "ROOT_repairBIOS");
 			menuCreateItem("Заменена батарейка",      "repair_CMOS_Battery",             "ROOT_repairBIOS");
+			menuCreateItem("System-on-a-chip",      "repair_CMOS_SoC",             "ROOT_repairBIOS");
         
 		menuCreateItem("Матрица",               "ROOT_repairMatrix",         "repairRoot");
 			menuCreateItem("Заменена",          "repairMatrix",         "ROOT_repairMatrix");			

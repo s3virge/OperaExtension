@@ -13,6 +13,11 @@ const PERFORM = "Закоментить";
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
 
+var imgURL = chrome.extension.getURL("eco-friendly-green-background.jpg");
+console.log(imgURL);
+document.body.style.backgroundImage = imgURL;
+
+//document.body.style.backgroundImage = url('chrome-extension://oidepbjanpjigicgphfafelkeglijphm/eco-friendly-green-background.jpg');
 
 document.body.style.backgroundColor = "#ccffcc";
 
@@ -68,12 +73,20 @@ function updateCSS() {
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
     $("#form-save-btn").css("color", "red");
-    $(".changes-confirm:first").css("height", "20em");
-    $(".block-content").css("font-size", "1.15em");
-    $(".changes-confirm").css("font-size", "14px");
+    
+	$(".changes-confirm:first").css("height", "20em");
+    
+    $(".changes-confirm").css("font-size", "1.1em");
+	$(".changes-confirm").css("color", "#474747");
 	//$(".changes-confirm").css("min-width", "100%");
 	$(".changes-confirm").css("width", ""); //убираем ширину = 80%
-
+	
+	$(".left-col-wrapper").css("font-size", "0.8em");
+	
+	$(".block-content").css("font-size", "1em");
+	//$(".block-content").css("color", "#474747");
+	$(".block-content").css("font-family", "Verdana, sans-serif");
+	
     $(".footer").hide();
 	
 	$(".table_list td:first-of-type").css("font-size", "1.2em");
@@ -83,7 +96,6 @@ function updateCSS() {
 	
 	$("i, em").css("font-style", "normal");
 	$("em").css("text-align","center");
-	//$(".block-content b").after("hr");
 	
 	updateHeigth();
 }
@@ -939,6 +951,14 @@ function processRepairMessage(message){
             PushAddWorkBtn();
 			break;
 			
+		case "repair_CMOS_SoC":
+            $("#diag_rez_input, #rem_rez_input").append(" В нуотбуке используется однокристальный процессор (System-on-a-Chip, SoC). Из-за сбоя микропрограммы ноутбук перестает запускаться. После отключения от материнской платы всех элементов питания материнская плата нормально включается, запускается, появляется изображение на матрице.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка 
+            PushAddWorkBtn();
+			break;
+			
 		case "repair_PS_Does_not_hold_the_load":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправные конденсаторы в блоке питания заменены на новые.");
             $("#form-save-btn").click();
@@ -999,7 +1019,7 @@ function processRepairMessage(message){
 			break;
 		
 		case "repair_Broken_SCREEN_CABLE_repair":
-            $("#diag_rez_input, #rem_rez_input").append(" Повреждённный кабель матрицы восстановлен.");
+            $("#diag_rez_input, #rem_rez_input").append(" Повреждённый кабель матрицы восстановлен.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id122').click();	//замена шлейфа      
