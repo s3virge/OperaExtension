@@ -13,11 +13,16 @@ const PERFORM = "Закоментить";
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
 
-var imgURL = chrome.extension.getURL("images/eco.jpg");
-console.log(imgURL);
+var pathname = window.location.pathname; // Returns path only
+//var url      = window.location.href;     // Returns full URL
 
-document.body.style['background-image'] = 'url("' + imgURL + '")';
-document.body.style['background-image'] = 'url(chrome-extension://__MSG_@@extension_id__/images/eco.jpg)'; 
+if (pathname == '/auth/user/login/') {
+
+    var imgURL = chrome.extension.getURL("images/eco.jpg");
+    // document.body.style['background-image'] = 'url("' + imgURL + '")';
+    document.body.style.backgroundImage = 'url("' + imgURL + '")';
+    document.body.style.backgroundSize = "cover";
+}
 
 document.body.style.backgroundColor = "#ccffcc";
 
@@ -32,6 +37,45 @@ var remontNumber = document.getElementById("global-caption");
 if (remontNumber != null) {
     remontNumber.style.fontSize = "24px";
 }
+
+$('<a>', {
+        text: 'Я контейнер-ссылка',
+        href: 'http://google.com',
+        target: "_blank",
+        css: {
+            color: 'green',
+            backgroundColor: 'black',
+            display: 'block',
+            position: 'relative',
+            padding: '10px',
+        },
+        width: 200,
+        height: 100,
+        offset: {
+            top: 20,
+            left: 120,
+        },
+        on: {
+            click: function(event){
+                alert('На меня кликнули');
+            },
+            mouseover: function(event){
+                alert("На меня навели мышку");
+                $(this).off('mouseover');
+            }
+        },
+        append: $('<br>')
+                .add($('<span>', 
+                  { 
+                      text: 'Я вставленный html', 
+                      css: { fontWeight: 'bold'}
+                  }))
+                .add($('<br>'))
+                .add($('<span>', {
+                    html: '<strong>Мой html задан в параметрах</strong>',
+                })),
+    })
+    .appendTo('.main-content');
 
 $(".login-header img").remove();
 
@@ -440,6 +484,11 @@ function processDiagnosisMessage(message){
 			break;
 		
 		case "diagnostics_Vga_Or_UMA":
+		var message = 	"\n***************************************************************************\n" + 
+						"* Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна. *\n" +
+						"***************************************************************************\n";
+			$("[name='neispravnost_mv']").append(message);
+			
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
