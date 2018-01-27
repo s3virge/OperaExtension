@@ -181,7 +181,14 @@ function CreateDiagnosticsMenu() {
             menuCreateItem("Компаунд",      	"diagnostics_Compaund", 	    "Root_diagnosticsBga");
 			menuCreateItem("VGA или UMA", 		"diagnostics_Vga_Or_UMA", 		"Root_diagnosticsBga");
 			menuCreateItem("В UMA", 			"diagnostics_UMA", 				"Root_diagnosticsBga");
-			
+		
+		menuCreateItem("QFN", 			"Root_diagnostics_QFN", 		"diagnosticsRoot");
+			menuCreateItem("зарядник", 			"diagnostics_", 				"Root_diagnostics_QFN");
+			menuCreateItem("шим дежурки", 			"diagnostics_Main_Power_Supply_Controller", 				"Root_diagnostics_QFN");
+			menuCreateItem("шим проца", 			"diagnostics_CPU_PWC", 				"Root_diagnostics_QFN");
+			menuCreateItem("шим видика", 			"diagnostics_VGA_PWC", 				"Root_diagnostics_QFN");
+			menuCreateItem("шим память", 			"diagnostics_Mem_PWC", 				"Root_diagnostics_QFN");
+		
 		menuCreateItem("Следы", 			"Root_diagnosticsTraces", 		"diagnosticsRoot");
 			menuCreateItem("Жидкости на мамке", 		"diagnosticsPour", 						"Root_diagnosticsTraces");
 			menuCreateItem("Жидкости на мамке нет", 	"diagnostics_No_Pour", 						"Root_diagnosticsTraces");
