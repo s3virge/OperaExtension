@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +20,7 @@
           <file leaf-file-name="background.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
+                <state relative-caret-position="4011">
                   <caret line="246" column="45" lean-forward="false" selection-start-line="246" selection-start-column="45" selection-end-line="246" selection-end-column="45" />
                   <folding />
                 </state>
@@ -33,10 +34,17 @@
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="109" column="25" lean-forward="false" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+                <state relative-caret-position="-42">
+                  <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding>
-                    <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+                    <element signature="e#688#1097#0" expanded="false" />
+                    <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+                    <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+                    <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+                    <element signature="e#4614#5072#0" expanded="false" />
+                    <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+                    <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+                    <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -551,7 +559,7 @@
       <workItem from="1507560946322" duration="204000" />
       <workItem from="1507561242944" duration="240000" />
       <workItem from="1516003379660" duration="493000" />
-      <workItem from="1517067451016" duration="129000" />
+      <workItem from="1517067451016" duration="856000" />
     </task>
     <task id="LOCAL-00001" summary="My opera extension.">
       <created>1499264079888</created>
@@ -833,11 +841,25 @@
       <option name="project" value="LOCAL" />
       <updated>1517067513993</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="added some new items">
+      <created>1517067639759</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1517067639759</updated>
+    </task>
+    <task id="LOCAL-00042" summary="added some new items">
+      <created>1517068004287</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1517068004287</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50472000" />
+    <option name="totallyTimeSpent" value="51199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -851,6 +873,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -861,15 +884,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -886,7 +908,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="added some new items" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -895,7 +919,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -913,7 +944,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -931,7 +969,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -949,7 +994,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -967,7 +1019,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -985,7 +1044,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1003,7 +1069,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1021,7 +1094,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1039,7 +1119,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1057,7 +1144,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1075,7 +1169,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1093,7 +1194,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,7 +1219,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1129,7 +1244,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1147,7 +1269,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1165,7 +1294,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1183,7 +1319,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1201,7 +1344,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1219,7 +1369,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1237,7 +1394,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1255,7 +1419,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1273,7 +1444,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1291,7 +1469,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1309,7 +1494,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1330,7 +1522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="4011">
           <caret line="246" column="45" lean-forward="false" selection-start-line="246" selection-start-column="45" selection-end-line="246" selection-end-column="45" />
           <folding />
         </state>
@@ -1338,10 +1530,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="109" column="25" lean-forward="false" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+        <state relative-caret-position="-42">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <marker date="1517067591980" expanded="true" signature="3627:3704" ph="//..." />
+            <element signature="e#688#1097#0" expanded="false" />
+            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
+            <element signature="n#!!block;n#updateHeigth#0" expanded="false" />
+            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
+            <element signature="e#4614#5072#0" expanded="false" />
+            <element signature="n#!!block;n#PushAddWorkBtn#0" expanded="false" />
+            <element signature="n#!!block;n#processDiagnosisMessage#0" expanded="false" />
+            <element signature="n#!!block;n#processRepairMessage#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -8,6 +8,8 @@
 const PERFORM = "Закоментить";
 /*=============================================*/
 
+document.body.style.backgroundColor = "#ccffcc";
+
 //////////////////////////////////////////
 // отключить все стили
 //////////////////////////////////////////
@@ -29,8 +31,6 @@ if (pathname == '/auth/user/login/') {
         loginBug[0].style.visibility = "hidden";
     }
 }
-
-document.body.style.backgroundColor = "#ccffcc";
 
 var remontNumber = document.getElementById("global-caption");
 
