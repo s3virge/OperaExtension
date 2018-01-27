@@ -1,6 +1,3 @@
-/**
- * Created by S3ViRGE on 22.06.2017.
- */
 /*скрипт встраивается в станицу и выполняется при ее загрузке*/
 
 /*=============================================*/
@@ -15,55 +12,12 @@ document.body.style.backgroundColor = "#ccffcc";
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
 
-var pathname = window.location.pathname; // Returns path only
-//var url      = window.location.href;     // Returns full URL
-
-if (pathname == '/auth/user/login/') {
-
-    var imgURL = chrome.extension.getURL("images/eco.jpg");
-    // document.body.style['background-image'] = 'url("' + imgURL + '")';
-    document.body.style.backgroundImage = 'url("' + imgURL + '")';
-    document.body.style.backgroundSize = "cover";
-
-    var loginBug = document.getElementsByClassName("login-bug");
-
-    if (loginBug.length != 0) {
-        loginBug[0].style.visibility = "hidden";
-    }
+//Настраиваем окно ввода логина-пароля
+if (window.location.pathname == '/auth/user/login/') {
+    customiseLoginPage();
 }
 
-var remontNumber = document.getElementById("global-caption");
-
-if (remontNumber != null) {
-    remontNumber.style.fontSize = "24px";
-}
-
-//$("<input type='button' class='timer-btn start-action' value='Запустить таймер' onclick=ajaxLoadUrl('https://base.freshit.ua/remont/timer/start/?remont_id=0000035749&type=1')>").appendTo(".main-content");
-
-$(".login-header img").remove();
-
-//убрать стиль у первого дочернего элемента div вложенного в div#auth
-$("div#auth > div").attr("style", "");
-//увеличить размер шрифта в поле ввода вложенном в .no-ajax
-$(".no-ajax input").css("font-size","2em");
-
-var Perfom = true;
-//если PERFORM не определено
-if (typeof(PERFORM) == "undefined"){
-    //то не выполнять блок
-    Perfom = false;
-}
-
-if (Perfom){
-    $(".mLine").hide(); //global search
-    $(".mLine2").css("height", "1px");
-    $(".menu").remove();
-    $("#leftBlock, #_data").remove();
-}
-
-$("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
-$("#breadcrumbs").remove();
-$(".line2").css("margin-bottom", "0");
+customiseWorkingPage();
 
 /*updateCSS не вызывается когда меняется содержимое #rightBlock */
 function updateCSS() {
@@ -105,6 +59,8 @@ function updateCSS() {
 	$("em").css("text-align","center");
 	
 	updateHeigth();
+
+	moveBtnStartStopTimer();
 }
 
 function updateHeigth() {
@@ -118,11 +74,10 @@ function updateHeigth() {
 //это вызывается когда изменяется содержимое блока #right-block-container
 function updateStyles() {
 	$(document).ready(updateCSS);
-};
+}
 
 //это вызывается когда загружается страница
 $(document).ready(updateCSS);
-
 //$(window).resize(updateHeigth());
 
 // just listen changes on #mydiv content
@@ -1034,4 +989,73 @@ function processRepairMessage(message){
             PushAddWorkBtn();
 			break;
     }
+}
+
+function customiseLoginPage() {
+    var imgURL = chrome.extension.getURL("images/eco.jpg");
+    // document.body.style['background-image'] = 'url("' + imgURL + '")';
+    document.body.style.backgroundImage = 'url("' + imgURL + '")';
+    document.body.style.backgroundSize = "cover";
+
+    var loginBug = document.getElementsByClassName("login-bug");
+
+    if (loginBug.length != 0) {
+        loginBug[0].style.visibility = "hidden";
+    }
+
+    $(".login-header img").remove();
+
+    //убрать стиль у первого дочернего элемента div вложенного в div#auth
+    $("div#auth > div").attr("style", "");
+    //увеличить размер шрифта в поле ввода вложенном в .no-ajax
+    $(".no-ajax input").css("font-size","2em");
+}
+
+function customiseWorkingPage() {
+    var remontNumber = document.getElementById("global-caption");
+
+    if (remontNumber != null) {
+        remontNumber.style.fontSize = "24px";
+    }
+
+    var Perfom = true;
+    //если PERFORM не определено
+    if (typeof(PERFORM) == "undefined"){
+        //то не выполнять блок
+        Perfom = false;
+    }
+
+    if (Perfom){
+        $(".mLine").hide(); //global search
+        $(".mLine2").css("height", "1px");
+        $(".menu").remove();
+        $("#leftBlock, #_data").remove();
+    }
+
+    $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
+    $("#breadcrumbs").remove();
+    $(".line2").css("margin-bottom", "0");
+}
+
+function moveBtnStartStopTimer() {
+    var startTimerBtn = $("*").is(".start-action");
+    var stopTimerBtn = $("*").is(".stop-action");
+
+    if( startTimerBtn ) {
+        //$("[value='Запустить таймер']").hide();
+        $(".start-action").hide();
+        var script = $("[value='Запустить таймер']").attr("onclick");
+        $("<input type='button' class='timer-btn start-action' value='Запустить таймер' onclick='"+ script + "'>").appendTo(".main-content");
+    }
+    else if (stopTimerBtn) {
+        $("[value='Остановить таймер']").hide();
+        var script = $("[value='Остановить таймер']").attr("onclick");
+        $("<input type='button' class='timer-btn stop-action' value='Остановить таймер' onclick='"+ script + "'>").appendTo(".main-content");
+    }
+
+    //    $("<span>" + script + "</span>").appendTo(".main-content");
+
+//<div style="text-align:center">
+//<input class="timer-btn stop-action" type="button" onclick="ajaxLoadUrl(&quot;https://base.freshit.ua/remont/timer/stop/?remont_id=0000034179&quot;)" value="Остановить таймер" style="padding: 5px 50px; font-size: 1.5em; background-color: rgb(221, 0, 0);">
+//</div>
 }
