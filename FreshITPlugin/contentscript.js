@@ -22,15 +22,15 @@ if (pathname == '/auth/user/login/') {
     // document.body.style['background-image'] = 'url("' + imgURL + '")';
     document.body.style.backgroundImage = 'url("' + imgURL + '")';
     document.body.style.backgroundSize = "cover";
+
+    var loginBug = document.getElementsByClassName("login-bug");
+
+    if (loginBug.length != 0) {
+        loginBug[0].style.visibility = "hidden";
+    }
 }
 
 document.body.style.backgroundColor = "#ccffcc";
-
-var loginBug = document.getElementsByClassName("login-bug");
-
-if (loginBug.length != 0) {
-    loginBug[0].style.visibility = "hidden";
-}
 
 var remontNumber = document.getElementById("global-caption");
 
@@ -785,10 +785,6 @@ function processDiagnosisMessage(message){
     }
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function processRepairMessage(message){
     switch(message){
         case "repairKeyboard":
