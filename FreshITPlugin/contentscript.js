@@ -108,7 +108,6 @@ function updateCSS() {
 }
 
 function updateHeigth() {
-	//alert( window.innerHeight ); // вся ширина окна
 	//alert( document.documentElement.clientHeight ); // ширина минус прокрутка
 	
 	var height = document.documentElement.clientHeight - 63;
