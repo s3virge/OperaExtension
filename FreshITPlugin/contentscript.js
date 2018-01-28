@@ -1044,40 +1044,49 @@ function moveBtnStartStopTimer() {
     console.log("startTimerBtn = " + startTimerBtn);
     console.log("stopTimerBtn = " + stopTimerBtn);
 
-//Обработчик или источник события click
+    //добавляем на страницу свой div блок где будут размещены кнопки
+    //остановки-запуска таймера
 
+    //если блока для кнопок нет, то добавляем его
+    if (!$("*").is(".timerBtns")) {
+        $("<span class='timerBtns' style='background-color: #999;'></span>").appendTo(".main-content");
+    }
+
+    //если есть кнопка Запустить таймер
     if( startTimerBtn ) {
-        if ($("*").is(".btnStartTimer")) {
-            return;
-        }
-        //прячем колину кнопку
-        $(".start-action").hide();
-        //добавляю свою кнопку
-        $("<input type='button' class='btnStartTimer' value='Запустить таймер'>").appendTo(".main-content");
+        //то прячем её
+        //$(".start-action").hide();
+
+        //установить текст в блоке timerBtns Запустить таймер
+        $(".timerBtns").text("Запустить таймер");
+        $(".timerBtns").addClass("timerIsRun");
+
         //регистрируем обработчик нажатия на созданную кнопку
-        $('.btnStartTimer').click(function(){
-            //убрать кноку запустить таймер
-            $(".btnStartTimer").remove();
-            //показать кнопку остановить таймер
-            $("<input type='button' class='btnStopBtn' value='Остановить таймер'>").appendTo(".main-content");
+        $('.timerIsRun').click(function(){
+           //изменить текст блока timerBtns на Остановить таймер
+           $(".timerIsRun").text("Остановить таймер");
             //выполнить действие onclick связанное с кнопкой
              $(".start-action").click();
+             console.log("Обработка нажатия на блок span.timerBtns => if startTimerBtn");
         });
     }
+    //иначе если таймер уже запущен и на странице есть кнопка Остановить таймер
     else if (stopTimerBtn) {
-        if ($("*").is(".btnStopTimer")) {
-            return;
-        }
-        $(".stop-action").hide();
-        $("<input type='button' class='btnStopTimer' value='Остановить таймер'>").appendTo(".main-content");
 
-        $('.btnStopTimer').click(function(){
-          //убрать кноку
-          $(".btnStopTimer").remove();
-            //показать кнопку остановить таймер
-            $("<input type='button' class='btnStartBtn' value='Остановить таймер'>").appendTo(".main-content");
+        //то прячем родную кнопку
+        //$(".stop-action").hide();
+
+       //установить текст в блоке timerBtns Остановить таймер
+       $(".timerBtns").text("Остановить таймер");
+       $(".timerBtns").addClass("timerIsStop"); //таймер запущен
+
+        $('.timerIsStop').click(function(){
+        //изменить текст блока timerBtns на Остановить таймер
+        $(".timerIsStop").text("Запустить таймер");
+
           //выполнить действие onclick связанное с кнопкой
           $(".stop-action").click();
+          console.log("Обработка нажатия на блок span.timerBtns => if stopTimerBtn.");
         });
     }
 
