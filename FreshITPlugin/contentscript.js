@@ -58,9 +58,9 @@ function updateCSS() {
 	$("i, em").css("font-style", "normal");
 	$("em").css("text-align","center");
 	
-	//updateHeigth();
+	updateHeigth();
 
-	moveBtnStartStopTimer();
+	//moveBtnStartStopTimer();
 }
 
 function updateHeigth() {
@@ -1061,13 +1061,18 @@ function moveBtnStartStopTimer() {
         $(".timerBtns").text("Запустить таймер");
         $(".timerBtns").addClass("timerIsRun");
 
+
         //регистрируем обработчик нажатия на созданную кнопку
-        $('.timerIsRun').click(function(){
-           //изменить текст блока timerBtns на Остановить таймер
-           $(".timerIsRun").text("Остановить таймер");
+        $('.timerIsRun').click(function() {
+            //изменить текст блока timerBtns на Остановить таймер
+            $(".timerIsRun").text("Остановить таймер");
+
+            $(".timerIsRun").unbind("click");
+            $(".timerBtns").removeClass("timerIsStop");
+
             //выполнить действие onclick связанное с кнопкой
-             $(".start-action").click();
-             console.log("Обработка нажатия на блок span.timerBtns => if startTimerBtn");
+            $(".start-action").click();
+            console.log("Обработка нажатия на блок span.timerBtns => if startTimerBtn");
         });
     }
     //иначе если таймер уже запущен и на странице есть кнопка Остановить таймер
@@ -1080,16 +1085,17 @@ function moveBtnStartStopTimer() {
        $(".timerBtns").text("Остановить таймер");
        $(".timerBtns").addClass("timerIsStop"); //таймер запущен
 
-        $('.timerIsStop').click(function(){
-        //изменить текст блока timerBtns на Остановить таймер
-        $(".timerIsStop").text("Запустить таймер");
 
-          //выполнить действие onclick связанное с кнопкой
-          $(".stop-action").click();
-          console.log("Обработка нажатия на блок span.timerBtns => if stopTimerBtn.");
+        $('.timerIsStop').click(function() {
+            //изменить текст блока timerBtns на Остановить таймер
+            $(".timerIsStop").text("Запустить таймер");
+
+            $(".timerIsStop").unbind("click");
+            $(".timerBtns").removeClass("timerIsRun");
+
+            //выполнить действие onclick связанное с кнопкой
+            $(".stop-action").click();
+            console.log("Обработка нажатия на блок span.timerBtns => if stopTimerBtn.");
         });
     }
-
-    //    $("<span>" + script + "</span>").appendTo(".main-content");
-
 }
