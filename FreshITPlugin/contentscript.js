@@ -53,12 +53,12 @@ function updateCSS() {
 	$(".table_list td:first-of-type").css("font-size", "1.2em");
 	$(".table_list td:first-of-type").css("background-color", "rgba(251, 175, 3, 0.16)");
 	
-    console.log("#rightBlock -> updateCss");
+    //console.log("#rightBlock -> updateCss");
 	
 	$("i, em").css("font-style", "normal");
 	$("em").css("text-align","center");
 	
-	updateHeigth();
+	//updateHeigth();
 
 	moveBtnStartStopTimer();
 }
@@ -1041,21 +1041,46 @@ function moveBtnStartStopTimer() {
     var startTimerBtn = $("*").is(".start-action");
     var stopTimerBtn = $("*").is(".stop-action");
 
+    console.log("startTimerBtn = " + startTimerBtn);
+    console.log("stopTimerBtn = " + stopTimerBtn);
+
+//Обработчик или источник события click
+
     if( startTimerBtn ) {
-        //$("[value='Запустить таймер']").hide();
+        if ($("*").is(".btnStartTimer")) {
+            return;
+        }
+        //прячем колину кнопку
         $(".start-action").hide();
-        var script = $("[value='Запустить таймер']").attr("onclick");
-        $("<input type='button' class='timer-btn start-action' value='Запустить таймер' onclick='"+ script + "'>").appendTo(".main-content");
+        //добавляю свою кнопку
+        $("<input type='button' class='btnStartTimer' value='Запустить таймер'>").appendTo(".main-content");
+        //регистрируем обработчик нажатия на созданную кнопку
+        $('.btnStartTimer').click(function(){
+            //убрать кноку запустить таймер
+            $(".btnStartTimer").remove();
+            //показать кнопку остановить таймер
+            $("<input type='button' class='btnStopBtn' value='Остановить таймер'>").appendTo(".main-content");
+            //выполнить действие onclick связанное с кнопкой
+             $(".start-action").click();
+        });
     }
     else if (stopTimerBtn) {
-        $("[value='Остановить таймер']").hide();
-        var script = $("[value='Остановить таймер']").attr("onclick");
-        $("<input type='button' class='timer-btn stop-action' value='Остановить таймер' onclick='"+ script + "'>").appendTo(".main-content");
+        if ($("*").is(".btnStopTimer")) {
+            return;
+        }
+        $(".stop-action").hide();
+        $("<input type='button' class='btnStopTimer' value='Остановить таймер'>").appendTo(".main-content");
+
+        $('.btnStopTimer').click(function(){
+          //убрать кноку
+          $(".btnStopTimer").remove();
+            //показать кнопку остановить таймер
+            $("<input type='button' class='btnStartBtn' value='Остановить таймер'>").appendTo(".main-content");
+          //выполнить действие onclick связанное с кнопкой
+          $(".stop-action").click();
+        });
     }
 
     //    $("<span>" + script + "</span>").appendTo(".main-content");
 
-//<div style="text-align:center">
-//<input class="timer-btn stop-action" type="button" onclick="ajaxLoadUrl(&quot;https://base.freshit.ua/remont/timer/stop/?remont_id=0000034179&quot;)" value="Остановить таймер" style="padding: 5px 50px; font-size: 1.5em; background-color: rgb(221, 0, 0);">
-//</div>
 }
