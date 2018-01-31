@@ -5,12 +5,31 @@
 const PERFORM = "Закоментить";
 /*=============================================*/
 
+var Perfom = true;
+//если PERFORM не определено
+if (typeof(PERFORM) == "undefined"){
+	//то не выполнять блок
+	Perfom = false;
+}
+
 document.body.style.backgroundColor = "#ccffcc";
 
 //////////////////////////////////////////
 // отключить все стили
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
+
+//это вызывается когда загружается страница
+$(document).ready(updateCSS);
+//$(window).resize(updateHeigth());
+
+// just listen changes on #mydiv content
+$("#right-block-container").bind("DOMSubtreeModified", updateStyles );
+
+//посылаем сообщение из этого файла в background.js и получаем ответ
+//chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+//  console.log(response.farewell);
+//});
 
 //Настраиваем окно ввода логина-пароля
 if (window.location.pathname == '/auth/user/login/') {
@@ -58,12 +77,28 @@ function updateCSS() {
 	$("i, em").css("font-style", "normal");
 	$("em").css("text-align","center");
 	
-	updateHeigth();
-
+	if (Perfom){
+        updateHeight();
+	}
+	
+	setRepairNumberColor();
+	
 	//moveBtnStartStopTimer();
 }
 
-function updateHeigth() {
+function setRepairNumberColor() {
+	var startTimerBtn = $("*").is(".start-action");
+	var stopTimerBtn = $("*").is(".stop-action");
+	
+	if(startTimerBtn) {
+		$("#global-caption").css("color", "#27345A");
+	}
+	else if(stopTimerBtn) {
+		$("#global-caption").css("color", "red");
+	}
+}
+
+function updateHeight() {
 	//alert( document.documentElement.clientHeight ); // ширина минус прокрутка
 	
 	var height = document.documentElement.clientHeight - 63;
@@ -75,20 +110,6 @@ function updateHeigth() {
 function updateStyles() {
 	$(document).ready(updateCSS);
 }
-
-//это вызывается когда загружается страница
-$(document).ready(updateCSS);
-//$(window).resize(updateHeigth());
-
-// just listen changes on #mydiv content
-$("#right-block-container").bind("DOMSubtreeModified", updateStyles );
-
-//посылаем сообщение из этого файла в background.js и получаем ответ
-//chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-//  console.log(response.farewell);
-//});
-
-//==================================================================================
 
 //принимаем сообщение из background.js
 chrome.runtime.onMessage.addListener(
@@ -109,7 +130,7 @@ chrome.runtime.onMessage.addListener(
     }
 );
 
-function PushAddWorkBtn(){
+function pushAddWorkBtn(){
 	$(".prise-raboti form").submit();
     //когда использую submit() все работает...
     //когда click() работы дублируются.
@@ -126,7 +147,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id141').click();	//замена hdd            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Hdd_Not_determined":
@@ -135,7 +156,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id141').click();	//замена hdd            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_Hdd_No_Errors":
@@ -149,7 +170,7 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $('#prise-id116').click();	//разборка    
 			
-			PushAddWorkBtn();			
+			pushAddWorkBtn();			
             break;
 			
 		case "diagnostics_DamagedThermalPads":
@@ -166,7 +187,7 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы.");
             $("#form-save-btn").click();
             $('#prise-id424').click();	//установка ос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_os_Not_loading":
@@ -199,7 +220,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id123').click();	//замена клавы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsPour":
@@ -211,7 +232,7 @@ function processDiagnosisMessage(message){
             $('#prise-id157').click();	//отмывка после залития
             $('#prise-id136').click();	//пайка смд компонентов
             //$('#prise-id123').click();	//замена клавы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_No_Pour":
@@ -220,7 +241,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка       
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnosticsPour_Case":
@@ -228,7 +249,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		//тараканы
@@ -238,7 +259,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsBIOS":
@@ -246,7 +267,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id162').click();	//Прошивка биос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_flash_doesn_t_write":
@@ -254,7 +275,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id162').click();	//Прошивка биос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsMatrix":
@@ -262,7 +283,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id119').click();	//замена матрицы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_Broken_Matrix":
@@ -270,7 +291,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id119').click();	//замена матрицы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_Matrix_Spots":
@@ -278,7 +299,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id119').click();	//замена матрицы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_Broken_SCREEN_CABLE_change":
@@ -287,7 +308,7 @@ function processDiagnosisMessage(message){
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id122').click();	//замена шлейфа      
 			$('#prise-id116').click();	//разборка			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_Broken_SCREEN_CABLE_repair":
@@ -296,7 +317,7 @@ function processDiagnosisMessage(message){
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id121').click();	//восстановление шлейфа      
 			$('#prise-id116').click();	//разборка			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Matrix_Distortion":
@@ -304,7 +325,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id119').click();	//замена матрицы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Matrix_NoBacklight":
@@ -312,7 +333,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
             // $('#prise-id119').click();	//замена матрицы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsPowerSupplyConnector":
@@ -321,7 +342,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id128').click();	//замена гнезда питания            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_accidentally_turned_off":
@@ -357,7 +378,7 @@ function processDiagnosisMessage(message){
 			$('#prise-id534').click();	//снятие компаунда
 			$('#prise-id133').click();	//пайка BGA    
 			$('#prise-id154').click();  //чистка	
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsBgaHUB":
@@ -367,7 +388,7 @@ function processDiagnosisMessage(message){
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsBgaNorthBridge":
@@ -377,7 +398,7 @@ function processDiagnosisMessage(message){
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsBgaSouthBridge":
@@ -387,7 +408,7 @@ function processDiagnosisMessage(message){
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnosticsBgaCPU":
@@ -397,7 +418,7 @@ function processDiagnosisMessage(message){
             $('#prise-id534').click();	//снятие компаунда
             $('#prise-id133').click();	//пайка BGA
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_Vga_Or_UMA":
@@ -413,28 +434,28 @@ function processDiagnosisMessage(message){
             $('#prise-id133').click();	//пайка BGA
             $('#prise-id154').click();  //чистка
 			$('#prise-id136').click();	//пайка смд компонентов            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnosticsNoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука не включается. Реакции на кнопку включения нет.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка            			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_HaveLite_NoReaction":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. Реакции на кнопку включения нет.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка            			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_HaveLite_NoPicture":
             $("#diag_rez_input, #rem_rez_input").append(" При подключении блока питания индикация на корпусе ноутбука включается. После нажатия на кнопку включения ноутбук включается, но изображение на экране не появляется.");
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка            			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnosticsNotRepair":
@@ -447,7 +468,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
 			$('#prise-id140').click();	//Восстановление корпуса					
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnosticsBrokenBody":
@@ -455,7 +476,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
 			$('#prise-id140').click();	//Восстановление корпуса					
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Power_Jack_Socket":
@@ -463,7 +484,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
 			$('#prise-id140').click();	//Восстановление корпуса					
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Broken_Matrix_Loops_Replacement":
@@ -472,7 +493,7 @@ function processDiagnosisMessage(message){
 			$('#prise-id116').click();	//разборка
 			$('#prise-id117').click();	//разборка крышки
 			$('#prise-id120').click();	//Замена петель					
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_Broken_Matrix_Loops_Repair":
@@ -481,7 +502,7 @@ function processDiagnosisMessage(message){
 			$('#prise-id116').click();	//разборка
 			$('#prise-id117').click();	//разборка крышки
 			$('#prise-id555').click();	//восстановление петель				
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 						
 		case "diagnostics_NotAGuarantee":
@@ -501,7 +522,7 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id137').click();	// Восстановление цепи питания материнской платы
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
             //не деталь
@@ -516,7 +537,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Fan_Strange_Sounds":
@@ -525,7 +546,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_Mult_Replacing":
@@ -535,7 +556,7 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id135').click();  //пайка планарной микросхемы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Mult_Firmware_Recovery":
@@ -545,7 +566,7 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id688').click();  //Прошивка мульта            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_MemTest_Errors":
@@ -554,7 +575,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id142').click();  //замена озу            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_MemTest_No_Errors":
@@ -567,7 +588,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			$('#prise-id116').click();	//разборка
             $('#prise-id142').click();  //замена озу            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Compaund":
@@ -582,7 +603,7 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id127').click();  //Замена аудио            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_Speakers_Broken":
@@ -591,7 +612,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id539').click();  //Замена динамиков            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "diagnostics_Audio_Сodec":
@@ -601,7 +622,7 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id134').click();  //пайка qfn чипа            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_Fatal_Damage":
@@ -615,7 +636,7 @@ function processDiagnosisMessage(message){
 			
             $('#prise-id116').click();	//разборка 
 			$('#prise-id704').click();	//замена батарейки смос			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_abruptly_turns_off":
@@ -623,7 +644,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();			
 			
             $('#prise-id116').click();	//разборка 			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_UMA":
@@ -633,7 +654,7 @@ function processDiagnosisMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
 			$('#prise-id136').click();	//пайка смд компонентов			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_NOT_a_good_design":
@@ -647,7 +668,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id439').click();	//разборка бп
             $('#prise-id381').click();  //замена кабеля						
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_PS_Does_not_hold_the_load":
@@ -656,7 +677,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id439').click();	//разборка бп				
             $('#prise-id514').click();	//Замена электролитических конденсаторов в зарядном устройстве		
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;	
 			
 		case "diagnostics_PS_cable_is_damaged_repair":
@@ -665,7 +686,7 @@ function processDiagnosisMessage(message){
 
             $('#prise-id439').click();	//разборка бп
             $('#prise-id441').click();  //восстановление кабеля						
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;			
 		
 		case "diagnostics_PS_no_supply_voltage":
@@ -673,7 +694,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 
             $('#prise-id439').click();	//разборка бп				
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;			
 		
 		case "diagnostics_Accumulator_Battery_Do_not_Charge":
@@ -692,7 +713,7 @@ function processDiagnosisMessage(message){
 			
 			//$('#prise-id116').click();	//разборка
             $('#prise-id117').click();	//разборка крышки						
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_WiFi_Not_determined":
@@ -701,7 +722,7 @@ function processDiagnosisMessage(message){
 			
 			$('#prise-id116').click();	//разборка
             $('#prise-id480').click();	//замена WiFI						
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "diagnostics_WiFi_Does_Not_Turn_On":
@@ -711,7 +732,7 @@ function processDiagnosisMessage(message){
 			
 			$('#prise-id116').click();	//разборка
             $('#prise-id480').click();	//замена WiFI						
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_TachPad_Does_not_Work":
@@ -719,7 +740,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			
 			$('#prise-id116').click();	//разборка
-			PushAddWorkBtn();
+			pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_TachPad_cable_broken":
@@ -727,7 +748,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			
 			$('#prise-id116').click();	//разборка
-			PushAddWorkBtn();
+			pushAddWorkBtn();
 			break;
 			
 		case "diagnostics_TachPad_Btn_Does_not_Work":
@@ -735,7 +756,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			
 			$('#prise-id116').click();	//разборка
-			PushAddWorkBtn();
+			pushAddWorkBtn();
 			break;		
     }
 }
@@ -763,7 +784,7 @@ function processRepairMessage(message){
 			// $('#prise-id116').click();	//разборка
 			// $('#prise-id117').click();	//разборка крышки
 			// $('#prise-id120').click();	//Замена петель					
-            // PushAddWorkBtn();
+            // pushAddWorkBtn();
 			break;
 		
 		case "repair_Broken_Matrix_Loops_Repair":
@@ -772,7 +793,7 @@ function processRepairMessage(message){
 			$('#prise-id116').click();	//разборка
 			$('#prise-id117').click();	//разборка крышки
 			$('#prise-id555').click();	//восстановление петель				
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "repairCleaning":
@@ -780,7 +801,7 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             $('#prise-id154').click();  //чистка
             $('#prise-id116').click();	//разборка
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_DamagedThermalPads":
@@ -792,7 +813,7 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
             $("#form-save-btn").click();
             $('#prise-id424').click();	//установка ос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "repairHDD":
@@ -805,7 +826,7 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id162').click();	//Прошивка биос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_flash_doesn_t_write":
@@ -813,7 +834,7 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id162').click();	//Прошивка биос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "repairMatrix":
@@ -883,7 +904,7 @@ function processRepairMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id135').click();  //пайка планарной микросхемы            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "repair_Mult_Firmware_Recovery":
@@ -892,7 +913,7 @@ function processRepairMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 
         case "repairMemory":
@@ -901,7 +922,7 @@ function processRepairMessage(message){
 
             $('#prise-id116').click();	//разборка
             $('#prise-id142').click();  //замена озу            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_CMOS_Battery":
@@ -910,7 +931,7 @@ function processRepairMessage(message){
 
             $('#prise-id116').click();	//разборка 
 			$('#prise-id704').click();	//замена батарейки смос            
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_CMOS_SoC":
@@ -918,7 +939,7 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка 
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_PS_Does_not_hold_the_load":
@@ -927,7 +948,7 @@ function processRepairMessage(message){
 
             $('#prise-id439').click();	//разборка бп				
             $('#prise-id514').click();	//Замена электролитических конденсаторов в зарядном устройстве		
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;	
 			
 		case "repair_PS_cable_is_damaged_change":
@@ -936,7 +957,7 @@ function processRepairMessage(message){
 
             $('#prise-id439').click();	//разборка бп
             $('#prise-id381').click();  //замена кабеля
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_PS_cable_is_damaged_repair":
@@ -945,7 +966,7 @@ function processRepairMessage(message){
 
             $('#prise-id439').click();	//разборка бп
             $('#prise-id441').click();  //восстановление кабеля	
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_Accumulator_Battery":
@@ -959,7 +980,7 @@ function processRepairMessage(message){
 			
 			//$('#prise-id116').click();	//разборка
             $('#prise-id117').click();	//разборка крышки						
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;	
 			
 		case "repair_WiFi":
@@ -968,7 +989,7 @@ function processRepairMessage(message){
 			
 			$('#prise-id116').click();	//разборка
             $('#prise-id480').click();	//замена WiFI					
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 			
 		case "repair_Broken_SCREEN_CABLE_change":
@@ -977,7 +998,7 @@ function processRepairMessage(message){
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id122').click();	//замена шлейфа      
 			$('#prise-id116').click();	//разборка			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
 		
 		case "repair_Broken_SCREEN_CABLE_repair":
@@ -986,7 +1007,7 @@ function processRepairMessage(message){
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id122').click();	//замена шлейфа      
 			$('#prise-id116').click();	//разборка			
-            PushAddWorkBtn();
+            pushAddWorkBtn();
 			break;
     }
 }
@@ -1015,14 +1036,7 @@ function customiseWorkingPage() {
     var remontNumber = document.getElementById("global-caption");
 
     if (remontNumber != null) {
-        remontNumber.style.fontSize = "24px";
-    }
-
-    var Perfom = true;
-    //если PERFORM не определено
-    if (typeof(PERFORM) == "undefined"){
-        //то не выполнять блок
-        Perfom = false;
+        remontNumber.style.fontSize = "25px";		
     }
 
     if (Perfom){
