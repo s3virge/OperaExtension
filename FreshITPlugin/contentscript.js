@@ -515,6 +515,11 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			break;
 		
+		case "diagnostics_Not_constantly_manifested":
+            $("#diag_rez_input, #rem_rez_input").append(" Заявленная неисправность проявляется не постоянно. Это сильно затрудняет её диагностику.");
+            $("#form-save-btn").click();
+			break;
+		
         case "diagnostics_ShortCircuit":
             $("#diag_rez_input, #rem_rez_input").append(" Блок питания при подключении к ноутбуку переключается в режим защиты от короткого замыкания. Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
             $("#form-save-btn").click();			

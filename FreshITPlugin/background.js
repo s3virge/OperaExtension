@@ -221,12 +221,13 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Есть индикация, реакция, нет картинки ", 	"diagnostics_HaveLite_NoPicture", 	"Root_DiagnosticsNoReaction");	
 		
 		menuCreateItem("Не ...", 		"Root_diagnosticsNot", 			"diagnosticsRoot");
-		menuCreateItem("Не ремонт", 	"diagnosticsNotRepair", 		"Root_diagnosticsNot");
-		menuCreateItem("Не гарантия", 	"diagnostics_NotAGuarantee", 	"Root_diagnosticsNot");
-		menuCreateItem("Не проявилась", "diagnostics_DontManifested",	"Root_diagnosticsNot");
-		menuCreateItem("Не деталь", 	"diagnostics_NotAPart", 		"Root_diagnosticsNot");
-		menuCreateItem("Фатальные повреждения", 	"diagnostics_Fatal_Damage", 		"Root_diagnosticsNot");
-		menuCreateItem("Неудачный конструктив", 	"diagnostics_NOT_a_good_design", 		"Root_diagnosticsNot");
+			menuCreateItem("Не ремонт", 	"diagnosticsNotRepair", 		"Root_diagnosticsNot");
+			menuCreateItem("Не гарантия", 	"diagnostics_NotAGuarantee", 	"Root_diagnosticsNot");
+			menuCreateItem("Не проявилась", "diagnostics_DontManifested",	"Root_diagnosticsNot");
+			menuCreateItem("Не постоянно проявляется", "diagnostics_Not_constantly_manifested",	"Root_diagnosticsNot");
+			menuCreateItem("Не деталь", 	"diagnostics_NotAPart", 		"Root_diagnosticsNot");
+			menuCreateItem("Фатальные повреждения", 	"diagnostics_Fatal_Damage", 		"Root_diagnosticsNot");
+			menuCreateItem("Неудачный конструктив", 	"diagnostics_NOT_a_good_design", 		"Root_diagnosticsNot");
 }
 
 //////////////////////////////////////////////////////////////////////////////
