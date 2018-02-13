@@ -12,7 +12,7 @@ if (typeof(PERFORM) == "undefined"){
 	Perfom = false;
 }
 
-document.body.style.backgroundColor = "#ccffcc";
+document.body.style.backgroundColor = "#96e896";
 
 //////////////////////////////////////////
 // отключить все стили
@@ -44,6 +44,9 @@ function updateCSS() {
 	$("#tab-active").css("background-color", "#ea0000");
 	$("#tab-diag").css("background-color", "#ea8200");
 	$("#tab-inrem").css("background-color", "#209e01");
+	$("#tab-sborka").css("background-color", "#000");
+	$("#tab-sborka").css("color", "#fff");
+	
 	
 	$(".timer-btn").css("padding", "5px 50px");
 	$(".timer-btn").css("font-size", "1.5em");
@@ -56,26 +59,31 @@ function updateCSS() {
     
 	$(".changes-confirm:first").css("height", "20em");
     
-    $(".changes-confirm").css("font-size", "1.1em");
-	$(".changes-confirm").css("color", "#474747");
-	//$(".changes-confirm").css("min-width", "100%");
-	$(".changes-confirm").css("width", ""); //убираем ширину = 80%
+    $(".changes-confirm").css({
+		"font-size": "1.1em",
+		"color": "#474747",
+		"width": ""});
 	
 	$(".left-col-wrapper").css("font-size", "0.8em");
 	
-	$(".block-content").css("font-size", "1em");
-	//$(".block-content").css("color", "#474747");
-	$(".block-content").css("font-family", "Verdana, sans-serif");
+	$(".block-content").css({
+		"font-size": "1em",
+		"font-family": "Verdana, sans-serif"});
 	
     $(".footer").hide();
 	
-	$(".table_list td:first-of-type").css("font-size", "1.2em");
-	$(".table_list td:first-of-type").css("background-color", "rgba(251, 175, 3, 0.16)");
+	$(".table_list td:first-of-type").css({
+		"font-size": "1.2em",
+		"background-color": "rgba(251, 175, 3, 0.16)"});
 	
     //console.log("#rightBlock -> updateCss");
 	
 	$("i, em").css("font-style", "normal");
 	$("em").css("text-align","center");
+	
+	//4 по счету блок на странице это Неисправность со слов клиента
+	$(".block-content:eq(3)").css("background-color", "#e6cb0a");
+	$(".block-caption").css("box-shadow", "none"); 
 	
 	if (Perfom){
         updateHeight();
@@ -94,7 +102,7 @@ function setRepairNumberColor() {
 		$("#global-caption").css("color", "#27345A");
 	}
 	else if(stopTimerBtn) {
-		$("#global-caption").css("color", "red");
+		$("#global-caption").css("color", "rgb(221, 0, 0)");
 	}
 }
 
@@ -141,7 +149,12 @@ function pushAddWorkBtn(){
 function processDiagnosisMessage(message){
 
     switch(message){
-        case "diagnostics_Hdd_Errors":
+        case "diagnostics_difficult":
+            $("#diag_rez_input, #rem_rez_input").append(" Сложная диагностика.");
+            $("#form-save-btn").click();
+			break;
+			
+		case "diagnostics_Hdd_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска обнаружила ошибки. Жесткий диск необходимо заменить.");
             $("#form-save-btn").click();
 
@@ -215,8 +228,16 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			break;
 
-        case "diagnosticsKeyboard":
+        case "diagnosticsKeyboard_do_not_work":
             $("#diag_rez_input, #rem_rez_input").append(" Не все клавиши на клавиатуре работают, необходима её замена.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            $('#prise-id123').click();	//замена клавы            
+            pushAddWorkBtn();
+			break;
+			
+		case "diagnosticsKeyboard_Hacked_keys":
+            $("#diag_rez_input, #rem_rez_input").append(" На клавиатуре сломаны клавиши, подходящих клавиш для ремонта клавиатуры нет, необходима её замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             $('#prise-id123').click();	//замена клавы            
@@ -1010,7 +1031,7 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Повреждённый кабель матрицы восстановлен.");
             $("#form-save-btn").click();
             $('#prise-id117').click();	//разборка крышки
-            $('#prise-id122').click();	//замена шлейфа      
+            $('#prise-id121').click();	//восстановление шлейфа      
 			$('#prise-id116').click();	//разборка			
             pushAddWorkBtn();
 			break;

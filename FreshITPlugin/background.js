@@ -95,6 +95,8 @@ function menuCreateItem(itemTitle, itemId, parentId) {
 function CreateDiagnosticsMenu() {
     menuCreateRootItem("Диагностика",        "diagnosticsRoot");
 
+		menuCreateItem("3 Дня => Сложная диагностика!",       	"diagnostics_difficult",     	"diagnosticsRoot");
+		
 		menuCreateItem("Жесткий диск",       	"Root_diagnostics_Hdd",     	"diagnosticsRoot");
 			menuCreateItem("Тест с ошибками",	"diagnostics_Hdd_Errors",		"Root_diagnostics_Hdd");
 			menuCreateItem("Тест без ошибок", 	"diagnostics_Hdd_No_Errors",	"Root_diagnostics_Hdd");		
@@ -119,7 +121,9 @@ function CreateDiagnosticsMenu() {
 				menuCreateItem("Замена", 	    	"diagnostics_Broken_Matrix_Loops_Replacement",		"Root_diagnostics_Matrix_Loops");
 				menuCreateItem("Восстановление", 	"diagnostics_Broken_Matrix_Loops_Repair",		"Root_diagnostics_Matrix_Loops");
 				
-		menuCreateItem("Клавиатура",         	"diagnosticsKeyboard",         "diagnosticsRoot");
+		menuCreateItem("Клавиатура",         	"ROOT_diagnosticsKeyboard",         "diagnosticsRoot");
+			menuCreateItem("Не работают клавиши",       "diagnosticsKeyboard_do_not_work",         "ROOT_diagnosticsKeyboard");
+			menuCreateItem("Сломаны клавиши",         	"diagnosticsKeyboard_Hacked_keys",         "ROOT_diagnosticsKeyboard");
 		
 		menuCreateItem("Тачпад",         		"Root_diagnosticsTachPad",         "diagnosticsRoot");
 			menuCreateItem("Не работает",   	"diagnostics_TachPad_Does_not_Work", 		"Root_diagnosticsTachPad");
@@ -252,6 +256,7 @@ function CreateRepairMenu() {
 				menuCreateItem("Восстановлены", 	"repair_Broken_Matrix_Loops_Repair",		"Root_Repair_Matrix_Loops");
         
 		menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
+		
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
 		
         menuCreateItem("BIOS",         "ROOT_repairBIOS",                   "repairRoot");
