@@ -5,21 +5,51 @@
 <html>
   <body>
     <style>
-      #btnSearch{
-        width: 100%; margin: 5px 0px;
-        padding: 2px;
-      }
-	  #btnUserInfo{
-	  }
+      <!-- #btnSearch{ -->
+        <!-- width: 30px; margin: 5px 0px; -->
+        <!-- padding: 2px; -->
+      <!-- } -->
+	  <!-- #btnUserInfo{ -->
+	  <!-- } -->
+	  
+		.search {
+			width: 300px; /* Ширина поля с кнопкой */
+			border: 1px solid #000; /* Параметры рамки */
+			min-height: 20px; /* Минимальная высота */
+		}
+		input[type="search"] {
+			border: none; /* Убираем рамку */
+			outline: none; /* Убираем свечение в Chrome и Safari */
+			-webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+			width: 274px; /* Ширина поля */
+			vertical-align: middle; /* Выравнивание по середине */
+		}
+		input[type="submit"] {
+			width: 20px; /* Ширина кнопки */
+			height: 20px; /* Высота кнопки */
+			border: none; /* Убираем рамку */
+			//background: url(images/video.png) no-repeat 50% 50%; /* Параметры фона */
+		}
+   
     </style>
+	
     <h3>Найти ремонт</h3>
     <div id="error"></div>
-    <form>
-      <input type='text' id="search" placeholder='' autofocus />
-      <br>
-      <button id="btnSearch" >Искать</button>
-		<button id="btnUserInfo"></button>
-    </form>
+	
+	<form>
+    <div class="search">
+     <input type="search" name="q">
+     <input id="btnSearch" type="submit" value="">	 
+   </div>
+   <button id="btnUserInfo"></button>
+	
+    <!-- <form> -->
+      <!-- <input type='text' id="search" placeholder='' autofocus /> -->
+      <!-- <br> -->
+		<!-- <button id="btnSearch" >Искать</button> -->
+		
+    <!-- </form> -->
+	
     <script type="text/javascript" src="popup.js"></script>
   </body>
 </html>
