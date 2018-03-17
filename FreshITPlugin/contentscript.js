@@ -192,6 +192,15 @@ function processDiagnosisMessage(message){
             $('#prise-id141').click();	//замена hdd
             pushAddWorkBtn();
 			break;
+		
+		case "diagnostics_Hdd_extraneous_sound":
+            $("#diag_rez_input, #rem_rez_input").append(" Жесткий диск издаёт посторонние звуки в время работы. Необходима его замена.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id141').click();	//замена hdd
+            pushAddWorkBtn();
+			break;
 
 		case "diagnostics_Hdd_No_Errors":
             $("#diag_rez_input, #rem_rez_input").append(" Программа проверки жесткого диска ошибок не обнаружила.");
@@ -507,6 +516,11 @@ function processDiagnosisMessage(message){
 
 		case "diagnosticsNotRepair":
             $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
+            $("#form-save-btn").click();
+			break;
+		
+		case "diagnostics_Not_Circuit":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнскую плату отсутствует принципиальная схема.");
             $("#form-save-btn").click();
 			break;
 
@@ -832,6 +846,16 @@ function processDiagnosisMessage(message){
 			$('#prise-id116').click();	//разборка
 			pushAddWorkBtn();
 			break;
+		
+		case "diagnostics_Main_Power_Supply_Controller":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер дежурных напряжений." + 
+			"Для дальнейшей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+			
+			$('#prise-id134').click();  //пайка qfn чипа
+			$('#prise-id116').click();	//разборка
+            pushAddWorkBtn();
+			break;
     }
 }
 
@@ -1082,7 +1106,7 @@ function processRepairMessage(message){
             $('#prise-id121').click();	//восстановление шлейфа
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
-			break;
+			break;		
     }
 }
 

@@ -99,6 +99,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Тест с ошибками",	"diagnostics_Hdd_Errors",		"Root_diagnostics_Hdd");
 			menuCreateItem("Тест без ошибок", 	"diagnostics_Hdd_No_Errors",	"Root_diagnostics_Hdd");
 			menuCreateItem("Не определяется", 	"diagnostics_Hdd_Not_determined",	"Root_diagnostics_Hdd");
+			menuCreateItem("Посторонние звуки", 	"diagnostics_Hdd_extraneous_sound",	"Root_diagnostics_Hdd");
 
 		menuCreateItem("Охлада",             			"Root_diagnostics_Cleaning", 		"diagnosticsRoot");
 			menuCreateItem("Чистка", 					"diagnostics_Cleaning", 			"Root_diagnostics_Cleaning");
@@ -228,6 +229,7 @@ function CreateDiagnosticsMenu() {
 
 		menuCreateItem("Не ...", 		"Root_diagnosticsNot", 			"diagnosticsRoot");
 			menuCreateItem("Не ремонт", 	"diagnosticsNotRepair", 		"Root_diagnosticsNot");
+			menuCreateItem("Нет схемы", 	"diagnostics_Not_Circuit", 		"Root_diagnosticsNot");
 			menuCreateItem("Гарантия", 	"Root_diagnostics_NotAGuarantee", 	"Root_diagnosticsNot");
 				menuCreateItem("Не гарантия", 			"diagnostics_NotAGuarantee", 	"Root_diagnostics_NotAGuarantee");
 				menuCreateItem("Пломбы повреждены", 	"diagnostics_NotAGuarantee_223", 	"Root_diagnostics_NotAGuarantee");
