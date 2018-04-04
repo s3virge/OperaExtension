@@ -49,20 +49,25 @@ function updateCSS() {
 	setTabStyle();
 	
 	$(".timer-btn").css({
-		"padding": "5px 50px",
+		"padding": "5px 40px",
 		"font-size": "1.5em",
 		"position": "fixed",
 		"top": "0.5em",
-		"left":"25.5em"
+		"left":"23.5em"
 	});
+	
+	$("#form-save-btn").css({"color": "red",
+	"position": "fixed",
+		"top": "0.98em",
+		"left":"65em"});
 
 	$(".stop-action").css("background-color", "#dd0000");
 	$(".start-action").css("background-color", "#006400");
 
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
-    $("#form-save-btn").css("color", "red");
-
+    
+	
 	$(".changes-confirm:first").css("height", "20em");
 
     $(".changes-confirm").css({
@@ -93,8 +98,8 @@ function updateCSS() {
 	//$(".block-content:eq(3)").css("background-color", "#e6cb0a");
 	$(".block-content:eq(3)").css({
 		"background-color": "#e6cb0a",
-	"font-size": "1.0em"}
-);
+		"font-size": "1.0em"});
+		
 	$(".block-caption").css("box-shadow", "none");
 
 	$("p").css("margin-top", "0px");
@@ -1187,6 +1192,7 @@ function customiseWorkingPage() {
     //$(".line2").css("background", "none");
 }
 
+/*do not use anymore*/
 function moveBtnStartStopTimer() {
     var startTimerBtn = $("*").is(".start-action");
     var stopTimerBtn = $("*").is(".stop-action");
