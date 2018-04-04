@@ -119,6 +119,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Петли",           		"Root_diagnostics_Matrix_Loops",       	"Root_diagnostics_Body");
 				menuCreateItem("Замена", 	    	"diagnostics_Broken_Matrix_Loops_Replacement",		"Root_diagnostics_Matrix_Loops");
 				menuCreateItem("Восстановление", 	"diagnostics_Broken_Matrix_Loops_Repair",		"Root_diagnostics_Matrix_Loops");
+			menuCreateItem("Не восстановить",       "diagnostics_body_case_can_not_be_restored",       	"Root_diagnostics_Body");
 
 		menuCreateItem("Клавиатура",         	"ROOT_diagnosticsKeyboard",         "diagnosticsRoot");
 			menuCreateItem("Не все клавиши работают",       "diagnosticsKeyboard_do_not_work",         "ROOT_diagnosticsKeyboard");
@@ -149,6 +150,7 @@ function CreateDiagnosticsMenu() {
 
 		menuCreateItem("WEb камера",           	"Root_diagnostics_WEb_camera",       	"diagnosticsRoot");
 			menuCreateItem("Не определяется",   "diagnostics_WEb_camera_Not_determined",       	"Root_diagnostics_WEb_camera");
+			menuCreateItem("Искажения",   		"diagnostics_WEb_camera_Distortions",       	"Root_diagnostics_WEb_camera");
 
 		menuCreateItem("WiFi",           	"Root_diagnostics_WiFi",       	"diagnosticsRoot");
 			menuCreateItem("Не определяется",   "diagnostics_WiFi_Not_determined",       	"Root_diagnostics_WiFi");

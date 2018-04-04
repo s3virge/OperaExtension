@@ -48,8 +48,14 @@ function updateCSS() {
 	//задаем цвета вкладкам
 	setTabStyle();
 	
-	$(".timer-btn").css("padding", "5px 50px");
-	$(".timer-btn").css("font-size", "1.5em");
+	$(".timer-btn").css({
+		"padding": "5px 50px",
+		"font-size": "1.5em",
+		"position": "fixed",
+		"top": "0.5em",
+		"left":"25.5em"
+	});
+
 	$(".stop-action").css("background-color", "#dd0000");
 	$(".start-action").css("background-color", "#006400");
 
@@ -788,7 +794,16 @@ function processDiagnosisMessage(message){
 			break;
 
 		case "diagnostics_WEb_camera_Not_determined":
-            $("#diag_rez_input, #rem_rez_input").append(" WEB камера не определяется как устройство в операционной системе. Для дальнешей диагностики необходима её замена.");
+            $("#diag_rez_input, #rem_rez_input").append(" WEB камера не определяется как устройство в операционной системе. Для дальнейшей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+
+			//$('#prise-id116').click();	//разборка
+            $('#prise-id117').click();	//разборка крышки
+            pushAddWorkBtn();
+			break;
+			
+		case "diagnostics_WEb_camera_Distortions":
+            $("#diag_rez_input, #rem_rez_input").append(" WEB камера определяется как устройство в операционной системе, но изображение выводит с искажениями. Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
 
 			//$('#prise-id116').click();	//разборка
@@ -848,13 +863,28 @@ function processDiagnosisMessage(message){
 			break;
 		
 		case "diagnostics_Main_Power_Supply_Controller":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер дежурных напряжений." + 
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер дежурных напряжений. " + 
 			"Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
 			
 			$('#prise-id134').click();  //пайка qfn чипа
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
+			break;
+			
+		case "diagnostics_CPU_PWC":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер напряжения питания процессора. " + 
+			"Для дальнейшей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+			
+			$('#prise-id134').click();  //пайка qfn чипа
+			$('#prise-id116').click();	//разборка
+            pushAddWorkBtn();
+			break;
+			
+		case "diagnostics_body_case_can_not_be_restored":
+            $("#diag_rez_input, #rem_rez_input").append(" Качественное восстановление корпуса невозможно.");
+            $("#form-save-btn").click();
 			break;
     }
 }
