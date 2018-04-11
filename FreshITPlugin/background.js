@@ -242,6 +242,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Неудачный конструктив", 	"diagnostics_NOT_a_good_design", 		"Root_diagnosticsNot");
 
 		menuCreateItem("3 Дня => Сложная диагностика!",       	"diagnostics_difficult",     	"diagnosticsRoot");
+		menuCreateItem("Коэффицие́нт",       	"diagnostics_Coefficient",     	"diagnosticsRoot");		
 }
 
 //////////////////////////////////////////////////////////////////////////////

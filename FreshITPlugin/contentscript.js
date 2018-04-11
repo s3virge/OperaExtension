@@ -15,7 +15,8 @@ var Perfom = true;
 if (typeof(PERFORM) == "undefined"){
 	//то не выполнять блок
 	Perfom = false;
-	bodyBackGroudColor = bodyBGColorBlue;
+	//bodyBackGroudColor = bodyBGColorBlue;
+    bodyBackGroudColor = bodyBGColorGreen
 }
 
 document.body.style.backgroundColor = bodyBackGroudColor;
@@ -47,27 +48,31 @@ customiseWorkingPage();
 function updateCSS() {
 	//задаем цвета вкладкам
 	setTabStyle();
-	
+
 	$(".timer-btn").css({
 		"padding": "5px 40px",
 		"font-size": "1.5em",
 		"position": "fixed",
-		"top": "0.5em",
-		"left":"23.5em"
+		//"top": "0.5em",
+         "top": "1.4%",
+		//"left":"23.5em"
+        "left":"37%"
 	});
-	
+
 	$("#form-save-btn").css({"color": "red",
 	"position": "fixed",
-		"top": "0.98em",
-		"left":"65em"});
+		//"top": "0.98em",
+        "top": "1.8%",
+		//"left":"65em"
+        "left":"60%"});
 
 	$(".stop-action").css("background-color", "#dd0000");
 	$(".start-action").css("background-color", "#006400");
 
     $("#remont-main-form input[type='button']").css("padding", "8px 12px");
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
-    
-	
+
+
 	$(".changes-confirm:first").css("height", "20em");
 
     $(".changes-confirm").css({
@@ -99,7 +104,7 @@ function updateCSS() {
 	$(".block-content:eq(3)").css({
 		"background-color": "#e6cb0a",
 		"font-size": "1.0em"});
-		
+
 	$(".block-caption").css("box-shadow", "none");
 
 	$("p").css("margin-top", "0px");
@@ -120,7 +125,7 @@ function setTabStyle() {
 	$("#tab-inrem").css("background-color", "#209e01");
 	$("#tab-sborka").css("background-color", "#000");
 	$("#tab-sborka").css("color", "#fff");
-		
+
 	//$(".section-tabs ul.tabs>li").css({"padding": "3px 5px;", "box-shadow": "none"});
 	$(".section-tabs ul.tabs>li").css({"padding": "5px", "box-shadow": "none", "border-radius": "0", "border": "none"});
 	$(".section-tabs ul").css("position", "static");
@@ -178,6 +183,54 @@ function pushAddWorkBtn(){
 	//$(".prise-raboti").find("input[type='submit']").click();
 }
 
+function customiseLoginPage() {
+    var imgURL = chrome.extension.getURL("images/eco.jpg");
+    // document.body.style['background-image'] = 'url("' + imgURL + '")';
+    document.body.style.backgroundImage = 'url("' + imgURL + '")';
+    document.body.style.backgroundSize = "cover";
+
+    var loginBug = document.getElementsByClassName("login-bug");
+
+    if (loginBug.length != 0) {
+        loginBug[0].style.visibility = "hidden";
+    }
+
+    $(".login-header img").remove();
+
+    //убрать стиль у первого дочернего элемента div вложенного в div#auth
+    $("div#auth > div").attr("style", "");
+    //увеличить размер шрифта в поле ввода вложенном в .no-ajax
+    $(".no-ajax input").css("font-size","2em");
+
+	//в поле ввода логина вставить логин пользователя
+	$("[name='login']").attr("value", userLogin);
+	$( document ).ready( function() { $("[name='pwd']" ).focus(); });
+}
+
+function customiseWorkingPage() {
+    var remontNumber = document.getElementById("global-caption");
+
+    if (remontNumber != null) {
+        remontNumber.style.fontSize = "25px";
+    }
+
+    if (Perfom){
+        $(".mLine").hide(); //global search
+        $(".mLine2").css("height", "1px");
+        $(".menu").remove();
+        $("#leftBlock, #_data").remove();
+    }
+
+    $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
+    $("#breadcrumbs").remove();
+    $(".line2").css({
+		"margin-bottom": "0",
+		"background": "none"});
+
+    //$(".line2").css("background", "none");
+}
+
+///////////////////////////////////////////////////////////////////////////////
 function processDiagnosisMessage(message){
 
     switch(message){
@@ -203,7 +256,7 @@ function processDiagnosisMessage(message){
             $('#prise-id141').click();	//замена hdd
             pushAddWorkBtn();
 			break;
-		
+
 		case "diagnostics_Hdd_extraneous_sound":
             $("#diag_rez_input, #rem_rez_input").append(" Жесткий диск издаёт посторонние звуки в время работы. Необходима его замена.");
             $("#form-save-btn").click();
@@ -489,10 +542,10 @@ function processDiagnosisMessage(message){
 			break;
 
 		case "diagnostics_Vga_Or_UMA":
-		var message = "\n\n***************************************************************************\n" +
-						"* Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна. *\n" +
-						"***************************************************************************\n";
-						$("[name='neispravnost_mv']").append(message);
+			var message = " Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.";
+						$("#zametkiNewForm").attr("action", "note/note/remontAdd");
+						$("[name='message']").append(message);
+						$("#zametkiNewForm").submit();
 
             $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
             $("#form-save-btn").click();
@@ -529,7 +582,7 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
             $("#form-save-btn").click();
 			break;
-		
+
 		case "diagnostics_Not_Circuit":
             $("#diag_rez_input, #rem_rez_input").append(" На материнскую плату отсутствует принципиальная схема.");
             $("#form-save-btn").click();
@@ -581,7 +634,7 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 3.1 условий гарантийного обслуживания данный ремонт не является гарантийным.");
             $("#form-save-btn").click();
 			break;
-		
+
 		case "diagnostics_NotAGuarantee_223":
             $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 2.2.3 условий гарантийного обслуживания данный ремонт не является гарантийным.");
             $("#form-save-btn").click();
@@ -806,7 +859,7 @@ function processDiagnosisMessage(message){
             $('#prise-id117').click();	//разборка крышки
             pushAddWorkBtn();
 			break;
-			
+
 		case "diagnostics_WEb_camera_Distortions":
             $("#diag_rez_input, #rem_rez_input").append(" WEB камера определяется как устройство в операционной системе, но изображение выводит с искажениями. Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
@@ -866,34 +919,45 @@ function processDiagnosisMessage(message){
 			$('#prise-id116').click();	//разборка
 			pushAddWorkBtn();
 			break;
-		
+
 		case "diagnostics_Main_Power_Supply_Controller":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер дежурных напряжений. " + 
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер дежурных напряжений. " +
 			"Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
-			
+
 			$('#prise-id134').click();  //пайка qfn чипа
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
 			break;
-			
+
 		case "diagnostics_CPU_PWC":
-            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер напряжения питания процессора. " + 
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправна микросхема контроллер напряжения питания процессора. " +
 			"Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
-			
+
 			$('#prise-id134').click();  //пайка qfn чипа
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
 			break;
-			
+
 		case "diagnostics_body_case_can_not_be_restored":
             $("#diag_rez_input, #rem_rez_input").append(" Качественное восстановление корпуса невозможно.");
             $("#form-save-btn").click();
 			break;
+
+		case "diagnostics_Coefficient":
+			//$("li[title='Заметки']").addClass("active");
+			//$("#zametkiNewForm").css("display","block");
+			//добавить атрибут action action="note/note/remontAdd"
+			$("#zametkiNewForm").attr("action", "note/note/remontAdd")
+			message = "Тому що для виконання вказаних робіт потрібно більше часу.";
+			$("[name='message']").append(message);
+			$("#zametkiNewForm").submit();
+			break;
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////
 function processRepairMessage(message){
     switch(message){
         case "repairKeyboard":
@@ -1141,117 +1205,6 @@ function processRepairMessage(message){
             $('#prise-id121').click();	//восстановление шлейфа
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
-			break;		
-    }
-}
-
-function customiseLoginPage() {
-    var imgURL = chrome.extension.getURL("images/eco.jpg");
-    // document.body.style['background-image'] = 'url("' + imgURL + '")';
-    document.body.style.backgroundImage = 'url("' + imgURL + '")';
-    document.body.style.backgroundSize = "cover";
-
-    var loginBug = document.getElementsByClassName("login-bug");
-
-    if (loginBug.length != 0) {
-        loginBug[0].style.visibility = "hidden";
-    }
-
-    $(".login-header img").remove();
-
-    //убрать стиль у первого дочернего элемента div вложенного в div#auth
-    $("div#auth > div").attr("style", "");
-    //увеличить размер шрифта в поле ввода вложенном в .no-ajax
-    $(".no-ajax input").css("font-size","2em");
-
-	//в поле ввода логина вставить логин пользователя
-	$("[name='login']").attr("value", userLogin);
-	$( document ).ready( function() { $("[name='pwd']" ).focus(); });
-}
-
-function customiseWorkingPage() {
-    var remontNumber = document.getElementById("global-caption");
-
-    if (remontNumber != null) {
-        remontNumber.style.fontSize = "25px";
-    }
-
-    if (Perfom){
-        $(".mLine").hide(); //global search
-        $(".mLine2").css("height", "1px");
-        $(".menu").remove();
-        $("#leftBlock, #_data").remove();
-    }
-
-    $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
-    $("#breadcrumbs").remove();
-    $(".line2").css({
-		"margin-bottom": "0",
-		"background": "none"});
-
-    //$(".line2").css("background", "none");
-}
-
-/*do not use anymore*/
-function moveBtnStartStopTimer() {
-    var startTimerBtn = $("*").is(".start-action");
-    var stopTimerBtn = $("*").is(".stop-action");
-
-    console.log("startTimerBtn = " + startTimerBtn);
-    console.log("stopTimerBtn = " + stopTimerBtn);
-
-    //добавляем на страницу свой div блок где будут размещены кнопки
-    //остановки-запуска таймера
-
-    //если блока для кнопок нет, то добавляем его
-    if (!$("*").is(".timerBtns")) {
-        $("<span class='timerBtns' style='background-color: #999;'></span>").appendTo(".main-content");
-    }
-
-    //если есть кнопка Запустить таймер
-    if( startTimerBtn ) {
-        //то прячем её
-        //$(".start-action").hide();
-
-        //установить текст в блоке timerBtns Запустить таймер
-        $(".timerBtns").text("Запустить таймер");
-        $(".timerBtns").addClass("timerIsRun");
-
-
-        //регистрируем обработчик нажатия на созданную кнопку
-        $('.timerIsRun').click(function() {
-            //изменить текст блока timerBtns на Остановить таймер
-            $(".timerIsRun").text("Остановить таймер");
-
-            $(".timerIsRun").unbind("click");
-            $(".timerBtns").removeClass("timerIsStop");
-
-            //выполнить действие onclick связанное с кнопкой
-            $(".start-action").click();
-            console.log("Обработка нажатия на блок span.timerBtns => if startTimerBtn");
-        });
-    }
-    //иначе если таймер уже запущен и на странице есть кнопка Остановить таймер
-    else if (stopTimerBtn) {
-
-        //то прячем родную кнопку
-        //$(".stop-action").hide();
-
-       //установить текст в блоке timerBtns Остановить таймер
-       $(".timerBtns").text("Остановить таймер");
-       $(".timerBtns").addClass("timerIsStop"); //таймер запущен
-
-
-        $('.timerIsStop').click(function() {
-            //изменить текст блока timerBtns на Остановить таймер
-            $(".timerIsStop").text("Запустить таймер");
-
-            $(".timerIsStop").unbind("click");
-            $(".timerBtns").removeClass("timerIsRun");
-
-            //выполнить действие onclick связанное с кнопкой
-            $(".stop-action").click();
-            console.log("Обработка нажатия на блок span.timerBtns => if stopTimerBtn.");
-        });
+			break;
     }
 }
