@@ -1,15 +1,16 @@
 /*скрипт встраивается в станицу и выполняется при ее загрузке*/
 
-const userLogin = "s3virge";
-//const userLogin = "khodor";
 
 //закоментить эту строку если нужно отображать левую колонку и вернюю полосу
 const PERFORM = "Закоментить";
+
+var userLogin = "s3virge";
 
 var bodyBGColorGreen = "#96e896"; //зелёненький
 var bodyBGColorBlue = "#468bf3"; //синенький
 
 var bodyBackGroudColor = bodyBGColorGreen;
+
 var Perfom = true;
 //если PERFORM не определено
 if (typeof(PERFORM) == "undefined"){
@@ -17,6 +18,7 @@ if (typeof(PERFORM) == "undefined"){
 	Perfom = false;
 	//bodyBackGroudColor = bodyBGColorBlue;
     bodyBackGroudColor = bodyBGColorGreen
+    userLogin = "khodor";
 }
 
 document.body.style.backgroundColor = bodyBackGroudColor;
@@ -25,6 +27,8 @@ document.body.style.backgroundColor = bodyBackGroudColor;
 // отключить все стили
 //////////////////////////////////////////
 //$('style,link[rel="stylesheet"]').remove();
+
+customiseWorkingPage();
 
 //это вызывается когда загружается страница
 $(document).ready(updateCSS);
@@ -41,8 +45,6 @@ $("#right-block-container").bind("DOMSubtreeModified", updateStyles );
 if (window.location.pathname == '/auth/user/login/') {
     customiseLoginPage();
 }
-
-customiseWorkingPage();
 
 /*updateCSS не вызывается когда меняется содержимое #rightBlock */
 function updateCSS() {
@@ -214,10 +216,13 @@ function customiseWorkingPage() {
         remontNumber.style.fontSize = "25px";
     }
 
+    /*оранжевая полоса вверху страницы*/
+    $(".mLine").hide(); //global search
+    $(".mLine2").css("height", "1px");
+    $(".menu").remove();
+
     if (Perfom){
-        $(".mLine").hide(); //global search
-        $(".mLine2").css("height", "1px");
-        $(".menu").remove();
+
         $("#leftBlock, #_data").remove();
     }
 
