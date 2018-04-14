@@ -112,13 +112,9 @@ function updateCSS() {
 	$("p").css("margin-top", "0px");
 	$("#rightBlock").css("box-shadow", "none");
 
-	if (Perfom){
-        updateHeight();
-	}
-
+	updateHeight();
+	
 	setRepairNumberColor();
-
-	//moveBtnStartStopTimer();
 }
 
 function setTabStyle() {
@@ -964,7 +960,8 @@ function processDiagnosisMessage(message){
 
 ///////////////////////////////////////////////////////////////////////////////
 function processRepairMessage(message){
-    switch(message){
+    
+	switch(message){
         case "repairKeyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
             $("#form-save-btn").click();
@@ -1211,5 +1208,12 @@ function processRepairMessage(message){
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
 			break;
+
+
+		case "repair_Audio_Socket_Broken":
+            $("#diag_rez_input, #rem_rez_input").append(" Повреждённое аудио гнездо заменено.");
+            $("#form-save-btn").click();
+			break;
+
     }
 }

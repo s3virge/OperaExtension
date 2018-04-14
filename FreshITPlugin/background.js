@@ -295,6 +295,11 @@ function CreateRepairMenu() {
 
 		menuCreateItem("Аккумуляторная батарея",    "repair_Accumulator_Battery", 		"repairRoot");
 
+	menuCreateItem("Звук",      "Root_repair_Audio", "repairRoot");
+                menuCreateItem("Аудио гнездо заменено",  "repair_Audio_Socket_Broken",  "Root_repair_Audio");
+                menuCreateItem("Динамики заменены",      "repairSpeakers",              "Root_repair_Audio");
+                menuCreateItem("Аудиокодек заменён",     "repair_Audio_Сodec",          "Root_repair_Audio");
+
     menuCreateItem("Мульт", 				"Root_repair_Mult", 			    "repairRoot");
         menuCreateItem("Заменён", 	"repair_Mult_Replacing", 			"Root_repair_Mult");
         menuCreateItem("Прошит", 	"repair_Mult_Firmware_Recovery", 	"Root_repair_Mult");
