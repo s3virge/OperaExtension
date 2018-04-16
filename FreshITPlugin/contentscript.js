@@ -960,8 +960,6 @@ function processDiagnosisMessage(message){
 			"Зазначені роботи є досить складними і вимагають великих затрат часу. Тому більше коеф."];
 
 			var messageNumber = Math.floor(Math.random() * 5); // returns a number between 0 to 5
-			console.log(messageNumber);
-			console.log(arrMessages[messageNumber]);
 
 			$("[name='message']").append(arrMessages[messageNumber]);
 			$("#zametkiNewForm").submit();
