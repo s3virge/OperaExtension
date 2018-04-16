@@ -951,8 +951,19 @@ function processDiagnosisMessage(message){
 			//$("#zametkiNewForm").css("display","block");
 			//добавить атрибут action action="note/note/remontAdd"
 			$("#zametkiNewForm").attr("action", "note/note/remontAdd")
-			message = "Тому що для виконання вказаних робіт потрібно більше часу.";
-			$("[name='message']").append(message);
+
+			var arrMessages = [
+			"Тому що для виконання вказаних робіт потрібно більше часу.",
+			"Складно все дуже. Потрібно багато часу. Тому коефіцієнт більше.",
+			"Все не так легко, як здається. Зазначені роботи вимагають більше часу.",
+			"Більш складні роботи. Забирають більше часу, ніж зазвичай. Тому коефіцієнт більше.",
+			"Зазначені роботи є досить складними і вимагають великих затрат часу. Тому більше коеф."];
+
+			var messageNumber = Math.floor(Math.random() * 5); // returns a number between 0 to 5
+			console.log(messageNumber);
+			console.log(arrMessages[messageNumber]);
+
+			$("[name='message']").append(arrMessages[messageNumber]);
 			$("#zametkiNewForm").submit();
 			break;
     }
