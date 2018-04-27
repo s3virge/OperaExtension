@@ -264,8 +264,53 @@ function processOtherMessage(message) {
             $("#diag_rez_input, #rem_rez_input").append(" Ноутбук включается, запускается, операционная система загружается.");
             $("#form-save-btn").click();
 			break;
-		break;	
-	}
+		break;
+
+        case "other_NotRepair":
+            $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_Not_Circuit":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнскую плату отсутствует принципиальная схема.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_NotAGuarantee":
+            $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 3.1 условий гарантийного обслуживания данный ремонт не является гарантийным.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_Seals_are_damaged":
+            $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 2.2.3 условий гарантийного обслуживания данный ремонт не является гарантийным.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_DontManifested":
+            $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_Not_constantly_manifested":
+            $("#diag_rez_input, #rem_rez_input").append(" Заявленная неисправность проявляется не постоянно. Это сильно затрудняет её диагностику.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_NotAPart":
+            $("#diag_rez_input, #rem_rez_input").append(" Данная деталь снята с производства. Заменить её на новую нельзя.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_Fatal_Damage":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате фатальные повреждения не совместимые с дальнейшей эксплуатацией.");
+            $("#form-save-btn").click();
+            break;
+
+        case "other_NOT_a_good_design":
+            $("#diag_rez_input, #rem_rez_input").append(" В результате неудачного конструктивного решения в данной модели ноутбука...");
+            $("#form-save-btn").click();
+            break;
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -410,7 +455,6 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
-		//тараканы
 		case "diagnostics_cockroach":
             $("#diag_rez_input, #rem_rez_input").append(" В корпусе ноутбука обнаружены насекомые и следы их жизнедеятельности. ");
             $("#form-save-btn").click();
@@ -616,16 +660,6 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
-		case "diagnosticsNotRepair":
-            $("#diag_rez_input, #rem_rez_input").append(" Определить причину неисправности не удалось.");
-            $("#form-save-btn").click();
-			break;
-
-		case "diagnostics_Not_Circuit":
-            $("#diag_rez_input, #rem_rez_input").append(" На материнскую плату отсутствует принципиальная схема.");
-            $("#form-save-btn").click();
-			break;
-
         case "diagnostics_Fastening_of_loops":
             $("#diag_rez_input, #rem_rez_input").append(" Крепления петель матрицы сломаны. Для предотвращения дальнейшего разрушения корпуса необходимо их восстановление.");
             $("#form-save-btn").click();
@@ -668,26 +702,6 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
-		case "diagnostics_NotAGuarantee":
-            $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 3.1 условий гарантийного обслуживания данный ремонт не является гарантийным.");
-            $("#form-save-btn").click();
-			break;
-
-		case "diagnostics_NotAGuarantee_223":
-            $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 2.2.3 условий гарантийного обслуживания данный ремонт не является гарантийным.");
-            $("#form-save-btn").click();
-			break;
-
-		case "diagnostics_DontManifested":
-            $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась.");
-            $("#form-save-btn").click();
-			break;
-
-		case "diagnostics_Not_constantly_manifested":
-            $("#diag_rez_input, #rem_rez_input").append(" Заявленная неисправность проявляется не постоянно. Это сильно затрудняет её диагностику.");
-            $("#form-save-btn").click();
-			break;
-
         case "diagnostics_ShortCircuit":
             $("#diag_rez_input, #rem_rez_input").append(" Блок питания при подключении к ноутбуку переключается в режим защиты от короткого замыкания. Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
             $("#form-save-btn").click();
@@ -696,12 +710,6 @@ function processDiagnosisMessage(message){
             $('#prise-id137').click();	// Восстановление цепи питания материнской платы
             $('#prise-id154').click();  //чистка
             pushAddWorkBtn();
-			break;
-
-            //не деталь
-        case "diagnostics_NotAPart":
-            $("#diag_rez_input, #rem_rez_input").append(" Данная деталь снята с производства. Заменить её на новую нельзя.");
-            $("#form-save-btn").click();
 			break;
 
         case "diagnostics_Fan":
@@ -779,7 +787,7 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
-      case "diagnostics_Speakers_Broken":
+        case "diagnostics_Speakers_Broken":
             $("#diag_rez_input, #rem_rez_input").append(" Динамики неисправны, необходима их замена.");
             $("#form-save-btn").click();
 
@@ -788,7 +796,7 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 						break;
 
-			case "diagnostics_speakers_wheeze":
+		case "diagnostics_speakers_wheeze":
             $("#diag_rez_input, #rem_rez_input").append(" Динамики воспроизводят звук с искажениями, необходима их замена.");
             $("#form-save-btn").click();
 
@@ -805,11 +813,6 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
             $('#prise-id134').click();  //пайка qfn чипа
             pushAddWorkBtn();
-			break;
-
-		case "diagnostics_Fatal_Damage":
-            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате фатальные повреждения не совместимые с дальнейшей эксплуатацией.");
-            $("#form-save-btn").click();
 			break;
 
 		case "diagnostics_CMOS_Battery":
@@ -837,11 +840,6 @@ function processDiagnosisMessage(message){
             $('#prise-id154').click();  //чистка
 			$('#prise-id136').click();	//пайка смд компонентов
             pushAddWorkBtn();
-			break;
-
-		case "diagnostics_NOT_a_good_design":
-            $("#diag_rez_input, #rem_rez_input").append(" В результате неудачного конструктивного решения в данной модели ноутбука...");
-            $("#form-save-btn").click();
 			break;
 
 		case "diagnostics_PS_cable_is_damaged_change":
@@ -942,7 +940,7 @@ function processDiagnosisMessage(message){
 			pushAddWorkBtn();
 			break;
 
-			case "diagnostics_TachPad_jack_broken":
+		case "diagnostics_TachPad_jack_broken":
 	    	$("#diag_rez_input, #rem_rez_input").append(" На материнской плате сломан разъём подключения тачпада.");
 	      $("#form-save-btn").click();
 
@@ -982,8 +980,6 @@ function processDiagnosisMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Качественное восстановление корпуса невозможно.");
             $("#form-save-btn").click();
 			break;
-
-		
     }
 }
 
@@ -1243,13 +1239,12 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
 			break;
 
-			case "repair_Power_Jack_Socket":
+		case "repair_Power_Jack_Socket":
 	            $("#diag_rez_input, #rem_rez_input").append(" Крепление гнезда питания в корпусе восстановлено.");
 	            $("#form-save-btn").click();
 				$('#prise-id116').click();	//разборка
 				$('#prise-id140').click();	//Восстановление корпуса
 	            pushAddWorkBtn();
 				break;
-
     }
 }

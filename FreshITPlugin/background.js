@@ -2,31 +2,32 @@
  * Created by s3virge on 21.06.17.
  */
 chrome.runtime.onInstalled.addListener(function () {
-	
+
+    CreateOtherMenu();
+
+    chrome.contextMenus.create({
+        title: "Вставить разделитель",
+        type: "separator",
+        id: "separator",
+        documentUrlPatterns: ["*://base.freshit.ua/*"]
+    });
+
     CreateDiagnosticsMenu();
     CreateRepairMenu();
-	
-	chrome.contextMenus.create({
-        title: "Вставить разделитель",
-        contexts: ["editable"],
-        id: "separator",
-        documentUrlPatterns: ["*://base.freshit.ua"]
-    });
-	
-	CreateOtherMenu();
 });
 
 chrome.contextMenus.onClicked.addListener(function (info) {
 
-	if (~info.menuItemId.indexOf("diagnostics")){
+    if (~info.menuItemId.indexOf("other")){
+        menuSendMessage("other", info.menuItemId);
+    }
+	else if (~info.menuItemId.indexOf("diagnostics")){
 		menuSendMessage("diagnostics", info.menuItemId);
 	}
 	else if (~info.menuItemId.indexOf("repair")){
 		menuSendMessage("repair", info.menuItemId);
 	}
-	else if (~info.menuItemId.indexOf("other")){
-		menuSendMessage("other", info.menuItemId);
-	}
+
 });
 
 
@@ -71,7 +72,7 @@ function menuSendMessage(messageType, messageId) {
                 chrome.tabs.sendMessage
                 (
                     tabs[0].id,
-                    {notype: messageId}
+                    {other: messageId}
                 );
             }
         }
@@ -105,11 +106,13 @@ function CreateOtherMenu() {
 		menuCreateItem("Все добре",       	"other_all_is_well",     	"otherRoot");
 		
 		menuCreateItem("Не ...", 		"Root_otherNot", 			"otherRoot");
-			menuCreateItem("Не ремонт", 	"otherNotRepair", 		"Root_otherNot");
+			menuCreateItem("Не ремонт", 	"other_NotRepair", 		"Root_otherNot");
 			menuCreateItem("Нет схемы", 	"other_Not_Circuit", 		"Root_otherNot");
+
 			menuCreateItem("Гарантия", 	"Root_other_NotAGuarantee", 	"Root_otherNot");
 				menuCreateItem("Не гарантия", 			"other_NotAGuarantee", 	"Root_other_NotAGuarantee");
-				menuCreateItem("Пломбы повреждены", 	"other_NotAGuarantee_223", 	"Root_other_NotAGuarantee");
+				menuCreateItem("Пломбы повреждены", 	"other_Seals_are_damaged", 	"Root_other_NotAGuarantee");
+
 			menuCreateItem("Не проявилась", "other_DontManifested",	"Root_otherNot");
 			menuCreateItem("Не постоянно проявляется", "other_Not_constantly_manifested",	"Root_otherNot");
 			menuCreateItem("Не деталь", 	"other_NotAPart", 		"Root_otherNot");
