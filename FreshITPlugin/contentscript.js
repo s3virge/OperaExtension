@@ -113,7 +113,7 @@ function updateCSS() {
 	$("#rightBlock").css("box-shadow", "none");
 
 	updateHeight();
-	
+
 	setRepairNumberColor();
 }
 
@@ -165,6 +165,9 @@ chrome.runtime.onMessage.addListener(
         }
         else if (msg.repair){
             processRepairMessage(msg.repair);
+        }
+		else if (msg.other){
+            processOtherMessage(msg.other);
         }
         else if (msg.message == "search") {
             $('.global-search input').attr("value", msg.number);
@@ -229,6 +232,40 @@ function customiseWorkingPage() {
 		"background": "none"});
 
     //$(".line2").css("background", "none");
+}
+
+function processOtherMessage(message) {
+	switch(message){
+        case "other_difficult":
+            $("#diag_rez_input, #rem_rez_input").append(" Сложная диагностика.");
+            $("#form-save-btn").click();
+			break;
+		
+		case "other_Coefficient":
+			//$("li[title='Заметки']").addClass("active");
+			//$("#zametkiNewForm").css("display","block");
+			//добавить атрибут action action="note/note/remontAdd"
+			$("#zametkiNewForm").attr("action", "note/note/remontAdd");
+
+			var arrMessages = [
+			"Тому що для виконання вказаних робіт потрібно більше часу.",
+			"Складно все дуже. Потрібно багато часу. Тому коефіцієнт більше.",
+			"Все не так легко, як здається. Зазначені роботи вимагають більше часу.",
+			"Більш складні роботи. Забирають більше часу, ніж зазвичай. Тому коефіцієнт більше.",
+			"Зазначені роботи є досить складними і вимагають великих затрат часу. Тому більше коеф."];
+
+			var messageNumber = Math.floor(Math.random() * 5); // returns a number between 0 to 5
+
+			$("[name='message']").append(arrMessages[messageNumber]);
+			$("#zametkiNewForm").submit();
+			break;
+
+		case "other_all_is_well":
+            $("#diag_rez_input, #rem_rez_input").append(" Ноутбук включается, запускается, операционная система загружается.");
+            $("#form-save-btn").click();
+			break;
+		break;	
+	}
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -543,19 +580,19 @@ function processDiagnosisMessage(message){
 			break;
 
 		case "diagnostics_Vga_Or_UMA":
-			var message = " Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.";
-						$("#zametkiNewForm").attr("action", "note/note/remontAdd");
-						$("[name='message']").append(message);
-						$("#zametkiNewForm").submit();
+      $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
+      $("#form-save-btn").click();
+      $('#prise-id116').click();	//разборка
+      $('#prise-id534').click();	//снятие компаунда
+      $('#prise-id133').click();	//пайка BGA
+      $('#prise-id154').click();  //чистка
+			$('#prise-id136').click();	//пайка смд компонентов
+      pushAddWorkBtn();
 
-            $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
-            $("#form-save-btn").click();
-            $('#prise-id116').click();	//разборка
-            $('#prise-id534').click();	//снятие компаунда
-            $('#prise-id133').click();	//пайка BGA
-            $('#prise-id154').click();  //чистка
-						$('#prise-id136').click();	//пайка смд компонентов
-            pushAddWorkBtn();
+			var msg = " Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.";
+			$("#zametkiNewForm").attr("action", "note/note/remontAdd");
+			$("[name='message']").append(msg);
+			$("#zametkiNewForm").submit();
 			break;
 
 		case "diagnosticsNoReaction":
@@ -946,30 +983,13 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			break;
 
-		case "diagnostics_Coefficient":
-			//$("li[title='Заметки']").addClass("active");
-			//$("#zametkiNewForm").css("display","block");
-			//добавить атрибут action action="note/note/remontAdd"
-			$("#zametkiNewForm").attr("action", "note/note/remontAdd")
-
-			var arrMessages = [
-			"Тому що для виконання вказаних робіт потрібно більше часу.",
-			"Складно все дуже. Потрібно багато часу. Тому коефіцієнт більше.",
-			"Все не так легко, як здається. Зазначені роботи вимагають більше часу.",
-			"Більш складні роботи. Забирають більше часу, ніж зазвичай. Тому коефіцієнт більше.",
-			"Зазначені роботи є досить складними і вимагають великих затрат часу. Тому більше коеф."];
-
-			var messageNumber = Math.floor(Math.random() * 5); // returns a number between 0 to 5
-
-			$("[name='message']").append(arrMessages[messageNumber]);
-			$("#zametkiNewForm").submit();
-			break;
+		
     }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 function processRepairMessage(message){
-    
+
 	switch(message){
         case "repairKeyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
@@ -1218,11 +1238,18 @@ function processRepairMessage(message){
             pushAddWorkBtn();
 			break;
 
-
 		case "repair_Audio_Socket_Broken":
             $("#diag_rez_input, #rem_rez_input").append(" Повреждённое аудио гнездо заменено.");
             $("#form-save-btn").click();
 			break;
+
+			case "repair_Power_Jack_Socket":
+	            $("#diag_rez_input, #rem_rez_input").append(" Крепление гнезда питания в корпусе восстановлено.");
+	            $("#form-save-btn").click();
+				$('#prise-id116').click();	//разборка
+				$('#prise-id140').click();	//Восстановление корпуса
+	            pushAddWorkBtn();
+				break;
 
     }
 }

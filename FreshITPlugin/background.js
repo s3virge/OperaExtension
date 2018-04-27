@@ -2,16 +2,18 @@
  * Created by s3virge on 21.06.17.
  */
 chrome.runtime.onInstalled.addListener(function () {
-
-    /* chrome.contextMenus.create({
+	
+    CreateDiagnosticsMenu();
+    CreateRepairMenu();
+	
+	chrome.contextMenus.create({
         title: "Вставить разделитель",
         contexts: ["editable"],
         id: "separator",
-        documentUrlPatterns: ["*://base.freshit.ua/*"]
-    }); */
-
-    CreateDiagnosticsMenu();
-    CreateRepairMenu();
+        documentUrlPatterns: ["*://base.freshit.ua"]
+    });
+	
+	CreateOtherMenu();
 });
 
 chrome.contextMenus.onClicked.addListener(function (info) {
@@ -21,6 +23,9 @@ chrome.contextMenus.onClicked.addListener(function (info) {
 	}
 	else if (~info.menuItemId.indexOf("repair")){
 		menuSendMessage("repair", info.menuItemId);
+	}
+	else if (~info.menuItemId.indexOf("other")){
+		menuSendMessage("other", info.menuItemId);
 	}
 });
 
@@ -62,13 +67,13 @@ function menuSendMessage(messageType, messageId) {
                     {diagnostics: messageId}
                 );
             }
-            /* else if (messageType == "notype"){
+            else if (messageType == "other"){
                 chrome.tabs.sendMessage
                 (
                     tabs[0].id,
                     {notype: messageId}
                 );
-            } */
+            }
         }
     );
 }
@@ -82,7 +87,7 @@ function menuCreateRootItem(rootTitle, rootId) {
     });
 }
 
-function menuCreateItem(itemTitle, itemId, parentId) {
+function menuCreateItem(itemTitle, itemId, parentId) {	
     chrome.contextMenus.create({
         title: itemTitle,
         contexts: ["editable", "page"],
@@ -90,6 +95,26 @@ function menuCreateItem(itemTitle, itemId, parentId) {
         id: itemId,
         documentUrlPatterns: ["*://base.freshit.ua/*"]
     });
+}
+
+function CreateOtherMenu() {
+	menuCreateRootItem("Разное",        "otherRoot");
+	
+		menuCreateItem("3 Дня => Сложная диагностика!",       	"other_difficult",     	"otherRoot");
+		menuCreateItem("Коэффицие́нт",       	"other_Coefficient",     	"otherRoot");
+		menuCreateItem("Все добре",       	"other_all_is_well",     	"otherRoot");
+		
+		menuCreateItem("Не ...", 		"Root_otherNot", 			"otherRoot");
+			menuCreateItem("Не ремонт", 	"otherNotRepair", 		"Root_otherNot");
+			menuCreateItem("Нет схемы", 	"other_Not_Circuit", 		"Root_otherNot");
+			menuCreateItem("Гарантия", 	"Root_other_NotAGuarantee", 	"Root_otherNot");
+				menuCreateItem("Не гарантия", 			"other_NotAGuarantee", 	"Root_other_NotAGuarantee");
+				menuCreateItem("Пломбы повреждены", 	"other_NotAGuarantee_223", 	"Root_other_NotAGuarantee");
+			menuCreateItem("Не проявилась", "other_DontManifested",	"Root_otherNot");
+			menuCreateItem("Не постоянно проявляется", "other_Not_constantly_manifested",	"Root_otherNot");
+			menuCreateItem("Не деталь", 	"other_NotAPart", 		"Root_otherNot");
+			menuCreateItem("Фатальные повреждения", 	"other_Fatal_Damage", 		"Root_otherNot");
+			menuCreateItem("Неудачный конструктив", 	"other_NOT_a_good_design", 		"Root_otherNot");
 }
 
 function CreateDiagnosticsMenu() {
@@ -127,7 +152,7 @@ function CreateDiagnosticsMenu() {
 
 		menuCreateItem("Тачпад",         		"Root_diagnosticsTachPad",         "diagnosticsRoot");
 			menuCreateItem("Не работает",   	"diagnostics_TachPad_Does_not_Work", 		"Root_diagnosticsTachPad");
-			menuCreateItem("Поврежден шлейф",   "diagnostics_TachPad_cable_broken", 		"Root_diagnosticsTachPad");  
+			menuCreateItem("Поврежден шлейф",   "diagnostics_TachPad_cable_broken", 		"Root_diagnosticsTachPad");
 			menuCreateItem("Сломан разъём подключения",   "diagnostics_TachPad_jack_broken", 		"Root_diagnosticsTachPad");
 			menuCreateItem("Не работают кнопки","diagnostics_TachPad_Btn_Does_not_Work", 	"Root_diagnosticsTachPad");
 
@@ -228,21 +253,6 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Нет индикации, нет реакции", 				"diagnosticsNoReaction", 			"Root_DiagnosticsNoReaction");
 			menuCreateItem("Есть индикация, нет реакции", 				"diagnostics_HaveLite_NoReaction", 	"Root_DiagnosticsNoReaction");
 			menuCreateItem("Есть индикация, реакция, нет картинки ", 	"diagnostics_HaveLite_NoPicture", 	"Root_DiagnosticsNoReaction");
-
-		menuCreateItem("Не ...", 		"Root_diagnosticsNot", 			"diagnosticsRoot");
-			menuCreateItem("Не ремонт", 	"diagnosticsNotRepair", 		"Root_diagnosticsNot");
-			menuCreateItem("Нет схемы", 	"diagnostics_Not_Circuit", 		"Root_diagnosticsNot");
-			menuCreateItem("Гарантия", 	"Root_diagnostics_NotAGuarantee", 	"Root_diagnosticsNot");
-				menuCreateItem("Не гарантия", 			"diagnostics_NotAGuarantee", 	"Root_diagnostics_NotAGuarantee");
-				menuCreateItem("Пломбы повреждены", 	"diagnostics_NotAGuarantee_223", 	"Root_diagnostics_NotAGuarantee");
-			menuCreateItem("Не проявилась", "diagnostics_DontManifested",	"Root_diagnosticsNot");
-			menuCreateItem("Не постоянно проявляется", "diagnostics_Not_constantly_manifested",	"Root_diagnosticsNot");
-			menuCreateItem("Не деталь", 	"diagnostics_NotAPart", 		"Root_diagnosticsNot");
-			menuCreateItem("Фатальные повреждения", 	"diagnostics_Fatal_Damage", 		"Root_diagnosticsNot");
-			menuCreateItem("Неудачный конструктив", 	"diagnostics_NOT_a_good_design", 		"Root_diagnosticsNot");
-
-		menuCreateItem("3 Дня => Сложная диагностика!",       	"diagnostics_difficult",     	"diagnosticsRoot");
-		menuCreateItem("Коэффицие́нт",       	"diagnostics_Coefficient",     	"diagnosticsRoot");		
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -261,6 +271,7 @@ function CreateRepairMenu() {
 
 		menuCreateItem("Корпус",             	"Root_repair_Body",       		"repairRoot");
 			menuCreateItem("Крепление петель",  "repair_Fastening_of_loops", 	"Root_repair_Body");
+      menuCreateItem("Крепление гнезда",  "repair_Power_Jack_Socket",   "Root_repair_Body");
 			menuCreateItem("Сломан",            "repairBrokenBody",             "Root_repair_Body");
 			menuCreateItem("Петли",           		"Root_Repair_Matrix_Loops",       	"Root_repair_Body");
 				menuCreateItem("Заменены", 	    	"repair_Broken_Matrix_Loops_Replacement",		"Root_Repair_Matrix_Loops");

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="was added some new items">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreshITPlugin/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,46 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="113" column="38" lean-forward="true" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
-              <folding>
-                <element signature="e#65#114#0" expanded="false" />
-                <element signature="e#223#272#0" expanded="false" />
-                <element signature="e#357#401#0" expanded="false" />
-                <element signature="e#453#495#0" expanded="false" />
-                <element signature="e#833#901#0" expanded="false" />
-                <element signature="e#1108#1137#0" expanded="false" />
-                <element signature="e#1164#1230#0" expanded="false" />
-                <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-                <element signature="e#2651#2679#0" expanded="false" />
-                <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-                <element signature="e#2891#2943#0" expanded="false" />
-                <element signature="e#2967#3015#0" expanded="false" />
-                <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-                <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-                <element signature="e#3520#3978#0" expanded="false" />
-                <element signature="e#3655#3720#0" expanded="false" />
-                <element signature="e#3749#3806#0" expanded="false" />
-                <element signature="e#3849#3972#0" expanded="false" />
-                <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-                <element signature="e#4049#4091#0" expanded="false" />
-                <element signature="e#4295#31848#0" expanded="false" />
-                <element signature="e#8180#8203#0" expanded="false" />
-                <element signature="e#12573#12590#0" expanded="false" />
-                <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-                <element signature="e#44913#45643#0" expanded="false" />
-                <element signature="e#45209#45635#0" expanded="false" />
-                <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -64,6 +27,9 @@
       <find>hide</find>
       <find>type</find>
       <find>PushAddWorkBtn</find>
+      <find>звук</find>
+      <find>Audio_Socket_Broken</find>
+      <find>message</find>
     </findStrings>
     <replaceStrings>
       <replace>Корпус сломан</replace>
@@ -72,11 +38,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -95,22 +56,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1366" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes />
@@ -118,6 +72,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,25 +89,84 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <setting name="vmparams" value="" />
@@ -161,17 +176,7 @@
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -181,30 +186,13 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -217,15 +205,12 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
     </configuration>
@@ -310,39 +295,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
@@ -363,55 +315,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -492,11 +395,24 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
       <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
@@ -511,9 +427,14 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -569,27 +490,9 @@
       <workItem from="1517395031581" duration="533000" />
       <workItem from="1517395694271" duration="558000" />
       <workItem from="1517472822368" duration="763000" />
-    </task>
-    <task id="LOCAL-00001" summary="My opera extension.">
-      <created>1499264079888</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1499264079888</updated>
-    </task>
-    <task id="LOCAL-00002" summary="My opera extension.">
-      <created>1499265330991</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1499265330991</updated>
-    </task>
-    <task id="LOCAL-00003" summary="My opera extension.">
-      <created>1499268950052</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1499268950052</updated>
+      <workItem from="1523546943773" duration="792000" />
+      <workItem from="1524488217850" duration="910000" />
+      <workItem from="1524490837778" duration="299000" />
     </task>
     <task id="LOCAL-00004" summary="My opera extension.">
       <created>1499355148699</created>
@@ -906,76 +809,105 @@
       <option name="project" value="LOCAL" />
       <updated>1517473643768</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="was added some new">
+      <created>1523547134614</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1523547134615</updated>
+    </task>
+    <task id="LOCAL-00050" summary="was added some new items">
+      <created>1523699976734</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1523699976736</updated>
+    </task>
+    <task id="LOCAL-00051" summary="was added some new items">
+      <created>1523889368562</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1523889368564</updated>
+    </task>
+    <task id="LOCAL-00052" summary="was added some new items">
+      <created>1523889412986</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1523889412987</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53192000" />
+    <option name="totallyTimeSpent" value="55193000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-3" y="0" width="1372" height="737" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12648809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32928678" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32923076" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32776934" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12591508" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info id="Learn" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Nl-Palette" order="5" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Properties" order="5" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12648809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" order="3" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Properties" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32776934" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32928678" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32923076" />
+      <window_info id="Nl-Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12591508" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -991,48 +923,55 @@
     <MESSAGE value="пытаюсь переместить кнопки таймера" />
     <MESSAGE value="сделал свои кнопки запуска и остановки таймера" />
     <MESSAGE value="Номер ремонта меняет свет в зависимости от кнопки таймера." />
-    <option name="LAST_COMMIT_MESSAGE" value="Номер ремонта меняет свет в зависимости от кнопки таймера." />
+    <MESSAGE value="was added some new" />
+    <MESSAGE value="was added some new items" />
+    <option name="LAST_COMMIT_MESSAGE" value="was added some new items" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+        <state relative-caret-position="14580">
+          <caret line="972" column="5" selection-start-line="972" selection-start-column="5" selection-end-line="972" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4260">
+          <caret line="284" lean-forward="true" selection-start-line="284" selection-end-line="284" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14415">
+          <caret line="961" column="5" lean-forward="true" selection-start-line="961" selection-start-column="5" selection-end-line="961" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4470">
+          <caret line="298" column="84" selection-start-line="298" selection-start-column="58" selection-end-line="298" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20689">
+          <caret line="1217" column="5" lean-forward="true" selection-start-line="1217" selection-start-column="5" selection-end-line="1217" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5066">
+          <caret line="298" column="84" selection-start-line="298" selection-start-column="58" selection-end-line="298" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -1043,426 +982,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2625">
-          <caret line="125" column="95" lean-forward="false" selection-start-line="125" selection-start-column="95" selection-end-line="125" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="125" column="95" selection-start-line="125" selection-start-column="95" selection-end-line="125" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2079">
-          <caret line="99" column="61" lean-forward="false" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="99" column="61" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2541">
-          <caret line="121" column="68" lean-forward="false" selection-start-line="121" selection-start-column="42" selection-end-line="121" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="121" column="68" selection-start-line="121" selection-start-column="42" selection-end-line="121" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
-          <caret line="110" column="62" lean-forward="false" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="110" column="62" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
-          <caret line="110" column="62" lean-forward="false" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="110" column="62" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2751">
-          <caret line="131" column="57" lean-forward="false" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="131" column="57" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3276">
-          <caret line="156" column="4" lean-forward="false" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="156" column="4" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3276">
-          <caret line="156" column="4" lean-forward="false" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="156" column="4" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1473,254 +1052,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+        <state relative-caret-position="882">
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1731,168 +1094,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2457">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5061">
-          <caret line="241" column="0" lean-forward="true" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2247">
-          <caret line="107" column="29" lean-forward="false" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1903,139 +1122,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+        <state relative-caret-position="1323">
+          <caret line="63" column="76" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
-          <caret line="63" column="76" lean-forward="false" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1323">
-          <caret line="63" column="76" lean-forward="false" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+          <caret line="63" column="76" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FindOnVlab/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="246" column="45" lean-forward="false" selection-start-line="246" selection-start-column="45" selection-end-line="246" selection-end-column="45" />
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -2046,39 +1150,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="113" column="38" lean-forward="true" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
-          <folding>
-            <element signature="e#65#114#0" expanded="false" />
-            <element signature="e#223#272#0" expanded="false" />
-            <element signature="e#357#401#0" expanded="false" />
-            <element signature="e#453#495#0" expanded="false" />
-            <element signature="e#833#901#0" expanded="false" />
-            <element signature="e#1108#1137#0" expanded="false" />
-            <element signature="e#1164#1230#0" expanded="false" />
-            <element signature="n#!!block;n#updateCSS#0" expanded="false" />
-            <element signature="e#2651#2679#0" expanded="false" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" expanded="false" />
-            <element signature="e#2891#2943#0" expanded="false" />
-            <element signature="e#2967#3015#0" expanded="false" />
-            <element signature="n#!!block;n#updateHeight#0" expanded="false" />
-            <element signature="n#!!block;n#updateStyles#0" expanded="false" />
-            <element signature="e#3520#3978#0" expanded="false" />
-            <element signature="e#3655#3720#0" expanded="false" />
-            <element signature="e#3749#3806#0" expanded="false" />
-            <element signature="e#3849#3972#0" expanded="false" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" expanded="false" />
-            <element signature="e#4049#4091#0" expanded="false" />
-            <element signature="e#4295#31848#0" expanded="false" />
-            <element signature="e#8180#8203#0" expanded="false" />
-            <element signature="e#12573#12590#0" expanded="false" />
-            <element signature="n#!!block;n#moveBtnStartStopTimer#0" expanded="false" />
-            <element signature="e#44913#45643#0" expanded="false" />
-            <element signature="e#45209#45635#0" expanded="false" />
-            <marker date="1517398441892" expanded="false" signature="43908:43931" ph="..." />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="972" column="5" selection-start-line="972" selection-start-column="5" selection-end-line="972" selection-end-column="5" />
         </state>
       </provider>
     </entry>
