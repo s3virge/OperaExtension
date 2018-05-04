@@ -3,16 +3,26 @@
  */
 chrome.runtime.onInstalled.addListener(function () {
 
+
+    CreateDiagnosticsMenu();
+
+    chrome.contextMenus.create({
+        title: "Вставить разделитель",
+        type: "separator",
+        id: "separator1",
+        documentUrlPatterns: ["*://base.freshit.ua/*"]
+    });
+
+
     CreateOtherMenu();
 
     chrome.contextMenus.create({
         title: "Вставить разделитель",
         type: "separator",
-        id: "separator",
+        id: "separator2",
         documentUrlPatterns: ["*://base.freshit.ua/*"]
     });
 
-    CreateDiagnosticsMenu();
     CreateRepairMenu();
 });
 
@@ -88,7 +98,7 @@ function menuCreateRootItem(rootTitle, rootId) {
     });
 }
 
-function menuCreateItem(itemTitle, itemId, parentId) {	
+function menuCreateItem(itemTitle, itemId, parentId) {
     chrome.contextMenus.create({
         title: itemTitle,
         contexts: ["editable", "page"],
@@ -100,11 +110,11 @@ function menuCreateItem(itemTitle, itemId, parentId) {
 
 function CreateOtherMenu() {
 	menuCreateRootItem("Разное",        "otherRoot");
-	
+
 		menuCreateItem("3 Дня => Сложная диагностика!",       	"other_difficult",     	"otherRoot");
 		menuCreateItem("Коэффицие́нт",       	"other_Coefficient",     	"otherRoot");
 		menuCreateItem("Все добре",       	"other_all_is_well",     	"otherRoot");
-		
+
 		menuCreateItem("Не ...", 		"Root_otherNot", 			"otherRoot");
 			menuCreateItem("Не ремонт", 	"other_NotRepair", 		"Root_otherNot");
 			menuCreateItem("Нет схемы", 	"other_Not_Circuit", 		"Root_otherNot");
