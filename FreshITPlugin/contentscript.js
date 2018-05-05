@@ -240,7 +240,7 @@ function processOtherMessage(message) {
             $("#diag_rez_input, #rem_rez_input").append(" Сложная диагностика.");
             $("#form-save-btn").click();
 			break;
-		
+
 		case "other_Coefficient":
 			//$("li[title='Заметки']").addClass("active");
 			//$("#zametkiNewForm").css("display","block");
@@ -1231,6 +1231,17 @@ function processRepairMessage(message){
             $('#prise-id117').click();	//разборка крышки
             $('#prise-id121').click();	//восстановление шлейфа
 			$('#prise-id116').click();	//разборка
+            pushAddWorkBtn();
+			break;
+
+
+			case "repair_Audio_Сodec":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправный аудио чип заменён на новый.");
+            $("#form-save-btn").click();
+
+						$('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id134').click();  //пайка qfn чипа
             pushAddWorkBtn();
 			break;
 
