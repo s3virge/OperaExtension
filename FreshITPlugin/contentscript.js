@@ -426,6 +426,13 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
+		case "diagnostics_Keyboard_needs_to_be_cleaned":
+            $("#diag_rez_input, #rem_rez_input").append(" Из-за попадания на клавиатуру жидкости клавиши плохо нажимаются. Необходимо разобрать клавиатуру и устранить последствия попадания на неё жидкости.");
+            $("#form-save-btn").click();
+            $('#prise-id129').click();	//Восстановление клавиатуры после залития
+            pushAddWorkBtn();
+			break;
+
         case "diagnosticsPour":
             $("#diag_rez_input, #rem_rez_input").append(" На материнской плате следы попадания жидкости. Для дальнейшей диагностики необходимо устранить последствия попадания жидкости.");
             $("#form-save-btn").click();
@@ -624,14 +631,15 @@ function processDiagnosisMessage(message){
 			break;
 
 		case "diagnostics_Vga_Or_UMA":
-      $("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
-      $("#form-save-btn").click();
-      $('#prise-id116').click();	//разборка
-      $('#prise-id534').click();	//снятие компаунда
-      $('#prise-id133').click();	//пайка BGA
-      $('#prise-id154').click();  //чистка
+			$("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
+			$("#form-save-btn").click();
+			
+			$('#prise-id116').click();	//разборка
+			$('#prise-id534').click();	//снятие компаунда
+			$('#prise-id133').click();	//пайка BGA
+			$('#prise-id154').click();  //чистка
 			$('#prise-id136').click();	//пайка смд компонентов
-      pushAddWorkBtn();
+			pushAddWorkBtn();
 
 			var msg = " Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.";
 			$("#zametkiNewForm").attr("action", "note/note/remontAdd");
@@ -987,9 +995,16 @@ function processDiagnosisMessage(message){
 function processRepairMessage(message){
 
 	switch(message){
-        case "repairKeyboard":
+        case "repair_Keyboard":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправная клавиатура заменена на новую.");
             $("#form-save-btn").click();
+            break;
+
+        case "repair_Keyboard_Keys_are_washed":
+            $("#diag_rez_input, #rem_rez_input").append(" Клавиши на клавиатуре восстановлены.");
+            $("#form-save-btn").click();
+            $('#prise-id129').click();	//Восстановление клавиатуры после залития
+            pushAddWorkBtn();
             break;
 
 		case "repair_Fastening_of_loops":
@@ -1233,7 +1248,6 @@ function processRepairMessage(message){
 			$('#prise-id116').click();	//разборка
             pushAddWorkBtn();
 			break;
-
 
 			case "repair_Audio_Сodec":
             $("#diag_rez_input, #rem_rez_input").append(" Неисправный аудио чип заменён на новый.");

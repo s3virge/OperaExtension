@@ -134,8 +134,8 @@ function CreateDiagnosticsMenu() {
     menuCreateRootItem("Диагностика",        "diagnosticsRoot");
 
 		menuCreateItem("Жесткий диск",       	"Root_diagnostics_Hdd",     	"diagnosticsRoot");
-			menuCreateItem("Тест с ошибками",	"diagnostics_Hdd_Errors",		"Root_diagnostics_Hdd");
-			menuCreateItem("Тест без ошибок", 	"diagnostics_Hdd_No_Errors",	"Root_diagnostics_Hdd");
+			menuCreateItem("С ошибками",	"diagnostics_Hdd_Errors",		"Root_diagnostics_Hdd");
+			menuCreateItem("Без ошибок", 	"diagnostics_Hdd_No_Errors",	"Root_diagnostics_Hdd");
 			menuCreateItem("Не определяется", 	"diagnostics_Hdd_Not_determined",	"Root_diagnostics_Hdd");
 			menuCreateItem("Посторонние звуки", 	"diagnostics_Hdd_extraneous_sound",	"Root_diagnostics_Hdd");
 
@@ -162,6 +162,7 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Клавиатура",         	"ROOT_diagnosticsKeyboard",         "diagnosticsRoot");
 			menuCreateItem("Не все клавиши работают",       "diagnosticsKeyboard_do_not_work",         "ROOT_diagnosticsKeyboard");
 			menuCreateItem("Сломаны клавиши",         	"diagnosticsKeyboard_Hacked_keys",         "ROOT_diagnosticsKeyboard");
+			menuCreateItem("Клавиши нужно мыть",         	"diagnostics_Keyboard_needs_to_be_cleaned",         "ROOT_diagnosticsKeyboard");
 
 		menuCreateItem("Тачпад",         		"Root_diagnosticsTachPad",         "diagnosticsRoot");
 			menuCreateItem("Не работает",   	"diagnostics_TachPad_Does_not_Work", 		"Root_diagnosticsTachPad");
@@ -290,7 +291,9 @@ function CreateRepairMenu() {
 				menuCreateItem("Заменены", 	    	"repair_Broken_Matrix_Loops_Replacement",		"Root_Repair_Matrix_Loops");
 				menuCreateItem("Восстановлены", 	"repair_Broken_Matrix_Loops_Repair",		"Root_Repair_Matrix_Loops");
 
-		menuCreateItem("Клавиатура",            "repairKeyboard",               "repairRoot");
+		menuCreateItem("Клавиатура",            "root_repair_Keyboard",             "repairRoot");
+			menuCreateItem("Заменена",          "repair_Keyboard",               	"root_repair_Keyboard");
+			menuCreateItem("Клавиши помыты",    "repair_Keyboard_Keys_are_washed",  "root_repair_Keyboard");
 
         menuCreateItem("Короткое замыкание",    "repair_ShortCircuit",          "repairRoot");
 
