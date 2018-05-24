@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="was added some new items">
+    <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FreshITPlugin/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/background.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterDir="false" />
@@ -15,17 +15,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4978038">
+    <splitter split-orientation="horizontal" split-proportion="0.5241581">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="background.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2895">
-                  <caret line="295" column="84" selection-start-line="295" selection-start-column="84" selection-end-line="295" selection-end-column="84" />
-                  <folding>
-                    <element signature="n#!!block;n#menuSendMessage#0" />
-                  </folding>
+                <state relative-caret-position="423">
+                  <caret line="324" column="82" selection-start-line="324" selection-start-column="47" selection-end-line="324" selection-end-column="82" />
                 </state>
               </provider>
             </entry>
@@ -37,43 +34,8 @@
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="1006" column="29" selection-start-line="1006" selection-start-column="29" selection-end-line="1006" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#424#577#0" />
-                    <element signature="e#638#680#0" />
-                    <element signature="e#1007#1075#0" />
-                    <element signature="e#1282#1311#0" />
-                    <element signature="e#1313#1379#0" />
-                    <element signature="n#!!block;n#updateCSS#0" />
-                    <element signature="e#1466#1627#0" />
-                    <element signature="e#1656#1778#0" />
-                    <element signature="e#2131#2193#0" />
-                    <element signature="e#2274#2337#0" />
-                    <element signature="e#2457#2531#0" />
-                    <element signature="e#2663#2726#0" />
-                    <element signature="e#2823#2881#0" />
-                    <element signature="n#!!block;n#setTabStyle#0" />
-                    <element signature="n#!!block;n#setRepairNumberColor#0" />
-                    <element signature="e#3742#3794#0" />
-                    <element signature="e#3818#3877#0" />
-                    <element signature="n#!!block;n#updateHeight#0" />
-                    <element signature="n#!!block;n#updateStyles#0" />
-                    <element signature="e#4381#4916#0" />
-                    <element signature="e#4516#4581#0" />
-                    <element signature="e#4610#4667#0" />
-                    <element signature="e#4689#4744#0" />
-                    <element signature="e#4787#4910#0" />
-                    <element signature="n#!!block;n#pushAddWorkBtn#0" />
-                    <element signature="e#4987#5029#0" />
-                    <element signature="n#!!block;n#customiseLoginPage#0" />
-                    <element signature="e#5565#5621#0" />
-                    <element signature="n#!!block;n#customiseWorkingPage#0" />
-                    <element signature="e#6190#6243#0" />
-                    <element signature="e#6249#6285#0" />
-                    <element signature="e#6406#6456#0" />
-                    <element signature="e#6587#6636#0" />
-                  </folding>
+                <state relative-caret-position="2621">
+                  <caret line="798" column="64" selection-start-line="798" selection-start-column="58" selection-end-line="798" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
@@ -100,10 +62,13 @@
       <find>key</find>
       <find>repairKeyboard</find>
       <find>Keyboard</find>
+      <find>гнездо</find>
+      <find>replase</find>
     </findStrings>
     <replaceStrings>
       <replace>Корпус сломан</replace>
       <replace>pushAddWorkBtn</replace>
+      <replace>replace</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -563,14 +528,8 @@
       <workItem from="1523546943773" duration="792000" />
       <workItem from="1524488217850" duration="910000" />
       <workItem from="1524490837778" duration="299000" />
-      <workItem from="1526643792628" duration="1244000" />
-    </task>
-    <task id="LOCAL-00004" summary="My opera extension.">
-      <created>1499355148699</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1499355148699</updated>
+      <workItem from="1526643792628" duration="2568000" />
+      <workItem from="1527171853557" duration="1506000" />
     </task>
     <task id="LOCAL-00005" summary="My opera extension.">
       <created>1499358216836</created>
@@ -908,11 +867,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523889412987</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="was added some new items">
+      <created>1526645771704</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1526645771717</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58879000" />
+    <option name="totallyTimeSpent" value="61709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="737" extended-state="6" />
@@ -926,6 +892,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32923076" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32776934" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -936,11 +903,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Nl-Palette" order="5" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Properties" order="5" />
@@ -964,12 +930,13 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32928678" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12591508" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32923076" />
       <window_info id="Nl-Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12591508" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="Learn" order="7" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -977,7 +944,6 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
@@ -1013,45 +979,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1061,45 +989,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1109,45 +999,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1157,45 +1009,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1205,45 +1019,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1253,45 +1029,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1301,45 +1039,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/FindOnVlab/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -1366,41 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="1039" column="33" selection-start-line="1039" selection-start-column="33" selection-end-line="1039" selection-end-column="33" />
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1623,53 +1288,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2895">
-          <caret line="295" column="84" selection-start-line="295" selection-start-column="84" selection-end-line="295" selection-end-column="84" />
-          <folding>
-            <element signature="n#!!block;n#menuSendMessage#0" />
-          </folding>
+        <state relative-caret-position="423">
+          <caret line="324" column="82" selection-start-line="324" selection-start-column="47" selection-end-line="324" selection-end-column="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="1006" column="29" selection-start-line="1006" selection-start-column="29" selection-end-line="1006" selection-end-column="29" />
-          <folding>
-            <element signature="e#424#577#0" />
-            <element signature="e#638#680#0" />
-            <element signature="e#1007#1075#0" />
-            <element signature="e#1282#1311#0" />
-            <element signature="e#1313#1379#0" />
-            <element signature="n#!!block;n#updateCSS#0" />
-            <element signature="e#1466#1627#0" />
-            <element signature="e#1656#1778#0" />
-            <element signature="e#2131#2193#0" />
-            <element signature="e#2274#2337#0" />
-            <element signature="e#2457#2531#0" />
-            <element signature="e#2663#2726#0" />
-            <element signature="e#2823#2881#0" />
-            <element signature="n#!!block;n#setTabStyle#0" />
-            <element signature="n#!!block;n#setRepairNumberColor#0" />
-            <element signature="e#3742#3794#0" />
-            <element signature="e#3818#3877#0" />
-            <element signature="n#!!block;n#updateHeight#0" />
-            <element signature="n#!!block;n#updateStyles#0" />
-            <element signature="e#4381#4916#0" />
-            <element signature="e#4516#4581#0" />
-            <element signature="e#4610#4667#0" />
-            <element signature="e#4689#4744#0" />
-            <element signature="e#4787#4910#0" />
-            <element signature="n#!!block;n#pushAddWorkBtn#0" />
-            <element signature="e#4987#5029#0" />
-            <element signature="n#!!block;n#customiseLoginPage#0" />
-            <element signature="e#5565#5621#0" />
-            <element signature="n#!!block;n#customiseWorkingPage#0" />
-            <element signature="e#6190#6243#0" />
-            <element signature="e#6249#6285#0" />
-            <element signature="e#6406#6456#0" />
-            <element signature="e#6587#6636#0" />
-          </folding>
+        <state relative-caret-position="2621">
+          <caret line="798" column="64" selection-start-line="798" selection-start-column="58" selection-end-line="798" selection-end-column="64" />
         </state>
       </provider>
     </entry>

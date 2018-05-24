@@ -545,7 +545,7 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
-        case "diagnosticsPowerSupplyConnector":
+        case "diagnosticsPowerSupplyConnector_replace":
             $("#diag_rez_input, #rem_rez_input").append(" Сломано гнездо подключения блока питания." +
                 " Необходима его замена.");
             $("#form-save-btn").click();
@@ -553,6 +553,16 @@ function processDiagnosisMessage(message){
             $('#prise-id128').click();	//замена гнезда питания
             pushAddWorkBtn();
 			break;
+
+        case "diagnosticsPowerSupplyConnector_recovery":
+            $("#diag_rez_input, #rem_rez_input").append(" Гнездо подключения блока питания сломано." +
+                " Необходимо его восстановление.");
+            $("#form-save-btn").click();
+            $('#prise-id116').click();	//разборка
+            //$('#prise-id128').click();	//замена гнезда питания
+            $('#prise-id541').click();	//восстановление разъема
+            pushAddWorkBtn();
+            break;
 
         case "diagnostics_accidentally_turned_off":
             $("#diag_rez_input, #rem_rez_input").append(" Во время выполнения программы стресс теста ноутбук аварийно выключается.");
@@ -1081,8 +1091,13 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             break;
 
-        case "repairPowerSupplyConnector":
+        case "repairPowerSupplyConnector_replace":
             $("#diag_rez_input, #rem_rez_input").append(" Сломанное гнездо подключения блока питания заменено.");
+            $("#form-save-btn").click();
+            break;
+
+        case "repairPowerSupplyConnector_recovery":
+            $("#diag_rez_input, #rem_rez_input").append(" Гнездо подключения блока питания восстановлено.");
             $("#form-save-btn").click();
             break;
 

@@ -202,7 +202,9 @@ function CreateDiagnosticsMenu() {
 				menuCreateItem("Замена",			"diagnostics_PS_cable_is_damaged_change",   "diagnostics_PS_cable");
 				menuCreateItem("Восстановление",	"diagnostics_PS_cable_is_damaged_repair",   "diagnostics_PS_cable");
 
-        menuCreateItem("Гнездо питания",    "diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+        menuCreateItem("Гнездо питания",        "root_diagnosticsPowerSupplyConnector", "diagnosticsRoot");
+            menuCreateItem("замена",            "diagnosticsPowerSupplyConnector_replace",      "root_diagnosticsPowerSupplyConnector");
+            menuCreateItem("восстановление",    "diagnosticsPowerSupplyConnector_recovery",      "root_diagnosticsPowerSupplyConnector");
 
 		menuCreateItem("Аккумуляторная батарея",    "ROOT_diagnostics_Accumulator_Battery", 		"diagnosticsRoot");
 			menuCreateItem("Не заряжается",    	"diagnostics_Accumulator_Battery_Do_not_Charge", 	"ROOT_diagnostics_Accumulator_Battery");
@@ -318,7 +320,9 @@ function CreateRepairMenu() {
 				menuCreateItem("Заменён",			"repair_PS_cable_is_damaged_change",   "repair_PS_cable");
 				menuCreateItem("Восстановлен",	"repair_PS_cable_is_damaged_repair",   "repair_PS_cable");
 
-		menuCreateItem("Гнездо питания",        "repairPowerSupplyConnector",   "repairRoot");
+		menuCreateItem("Гнездо питания",      "root_repairPowerSupplyConnector",        "repairRoot");
+		    menuCreateItem("заменено",        "repairPowerSupplyConnector_replace",     "root_repairPowerSupplyConnector");
+		    menuCreateItem("восстановлено",   "repairPowerSupplyConnector_recovery",   "root_repairPowerSupplyConnector");
 
 		menuCreateItem("Аккумуляторная батарея",    "repair_Accumulator_Battery", 		"repairRoot");
 
