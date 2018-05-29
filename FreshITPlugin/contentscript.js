@@ -550,6 +550,7 @@ function processDiagnosisMessage(message){
                 " Необходима его замена.");
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
             $('#prise-id128').click();	//замена гнезда питания
             pushAddWorkBtn();
 			break;
@@ -560,6 +561,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             $('#prise-id116').click();	//разборка
             //$('#prise-id128').click();	//замена гнезда питания
+            $('#prise-id154').click();  //чистка
             $('#prise-id541').click();	//восстановление разъема
             pushAddWorkBtn();
             break;
@@ -641,6 +643,15 @@ function processDiagnosisMessage(message){
 			break;
 
 		case "diagnostics_Vga_Or_UMA":
+            var msg = "\n-----------------------------------------------------------------------\n";
+            msg += "Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.\n";
+            msg += "------------------------------------------------------------------------\n";
+
+            $("[name='neispravnost_mv']").append(msg);
+
+            // $("#zametkiNewForm").attr("action", "note/note/remontAdd");
+            // $("#zametkiNewForm").submit();
+
 			$("#diag_rez_input, #rem_rez_input").append(" Для дальнейшей диагностики необходима замена видеочипа или переделка материнской платы для работы без дополнительной видеокарты.");
 			$("#form-save-btn").click();
 			
@@ -650,11 +661,6 @@ function processDiagnosisMessage(message){
 			$('#prise-id154').click();  //чистка
 			$('#prise-id136').click();	//пайка смд компонентов
 			pushAddWorkBtn();
-
-			var msg = " Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.";
-			$("#zametkiNewForm").attr("action", "note/note/remontAdd");
-			$("[name='message']").append(msg);
-			$("#zametkiNewForm").submit();
 			break;
 
 		case "diagnosticsNoReaction":
