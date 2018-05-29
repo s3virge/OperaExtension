@@ -282,7 +282,7 @@ function processOtherMessage(message) {
             break;
 
         case "other_Seals_are_damaged":
-            $("#diag_rez_input, #rem_rez_input").append(" Согласно пункта 2.2.3 условий гарантийного обслуживания данный ремонт не является гарантийным.");
+            $("#diag_rez_input, #rem_rez_input").append(" Гарантийные пломбы повреждены. Согласно пункта 2.2.3 условий гарантийного обслуживания данный ремонт не является гарантийным.");
             $("#form-save-btn").click();
             break;
 

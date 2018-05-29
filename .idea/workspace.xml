@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +19,8 @@
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="647" column="25" selection-start-line="647" selection-start-column="25" selection-end-line="647" selection-end-column="25" />
+                <state relative-caret-position="1225">
+                  <caret line="651" column="57" selection-start-line="651" selection-start-column="57" selection-end-line="651" selection-end-column="57" />
                 </state>
               </provider>
             </entry>
@@ -533,14 +532,7 @@
       <workItem from="1527171853557" duration="1818000" />
       <workItem from="1527245594334" duration="78000" />
       <workItem from="1527245888201" duration="1200000" />
-      <workItem from="1527599759743" duration="1237000" />
-    </task>
-    <task id="LOCAL-00006" summary="My opera extension.">
-      <created>1499443652632</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1499443652632</updated>
+      <workItem from="1527599759743" duration="1507000" />
     </task>
     <task id="LOCAL-00007" summary="My opera extension.">
       <created>1499531302201</created>
@@ -878,11 +870,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527173565856</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="was added some new items">
+      <created>1527601143094</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1527601143100</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64536000" />
+    <option name="totallyTimeSpent" value="64806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="737" extended-state="6" />
@@ -1320,8 +1319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="647" column="25" selection-start-line="647" selection-start-column="25" selection-end-line="647" selection-end-column="25" />
+        <state relative-caret-position="1225">
+          <caret line="651" column="57" selection-start-line="651" selection-start-column="57" selection-end-line="651" selection-end-column="57" />
         </state>
       </provider>
     </entry>
