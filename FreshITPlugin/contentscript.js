@@ -82,6 +82,8 @@ function updateCSS() {
 		"color": "#474747",
 		"width": ""});
 
+    $("[name='neispravnost_m']").css({"height": "8em"})
+
 	$(".left-col-wrapper").css("font-size", "0.8em");
 
 	$(".block-content").css({
