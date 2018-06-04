@@ -76,13 +76,14 @@ function updateCSS() {
 
 
 	$(".changes-confirm:first").css("height", "20em");
+	$(".changes-confirm:nth-of-type(2)").css("height", "8em");
 
     $(".changes-confirm").css({
 		"font-size": "1.1em",
 		"color": "#474747",
 		"width": ""});
 
-    $("[name='neispravnost_m']").css({"height": "8em"})
+    // $("[name='neispravnost_m']").css({"height": "8em"})
 
 	$(".left-col-wrapper").css("font-size", "0.8em");
 
