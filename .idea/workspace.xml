@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -542,14 +541,7 @@
       <workItem from="1527599759743" duration="1507000" />
       <workItem from="1527605853480" duration="294000" />
       <workItem from="1527853858030" duration="543000" />
-      <workItem from="1528123218655" duration="2138000" />
-    </task>
-    <task id="LOCAL-00009" summary="My opera extension.">
-      <created>1499929912900</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1499929912900</updated>
+      <workItem from="1528123218655" duration="2458000" />
     </task>
     <task id="LOCAL-00010" summary="My opera extension.">
       <created>1499945406867</created>
@@ -887,11 +879,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527854383679</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="was added some new items">
+      <created>1528125750106</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1528125750120</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67781000" />
+    <option name="totallyTimeSpent" value="68101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="737" extended-state="6" />
