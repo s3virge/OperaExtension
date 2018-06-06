@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+                <state relative-caret-position="452">
+                  <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -33,7 +34,7 @@
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="370">
-                  <caret line="261" column="33" selection-start-line="261" selection-start-column="12" selection-end-line="261" selection-end-column="33" />
+                  <caret line="262" column="33" selection-start-line="262" selection-start-column="12" selection-end-line="262" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -103,12 +104,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -542,13 +538,8 @@
       <workItem from="1527605853480" duration="294000" />
       <workItem from="1527853858030" duration="543000" />
       <workItem from="1528123218655" duration="2458000" />
-    </task>
-    <task id="LOCAL-00010" summary="My opera extension.">
-      <created>1499945406867</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1499945406868</updated>
+      <workItem from="1528201691916" duration="446000" />
+      <workItem from="1528273712785" duration="877000" />
     </task>
     <task id="LOCAL-00011" summary="My opera extension.">
       <created>1499958208511</created>
@@ -886,11 +877,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528125750120</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="was added some new items">
+      <created>1528201912297</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1528201912302</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68101000" />
+    <option name="totallyTimeSpent" value="69424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="737" extended-state="6" />
@@ -1335,8 +1333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="452">
+          <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
         </state>
       </provider>
     </entry>

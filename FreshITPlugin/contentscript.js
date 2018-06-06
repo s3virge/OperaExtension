@@ -76,7 +76,8 @@ function updateCSS() {
 
 
 	$(".changes-confirm:first").css("height", "20em");
-	$(".changes-confirm:nth-of-type(3)").css("height", "8em");
+	// $(".changes-confirm:nth-of-type(3)").css("height", "8em");
+	$(".changes-confirm:eq(2)").css("height", "8em");
 
     $(".changes-confirm").css({
 		"font-size": "1.1em",
