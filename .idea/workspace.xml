@@ -17,11 +17,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
+          <file leaf-file-name="background.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="452">
-                  <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+                <state relative-caret-position="60">
+                  <caret line="230" column="71" selection-start-line="230" selection-start-column="49" selection-end-line="230" selection-end-column="71" />
                 </state>
               </provider>
             </entry>
@@ -29,12 +29,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
-                  <caret line="262" column="33" selection-start-line="262" selection-start-column="12" selection-end-line="262" selection-end-column="33" />
+                <state relative-caret-position="265">
+                  <caret line="651" column="60" lean-forward="true" selection-start-line="651" selection-start-column="60" selection-end-line="651" selection-end-column="60" />
                 </state>
               </provider>
             </entry>
@@ -66,6 +66,8 @@
       <find>zametkiNewForm</find>
       <find>vga</find>
       <find>2.2.3</find>
+      <find>$(&quot;[name='message']&quot;)</find>
+      <find>diagnostics_Vga_Or_UMA</find>
     </findStrings>
     <replaceStrings>
       <replace>Корпус сломан</replace>
@@ -104,7 +106,31 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OperaExtension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OperaExtension" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OperaExtension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OperaExtension" type="462c0819:PsiDirectoryNode" />
+              <item name="FreshITPlugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OperaExtension" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -539,14 +565,8 @@
       <workItem from="1527853858030" duration="543000" />
       <workItem from="1528123218655" duration="2458000" />
       <workItem from="1528201691916" duration="446000" />
-      <workItem from="1528273712785" duration="877000" />
-    </task>
-    <task id="LOCAL-00011" summary="My opera extension.">
-      <created>1499958208511</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1499958208511</updated>
+      <workItem from="1528273712785" duration="1004000" />
+      <workItem from="1529655671516" duration="289000" />
     </task>
     <task id="LOCAL-00012" summary="My opera extension.">
       <created>1500103470160</created>
@@ -884,11 +904,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528201912302</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="was added some new items">
+      <created>1528275587470</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1528275587489</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69424000" />
+    <option name="totallyTimeSpent" value="69840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1372" height="737" extended-state="6" />
@@ -905,7 +932,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32776934" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12591508" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12575758" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info id="Learn" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -928,8 +955,9 @@
     <layout-to-restore>
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -945,7 +973,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32923076" />
       <window_info id="Nl-Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12591508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12575758" />
       <window_info id="Learn" order="7" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -954,7 +982,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -1326,15 +1353,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
+        <state relative-caret-position="60">
           <caret line="230" column="71" selection-start-line="230" selection-start-column="49" selection-end-line="230" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        <state relative-caret-position="265">
+          <caret line="651" column="60" lean-forward="true" selection-start-line="651" selection-start-column="60" selection-end-line="651" selection-end-column="60" />
         </state>
       </provider>
     </entry>

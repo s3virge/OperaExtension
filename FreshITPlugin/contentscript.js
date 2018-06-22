@@ -649,9 +649,10 @@ function processDiagnosisMessage(message){
 		case "diagnostics_Vga_Or_UMA":
             var msg = "\n-----------------------------------------------------------------------\n";
             msg += "Если клиент решит менять чип, то работа Пайка SMD компонентов не нужна.\n";
-            msg += "------------------------------------------------------------------------\n";
+            msg += "-----------------------------------------------------------------------\n";
 
             $("[name='neispravnost_mv']").append(msg);
+            $("[name='comment_mm']").append(msg);
 
             // $("#zametkiNewForm").attr("action", "note/note/remontAdd");
             // $("#zametkiNewForm").submit();
