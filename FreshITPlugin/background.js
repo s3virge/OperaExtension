@@ -123,6 +123,8 @@ function CreateOtherMenu() {
 				menuCreateItem("Не гарантия", 			"other_NotAGuarantee", 	"Root_other_NotAGuarantee");
 				menuCreateItem("Пломбы повреждены", 	"other_Seals_are_damaged", 	"Root_other_NotAGuarantee");
 
+			menuCreateItem("ОС не восстановить", "other_OSDontRecovered",	"Root_otherNot");
+
 			menuCreateItem("Не проявилась", "other_DontManifested",	"Root_otherNot");
 			menuCreateItem("Не постоянно проявляется", "other_Not_constantly_manifested",	"Root_otherNot");
 			menuCreateItem("Не деталь", 	"other_NotAPart", 		"Root_otherNot");

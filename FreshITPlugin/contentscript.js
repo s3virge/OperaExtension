@@ -295,6 +295,11 @@ function processOtherMessage(message) {
             $("#form-save-btn").click();
             break;
 
+            case "other_OSDontRecovered":
+            $("#diag_rez_input, #rem_rez_input").append(" Восстановить операционную систему не удается. Необходима установка, настройка ОС");
+            $("#form-save-btn").click();
+            break;
+
         case "other_Not_constantly_manifested":
             $("#diag_rez_input, #rem_rez_input").append(" Заявленная неисправность проявляется не постоянно. Это сильно затрудняет её диагностику.");
             $("#form-save-btn").click();
