@@ -259,8 +259,10 @@ function processOtherMessage(message) {
 			"Зазначені роботи є досить складними і вимагають великих затрат часу. Тому більше коеф."];
 
 			var messageNumber = Math.floor(Math.random() * 5); // returns a number between 0 to 5
+            var mess = "Тонна разных малюсеньких шлейфиков, нежные разъёмы, кабелёчки. Винтики разной длины, под разные отвертки. Очень плотная пайка смд компонентов на мамке. Нужно аккуратно разбирать-собирать."
 
-			$("[name='message']").append(arrMessages[messageNumber]);
+            //$("[name='message']").append(arrMessages[messageNumber]);
+            $("[name='message']").append(mess);
 			$("#zametkiNewForm").submit();
 			break;
 
