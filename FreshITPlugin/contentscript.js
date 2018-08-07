@@ -1286,11 +1286,20 @@ function processRepairMessage(message){
             $("#diag_rez_input, #rem_rez_input").append(" Неисправный аудио чип заменён на новый.");
             $("#form-save-btn").click();
 
-						$('#prise-id116').click();	//разборка
+            $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             $('#prise-id134').click();  //пайка qfn чипа
             pushAddWorkBtn();
 			break;
+
+        case "repairSpeakers":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправные динамики заменены на новые.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            pushAddWorkBtn();
+            break;
 
 		case "repair_Audio_Socket_Broken":
             $("#diag_rez_input, #rem_rez_input").append(" Повреждённое аудио гнездо заменено.");
