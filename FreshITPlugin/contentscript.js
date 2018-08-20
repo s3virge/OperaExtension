@@ -374,6 +374,15 @@ function processDiagnosisMessage(message){
 			pushAddWorkBtn();
             break;
 
+            case "diagnostics_Cooling_system_Defective":
+            $("#diag_rez_input, #rem_rez_input").append(" Система охлаждения неисправна. Для дальнейшей диагностики необходима её замена.");
+            $("#form-save-btn").click();
+            $('#prise-id154').click();  //чистка
+            $('#prise-id116').click();	//разборка
+
+			pushAddWorkBtn();
+            break;
+
 		case "diagnostics_DamagedThermalPads":
             $("#diag_rez_input, #rem_rez_input").append(" Термопрокладки повреждены.");
             $("#form-save-btn").click();
@@ -1076,6 +1085,11 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             break;
 
+            case "repair_Cooling_system_Defective":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправная система охлаждения заменена на новую.");
+            $("#form-save-btn").click();
+            break;
+
         case "repairInstallOs":
             $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
             $("#form-save-btn").click();
@@ -1299,7 +1313,7 @@ function processRepairMessage(message){
             $('#prise-id116').click();	//разборка
             $('#prise-id154').click();  //чистка
             pushAddWorkBtn();
-            break;
+            break;tt
 
 		case "repair_Audio_Socket_Broken":
             $("#diag_rez_input, #rem_rez_input").append(" Повреждённое аудио гнездо заменено.");

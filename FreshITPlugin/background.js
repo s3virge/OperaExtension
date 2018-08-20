@@ -145,6 +145,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Чистка", 					"diagnostics_Cleaning", 			"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопрокладки повреждены", "diagnostics_DamagedThermalPads", 	"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопаста пересохла", 		"diagnostics_Thermal_Compaund",		"Root_diagnostics_Cleaning");
+			menuCreateItem("Неисправна", 				"diagnostics_Cooling_system_Defective",		"Root_diagnostics_Cleaning");
 			menuCreateItem("Вентилятор",         		"ROOT_diagnostics_Fan",             "Root_diagnostics_Cleaning");
 				menuCreateItem("Не вращается",         	"diagnostics_Fan",             		"ROOT_diagnostics_Fan");
 				menuCreateItem("Трещит",         		"diagnostics_Fan_Strange_Sounds",   "ROOT_diagnostics_Fan");
@@ -282,6 +283,7 @@ function CreateRepairMenu() {
 		menuCreateItem("Охлада",            	"Root_repairCleaning",			"repairRoot");
 			menuCreateItem("Чистка",        	"repairCleaning",       		"Root_repairCleaning");
 			menuCreateItem("Термопрокладки",    "repair_DamagedThermalPads",	"Root_repairCleaning");
+			menuCreateItem("Заменена",    "repair_Cooling_system_Defective",	"Root_repairCleaning");
 
 		menuCreateItem("Вентилятор ",		"ROOT_repair_Fan",           		"Root_repairCleaning");
 			menuCreateItem("Смазан",         	"repair_Fan_is_oiled",          "ROOT_repair_Fan");
