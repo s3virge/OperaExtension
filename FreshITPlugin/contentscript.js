@@ -1136,6 +1136,12 @@ function processRepairMessage(message){
         case "repairPour":
             $("#diag_rez_input, #rem_rez_input").append(" Материнская плата помыта. Удалены окислы с деталей.");
             $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id154').click();  //чистка
+            $('#prise-id157').click();	//отмывка после залития
+            $('#prise-id136').click();	//пайка смд компонентов
+            pushAddWorkBtn();
             break;
 
 		case "repairUMA":
