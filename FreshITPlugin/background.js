@@ -173,7 +173,10 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Сломан разъём подключения",   "diagnostics_TachPad_jack_broken", 		"Root_diagnosticsTachPad");
 			menuCreateItem("Не работают кнопки","diagnostics_TachPad_Btn_Does_not_Work", 	"Root_diagnosticsTachPad");
 
-		menuCreateItem("Короткое замыкание", 	"diagnostics_ShortCircuit",    "diagnosticsRoot");
+		menuCreateItem("Короткое замыкание", 	"diagnostics_ShortCircuit_ROOT",    "diagnosticsRoot");
+		    menuCreateItem("В цепи 19 В", 	"diagnostics_ShortCircuit_19V",    "diagnostics_ShortCircuit_ROOT");
+		    menuCreateItem("В цепи 5 В", 	"diagnostics_ShortCircuit_5V",    "diagnostics_ShortCircuit_ROOT");
+		    menuCreateItem("В цепи 3.3 В", 	"diagnostics_ShortCircuit_3V",    "diagnostics_ShortCircuit_ROOT");
 
 		menuCreateItem("BIOS",      			"ROOT_diagnostics_BIOS",             "diagnosticsRoot");
 			menuCreateItem("Нужно шить",      		"diagnosticsBIOS",             "ROOT_diagnostics_BIOS");
@@ -198,6 +201,9 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Не определяется",   "diagnostics_WiFi_Not_determined",       	"Root_diagnostics_WiFi");
 			menuCreateItem("Не включается",   	"diagnostics_WiFi_Does_Not_Turn_On",       	"Root_diagnostics_WiFi");
 
+        menuCreateItem("USB",           	"Root_diagnostics_USB",       	"diagnosticsRoot");
+            menuCreateItem("Сломан",           	"diagnostics_USB_broken",       	"Root_diagnostics_USB");
+
 		menuCreateItem("Блок питания",    				"ROOT_diagnostics_Power_Supply",   "diagnosticsRoot");
 			menuCreateItem("Не держит нагрузку",	"diagnostics_PS_Does_not_hold_the_load",   "ROOT_diagnostics_Power_Supply");
 			menuCreateItem("Нет напряжения",					"diagnostics_PS_no_supply_voltage",   "ROOT_diagnostics_Power_Supply");
@@ -212,6 +218,7 @@ function CreateDiagnosticsMenu() {
 		menuCreateItem("Аккумуляторная батарея",    "ROOT_diagnostics_Accumulator_Battery", 		"diagnosticsRoot");
 			menuCreateItem("Не заряжается",    	"diagnostics_Accumulator_Battery_Do_not_Charge", 	"ROOT_diagnostics_Accumulator_Battery");
 			menuCreateItem("Изношена",    		"diagnostics_Accumulator_Battery_Worn_out", 		"ROOT_diagnostics_Accumulator_Battery");
+			menuCreateItem("Не определяется",   "diagnostics_battery_is_not_detected", 				"ROOT_diagnostics_Accumulator_Battery");
 
         menuCreateItem("Звук",      "Root_diagnostics_Audio", "diagnosticsRoot");
             menuCreateItem("Аудио гнездо сломано",  "diagnostics_Audio_Socket_Broken",  "Root_diagnostics_Audio");

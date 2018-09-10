@@ -747,8 +747,38 @@ function processDiagnosisMessage(message){
             pushAddWorkBtn();
 			break;
 
-        case "diagnostics_ShortCircuit":
+        case "diagnostics_ShortCircuit_19V":
             $("#diag_rez_input, #rem_rez_input").append(" Блок питания при подключении к ноутбуку переключается в режим защиты от короткого замыкания. Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на материнской плате.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id137').click();	// Восстановление цепи питания материнской платы
+            $('#prise-id154').click();  //чистка
+            pushAddWorkBtn();
+			break;
+
+case "diagnostics_ShortCircuit_5V":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате короткое замыкание в цепи дежурного напряжения 5 Вольт. Для дальнейшей диагностики необходимо найти и устранить короткое замыкание на ней.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id137').click();	// Восстановление цепи питания материнской платы
+            $('#prise-id154').click();  //чистка
+            pushAddWorkBtn();
+			break;
+
+case "diagnostics_ShortCircuit_3V":
+            $("#diag_rez_input, #rem_rez_input").append(" На материнской плате короткое замыкание в цепи 3.3 Вольта. Для дальнейшей диагностики короткое замыкание необходимо устранить.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id137').click();	// Восстановление цепи питания материнской платы
+            $('#prise-id154').click();  //чистка
+            pushAddWorkBtn();
+			break;
+
+case "diagnostics_USB_broken":
+            $("#diag_rez_input, #rem_rez_input").append(" Сломаны usb порты, необходима их замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
@@ -762,7 +792,7 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id154').click();  //чистка
+            $('#prise-id126').click();  //usb
             pushAddWorkBtn();
 			break;
 
@@ -929,6 +959,11 @@ function processDiagnosisMessage(message){
 
 		case "diagnostics_Accumulator_Battery_Worn_out":
             $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея изношена, необходима её замена.");
+            $("#form-save-btn").click();
+			break;
+			
+		case "diagnostics_battery_is_not_detected":
+            $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея подключена, но системой не определяется.");
             $("#form-save-btn").click();
 			break;
 
