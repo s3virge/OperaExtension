@@ -782,8 +782,7 @@ case "diagnostics_USB_broken":
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id137').click();	// Восстановление цепи питания материнской платы
-            $('#prise-id154').click();  //чистка
+            $('#prise-id126').click();  //usb
             pushAddWorkBtn();
 			break;
 
@@ -792,7 +791,7 @@ case "diagnostics_USB_broken":
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
-            $('#prise-id126').click();  //usb
+            $('#prise-id154').click();	//чистка
             pushAddWorkBtn();
 			break;
 
