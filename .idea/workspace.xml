@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="faed4790-9dd5-4eff-bd1a-8358ce0ee93c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreshITPlugin/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/FreshITPlugin/contentscript.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +21,8 @@
           <file leaf-file-name="background.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
+                <state relative-caret-position="272">
                   <caret line="204" column="71" selection-start-line="204" selection-start-column="49" selection-end-line="204" selection-end-column="71" />
-                  <folding>
-                    <element signature="e#0#20945#0" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -35,8 +34,8 @@
           <file leaf-file-name="contentscript.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="794" column="45" selection-start-line="794" selection-start-column="45" selection-end-line="794" selection-end-column="45" />
+                <state relative-caret-position="227">
+                  <caret line="780" column="89" selection-start-line="780" selection-start-column="89" selection-end-line="780" selection-end-column="89" />
                 </state>
               </provider>
             </entry>
@@ -76,7 +75,7 @@
       <find>diagnostics_USB_broken</find>
     </findStrings>
     <replaceStrings>
-      <replace>Корпус сломан</replace>
+      <replace />
       <replace>pushAddWorkBtn</replace>
       <replace>replace</replace>
     </replaceStrings>
@@ -556,13 +555,6 @@
       <workItem from="1534754960620" duration="844000" />
       <workItem from="1535624118024" duration="1157000" />
     </task>
-    <task id="LOCAL-00019" summary="My opera extension.">
-      <created>1500542143322</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1500542143322</updated>
-    </task>
     <task id="LOCAL-00020" summary="My opera extension.">
       <created>1500546059505</created>
       <option name="number" value="00020" />
@@ -899,7 +891,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536588404460</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="was added some new items">
+      <created>1536589800899</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1536589800902</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -907,6 +906,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -954,13 +954,12 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32928678" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12575758" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32923076" />
       <window_info id="Nl-Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12575758" />
       <window_info id="Learn" order="7" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -968,6 +967,7 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
@@ -1340,18 +1340,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="272">
           <caret line="204" column="71" selection-start-line="204" selection-start-column="49" selection-end-line="204" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#20945#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FreshITPlugin/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="794" column="45" selection-start-line="794" selection-start-column="45" selection-end-line="794" selection-end-column="45" />
+        <state relative-caret-position="227">
+          <caret line="780" column="89" selection-start-line="780" selection-start-column="89" selection-end-line="780" selection-end-column="89" />
         </state>
       </provider>
     </entry>

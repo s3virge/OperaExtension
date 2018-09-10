@@ -325,6 +325,9 @@ function CreateRepairMenu() {
 		menuCreateItem("WEb камера",           	"repair_WEb_camera",	"repairRoot");
         menuCreateItem("WiFi",           		"repair_WiFi",       	"repairRoot");
 
+        menuCreateItem("USB",           		"repair_USB_Root",       	"repairRoot");
+        menuCreateItem("Заменён",           		"repair_USB",       	"repair_USB_Root");
+
 		menuCreateItem("Блок питания",    		"ROOT_repair_Power_Supply",   "repairRoot");
 			menuCreateItem("Не держит нагрузку",	"repair_PS_Does_not_hold_the_load",   "ROOT_repair_Power_Supply");
 			menuCreateItem("Кабель поврежден",	"repair_PS_cable",   "ROOT_repair_Power_Supply");

@@ -778,7 +778,7 @@ case "diagnostics_ShortCircuit_3V":
 			break;
 
 case "diagnostics_USB_broken":
-            $("#diag_rez_input, #rem_rez_input").append(" Сломаны usb порты, необходима их замена.");
+            $("#diag_rez_input, #rem_rez_input").append(" Сломан usb порт, необходима его замена.");
             $("#form-save-btn").click();
 
             $('#prise-id116').click();	//разборка
@@ -1317,6 +1317,15 @@ function processRepairMessage(message){
             $('#prise-id480').click();	//замена WiFI
             pushAddWorkBtn();
 			break;
+
+        case "repair_USB":
+            $("#diag_rez_input, #rem_rez_input").append(" Поврежденное USB гнездо заменено.");
+            $("#form-save-btn").click();
+
+            $('#prise-id116').click();	//разборка
+            $('#prise-id126').click();  //usb
+            pushAddWorkBtn();
+            break;
 
 		case "repair_Broken_SCREEN_CABLE_change":
             $("#diag_rez_input, #rem_rez_input").append(" Кабель подключения матрицы заменён на новый.");
