@@ -1032,6 +1032,8 @@ case "diagnostics_USB_broken":
             $("#form-save-btn").click();
 
 			$('#prise-id116').click();	//разборка
+			$('#prise-id125').click();	//Замена микрокнопки
+
 			pushAddWorkBtn();
 			break;
 
