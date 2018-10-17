@@ -119,8 +119,15 @@ function updateCSS() {
 	updateHeight();
 
 	setRepairNumberColor();
+
+	addButtonPayment();
 }
 
+function addButtonPayment() {
+    $("#btn-files").append("");
+}
+
+/* стили вкладок */
 function setTabStyle() {
 	$("#tab-active").css("background-color", "#ea0000");
 	$("#tab-diag").css("background-color", "#ea8200");
@@ -225,7 +232,6 @@ function customiseWorkingPage() {
     $(".menu").remove();
 
     if (Perfom){
-
         $("#leftBlock, #_data").remove();
     }
 

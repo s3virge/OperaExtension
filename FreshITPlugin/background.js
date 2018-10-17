@@ -1,8 +1,15 @@
 /**
  * Created by s3virge on 21.06.17.
  */
-chrome.runtime.onInstalled.addListener(function () {
 
+//обработка нажания на иконку расширения
+chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.executeScript(null,
+        // {file: "ClickExtentionIcon.js"});
+		{code: window.open( "https://base.freshit.ua/user/user/info" )})
+});
+
+chrome.runtime.onInstalled.addListener(function () {
 
     CreateDiagnosticsMenu();
 
@@ -12,7 +19,6 @@ chrome.runtime.onInstalled.addListener(function () {
         id: "separator1",
         documentUrlPatterns: ["*://base.freshit.ua/*"]
     });
-
 
     CreateOtherMenu();
 
