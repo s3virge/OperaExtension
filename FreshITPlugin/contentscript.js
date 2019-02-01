@@ -120,12 +120,12 @@ function updateCSS() {
 
 	setRepairNumberColor();
 
-	addButtonPayment();
+	// addButtonPayment();
 }
 
-function addButtonPayment() {
-    $("#btn-files").append("");
-}
+// function addButtonPayment() {
+//     $("#btn-files").append("diagnostics_Install_Os_win");
+// }
 
 /* стили вкладок */
 function setTabStyle() {
@@ -399,10 +399,24 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             break;
 
-		case "diagnostics_Install_Os":
-            $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы.");
+		case "diagnostics_Install_Os_win":
+            $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы Windows.");
             $("#form-save-btn").click();
             $('#prise-id424').click();	//установка ос
+            pushAddWorkBtn();
+			break;
+
+		case "diagnostics_Install_Os_lin":
+            $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы Linux.");
+            $("#form-save-btn").click();
+            $('#prise-id694').click();	//установка ос
+            pushAddWorkBtn();
+			break;
+
+		case "diagnostics_Install_Os_mac":
+            $("#diag_rez_input, #rem_rez_input").append(" Необходима установка, настройка операционной системы MacOs.");
+            $("#form-save-btn").click();
+            $('#prise-id426').click();	//установка ос
             pushAddWorkBtn();
 			break;
 
@@ -972,6 +986,11 @@ case "diagnostics_USB_broken":
             $("#form-save-btn").click();
 			break;
 
+        case "diagnostics_battery_is_swollen":
+            $("#diag_rez_input, #rem_rez_input").append(" Аккумуляторная батарея вздулась. Необходима её замена.");
+            $("#form-save-btn").click();
+			break;
+
 		case "diagnostics_WEb_camera_Not_determined":
             $("#diag_rez_input, #rem_rez_input").append(" WEB камера не определяется как устройство в операционной системе. Для дальнейшей диагностики необходима её замена.");
             $("#form-save-btn").click();
@@ -1132,10 +1151,24 @@ function processRepairMessage(message){
             $("#form-save-btn").click();
             break;
 
-        case "repairInstallOs":
-            $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система с базовым набором программ.");
+        case "repairInstalled_Win":
+            $("#diag_rez_input, #rem_rez_input").append(" Установлена лицензионная операционная система Windows с базовым набором программ.");
             $("#form-save-btn").click();
             $('#prise-id424').click();	//установка ос
+            pushAddWorkBtn();
+			break;
+
+		case "repairInstalled_Lin":
+            $("#diag_rez_input, #rem_rez_input").append(" Установлена операционная система Linux с базовым набором программ.");
+            $("#form-save-btn").click();
+            $('#prise-id694').click();	//установка ос
+            pushAddWorkBtn();
+			break;
+
+		case "repairInstalled_Mac":
+            $("#diag_rez_input, #rem_rez_input").append(" Установлена операционная система Mac с базовым набором программ.");
+            $("#form-save-btn").click();
+            $('#prise-id426').click();	//установка ос
             pushAddWorkBtn();
 			break;
 

@@ -225,6 +225,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Не заряжается",    	"diagnostics_Accumulator_Battery_Do_not_Charge", 	"ROOT_diagnostics_Accumulator_Battery");
 			menuCreateItem("Изношена",    		"diagnostics_Accumulator_Battery_Worn_out", 		"ROOT_diagnostics_Accumulator_Battery");
 			menuCreateItem("Не определяется",   "diagnostics_battery_is_not_detected", 				"ROOT_diagnostics_Accumulator_Battery");
+            menuCreateItem("Вздулась",          "diagnostics_battery_is_swollen", 				    "ROOT_diagnostics_Accumulator_Battery");
 
         menuCreateItem("Звук",      "Root_diagnostics_Audio", "diagnosticsRoot");
             menuCreateItem("Аудио гнездо сломано",  "diagnostics_Audio_Socket_Broken",  "Root_diagnostics_Audio");
@@ -270,6 +271,9 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("BSOD при загрузке", 			"diagnostics_Blue_Screen_on_load", 		"ROOT_diagnostics_Os");
 			menuCreateItem("BSOD при работе", 			"diagnostics_Blue_Screen", 		"ROOT_diagnostics_Os");
 			menuCreateItem("Необходима установка", 	"diagnostics_Install_Os", 		"ROOT_diagnostics_Os");
+			    menuCreateItem("Windows", 	"diagnostics_Install_Os_win", 		"diagnostics_Install_Os");
+			    menuCreateItem("Linux", 	"diagnostics_Install_Os_lin", 		"diagnostics_Install_Os");
+			    menuCreateItem("Mac", 	"diagnostics_Install_Os_mac", 		"diagnostics_Install_Os");
 
 		menuCreateItem("Стресс тест", "Root_diagnosticsTest", 		"diagnosticsRoot");
 		    menuCreateItem("с ошибками", "diagnostics_Test_Errors", 	"Root_diagnosticsTest");
@@ -364,7 +368,10 @@ function CreateRepairMenu() {
 			menuCreateItem("Переделана в UMA", 		"repairUMA", 				"Root_repairBga");
 
 	menuCreateItem("Следы залития", "repairPour", "repairRoot");
-    menuCreateItem("Установка ОС", "repairInstallOs", "repairRoot");
+    menuCreateItem("Установлена ОС", "repairInstallOs", "repairRoot");
+    menuCreateItem("Windows", "repairInstalled_Win", "repairInstallOs");
+    menuCreateItem("Linux", "repairInstalled_Lin", "repairInstallOs");
+    menuCreateItem("Mac", "repairInstalled_Mac", "repairInstallOs");
     menuCreateItem("ОЗУ", "repairMemory",  "repairRoot");
 
 }
