@@ -264,6 +264,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Прусаки", 				"diagnostics_cockroach", 				"Root_diagnosticsTraces");
 
 		menuCreateItem("Операционная система", "ROOT_diagnostics_Os", "diagnosticsRoot");
+			menuCreateItem("Нет лицензии", 		"diagnostics_os_No_licence", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Не загружается", 		"diagnostics_os_Not_loading", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Не активирована", 		"diagnostics_os_Not_Activated", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Не все драйвера", 		"diagnostics_Not_all_drivers", 	"ROOT_diagnostics_Os");

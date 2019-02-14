@@ -425,6 +425,20 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
             break;
 
+        case "diagnostics_os_No_licence":
+            var msg = "\n-----------------------------------------------------------------------\n";
+            msg += " На корпусе ноутбука отсутствует лицензионная наклейка Windows.";
+            msg += "\n-----------------------------------------------------------------------\n";
+
+            $("[name='neispravnost_mv']").append(msg);
+            $("[name='comment_mm']").append(msg);
+
+            $("#diag_rez_input, #rem_rez_input").append(" Возможно установка, настройка операционной системы Linux.");
+            $("#form-save-btn").click();
+            $('#prise-id694').click();	//установка ос linux
+            pushAddWorkBtn();
+            break;
+
 		case "diagnostics_os_Not_Activated":
             $("#diag_rez_input, #rem_rez_input").append(" Операционная система не активирована.");
             $("#form-save-btn").click();
