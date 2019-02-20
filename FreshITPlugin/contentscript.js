@@ -433,7 +433,7 @@ function processDiagnosisMessage(message){
             $("[name='neispravnost_mv']").append(msg);
             $("[name='comment_mm']").append(msg);
 
-            $("#diag_rez_input, #rem_rez_input").append(" Возможно установка, настройка операционной системы Linux.");
+            $("#diag_rez_input, #rem_rez_input").append(" Возможна установка, настройка операционной системы Linux.");
             $("#form-save-btn").click();
             $('#prise-id694').click();	//установка ос linux
             pushAddWorkBtn();
