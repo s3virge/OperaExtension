@@ -389,6 +389,11 @@ function processDiagnosisMessage(message){
 			pushAddWorkBtn();
             break;
 
+            case "diagnostics_Cooling_system_passive":
+            $("#diag_rez_input, #rem_rez_input").append(" В ноутбуке пассивная система охлаждения, в чистке не нуждается.");
+            $("#form-save-btn").click();
+            break;
+
 		case "diagnostics_DamagedThermalPads":
             $("#diag_rez_input, #rem_rez_input").append(" Термопрокладки повреждены.");
             $("#form-save-btn").click();

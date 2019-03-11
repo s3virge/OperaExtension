@@ -147,11 +147,12 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Не определяется", 	"diagnostics_Hdd_Not_determined",	"Root_diagnostics_Hdd");
 			menuCreateItem("Посторонние звуки", 	"diagnostics_Hdd_extraneous_sound",	"Root_diagnostics_Hdd");
 
-		menuCreateItem("Охлада",             			"Root_diagnostics_Cleaning", 		"diagnosticsRoot");
+		menuCreateItem("Охлада",             			"Root_diagnostics_Cleaning", 	"diagnosticsRoot");
 			menuCreateItem("Чистка", 					"diagnostics_Cleaning", 			"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопрокладки повреждены", "diagnostics_DamagedThermalPads", 	"Root_diagnostics_Cleaning");
 			menuCreateItem("Термопаста пересохла", 		"diagnostics_Thermal_Compaund",		"Root_diagnostics_Cleaning");
-			menuCreateItem("Неисправна", 				"diagnostics_Cooling_system_Defective",		"Root_diagnostics_Cleaning");
+			menuCreateItem("Неисправна", 				"diagnostics_Cooling_system_Defective","Root_diagnostics_Cleaning");
+    		menuCreateItem("Пассивная",    				"diagnostics_Cooling_system_passive","Root_diagnostics_Cleaning");
 			menuCreateItem("Вентилятор",         		"ROOT_diagnostics_Fan",             "Root_diagnostics_Cleaning");
 				menuCreateItem("Не вращается",         	"diagnostics_Fan",             		"ROOT_diagnostics_Fan");
 				menuCreateItem("Трещит",         		"diagnostics_Fan_Strange_Sounds",   "ROOT_diagnostics_Fan");
