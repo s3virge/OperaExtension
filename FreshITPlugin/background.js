@@ -257,12 +257,14 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("память", 			"diagnostics_Mem_PWC", 				"Root_diagnostics_QFN");
 
 		menuCreateItem("Следы", 			"Root_diagnosticsTraces", 		"diagnosticsRoot");
-			menuCreateItem("Жидкости на мамке", 		"diagnosticsPour", 						"Root_diagnosticsTraces");
-			menuCreateItem("Жидкости на мамке нет", 	"diagnostics_No_Pour", 						"Root_diagnosticsTraces");
-			menuCreateItem("Жидкости в корпусе", 	"diagnosticsPour_Case", 				"Root_diagnosticsTraces");
-			menuCreateItem("Ремонта мамки", 		"diagnosticsTracesOfRepair", 			"Root_diagnosticsTraces");
-			menuCreateItem("Ремонта на корпусе", 	"diagnostics_Traces_Of_Case_Repair", 	"Root_diagnosticsTraces");
-			menuCreateItem("Прусаки", 				"diagnostics_cockroach", 				"Root_diagnosticsTraces");
+			menuCreateItem("Жидкости", 		"subroot_diagnosticsPour", 						"Root_diagnosticsTraces");
+				menuCreateItem("На мамке", 		"diagnosticsPour", 				"subroot_diagnosticsPour");
+				menuCreateItem("На мамке отсутствуют", 	"diagnostics_No_Pour",			"subroot_diagnosticsPour");
+				menuCreateItem("В корпусе", 	"diagnosticsPour_Case", 			"subroot_diagnosticsPour");
+			menuCreateItem("Ремонта", 		"subroot_diagnosticsTracesOfRepair", 			"Root_diagnosticsTraces");
+				menuCreateItem("Материнки", 		"diagnosticsTracesOfRepair", 			"subroot_diagnosticsTracesOfRepair");
+				menuCreateItem("Корпуса", 	"diagnostics_Traces_Of_Case_Repair", 	"subroot_diagnosticsTracesOfRepair");
+			menuCreateItem("Прусаки тут живут", 				"diagnostics_cockroach", 				"Root_diagnosticsTraces");
 
 		menuCreateItem("Операционная система", "ROOT_diagnostics_Os", "diagnosticsRoot");
 			menuCreateItem("Нет лицензии", 		"diagnostics_os_No_licence", 	"ROOT_diagnostics_Os");

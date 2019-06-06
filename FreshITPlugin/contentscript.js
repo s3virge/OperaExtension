@@ -8,17 +8,18 @@ var userLogin = "s3virge";
 
 var bodyBGColorGreen = "#96e896"; //зелёненький
 var bodyBGColorBlue = "#468bf3"; //синенький
+var bodyBGColorGray = "#030513"; //dark gray
 
 var bodyBackGroudColor = bodyBGColorGreen;
 
-var Perfom = true;
+//var Perfom = true;
 //если PERFORM не определено
 if (typeof(PERFORM) == "undefined"){
 	//то не выполнять блок
 	Perfom = false;
 	//bodyBackGroudColor = bodyBGColorBlue;
-    bodyBackGroudColor = bodyBGColorGreen
-    userLogin = "khodor";
+    bodyBackGroudColor = bodyBGColorGray;
+    userLogin = "alen";
 }
 
 document.body.style.backgroundColor = bodyBackGroudColor;
@@ -127,6 +128,10 @@ function updateCSS() {
 //     $("#btn-files").append("diagnostics_Install_Os_win");
 // }
 
+function removeWakingPenguin() {
+ $("#xmas-walker").remove();
+}
+
 /* стили вкладок */
 function setTabStyle() {
 	$("#tab-active").css("background-color", "#ea0000");
@@ -226,13 +231,12 @@ function customiseWorkingPage() {
         remontNumber.style.fontSize = "25px";
     }
 
-    /*оранжевая полоса вверху страницы*/
-    $(".mLine").hide(); //global search
-    $(".mLine2").css("height", "1px");
-    $(".menu").remove();
-
     if (Perfom){
         $("#leftBlock, #_data").remove();
+        /*оранжевая полоса вверху страницы*/
+        $(".mLine").hide(); //global search
+        $(".mLine2").css("height", "1px");
+        $(".menu").remove();
     }
 
     $("#files-tool-bar").css("height", "50%"); //размер окна загрузки файлов
@@ -242,6 +246,8 @@ function customiseWorkingPage() {
 		"background": "none"});
 
     //$(".line2").css("background", "none");
+
+    removeWakingPenguin();
 }
 
 function processOtherMessage(message) {
