@@ -12,7 +12,7 @@ var bodyBGColorGray = "#030513"; //dark gray
 
 var bodyBackGroudColor = bodyBGColorGreen;
 
-//var Perfom = true;
+var Perfom = true;
 //если PERFORM не определено
 if (typeof(PERFORM) == "undefined"){
 	//то не выполнять блок
@@ -76,7 +76,7 @@ function updateCSS() {
     $("#main-remont-form input[type='button']").css("padding", "8px 12px");
 
 
-	$(".changes-confirm:first").css("height", "20em");
+	$(".changes-confirm:first").css("height", "18em");
 	// $(".changes-confirm:nth-of-type(3)").css("height", "8em");
 	$(".changes-confirm:eq(2)").css("height", "8em");
 
@@ -161,6 +161,12 @@ function updateHeight() {
 	//alert( document.documentElement.clientHeight ); // ширина минус прокрутка
 
 	var height = document.documentElement.clientHeight - 63;
+
+    if (!Perfom) {
+        //если есть верхняя оранжевая полоса, то кнопки внизу прячуться за границы экрана.
+        //что-бы они отображались уменьшаем высоту блока
+        height = document.documentElement.clientHeight - 100;
+    }
 	console.log("clientHeight = " + height);
 	$("#rightBlock").css('height', height);
 }
@@ -305,7 +311,7 @@ function processOtherMessage(message) {
             break;
 
         case "other_DontManifested":
-            $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась.");
+            $("#diag_rez_input, #rem_rez_input").append(" В процессе диагностики указанная неисправность не проявилась. Вероятно неисправность проявляется не постоянно. Диагностировать неисправность можно будет во время стабильного её проявления.");
             $("#form-save-btn").click();
             break;
 
@@ -1444,3 +1450,6 @@ function processRepairMessage(message){
 				break;
     }
 }
+
+//todo
+/* Требуется настройка операционной системы. Учитывая состояние ОС есть вероятность выхода её из строя. */
