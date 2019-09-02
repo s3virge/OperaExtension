@@ -293,6 +293,16 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Нет индикации, нет реакции", 				"diagnosticsNoReaction", 			"Root_DiagnosticsNoReaction");
 			menuCreateItem("Есть индикация, нет реакции", 				"diagnostics_HaveLite_NoReaction", 	"Root_DiagnosticsNoReaction");
 			menuCreateItem("Есть индикация, реакция, нет картинки ", 	"diagnostics_HaveLite_NoPicture", 	"Root_DiagnosticsNoReaction");
+
+			//Наушники ///////////////////////
+		menuCreateItem("Наушники", 					"Root_DiagnosticsHeadphones", 	"diagnosticsRoot");
+			menuCreateItem("Кабель", 				"Root_Headphones_Сable", 		"Root_DiagnosticsHeadphones");
+				menuCreateItem("Замена", 			"diagnostics_Headphones_Сable_Replacement", 	"Root_Headphones_Сable");
+				menuCreateItem("Восстановление", 	"diagnostics_Headphones_Сable_Repair", 		"Root_Headphones_Сable");
+			
+			menuCreateItem("Штекер", 				"Root_Headphones_Jack", 		"Root_DiagnosticsHeadphones");
+				menuCreateItem("Замена", 			"diagnostics_Headphones_Jack_Replacement", 	"Root_Headphones_Jack");
+				//menuCreateItem("Восстановление", 	"diagnostics_Headphones_Jack_Repair", 		"Root_Headphones_Jack");
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -377,5 +387,16 @@ function CreateRepairMenu() {
     menuCreateItem("Linux", "repairInstalled_Lin", "repairInstallOs");
     menuCreateItem("Mac", "repairInstalled_Mac", "repairInstallOs");
     menuCreateItem("ОЗУ", "repairMemory",  "repairRoot");
+
+		//Наушники ///////////////////////
+		menuCreateItem("Наушники", 					"Root_repairHeadphones", 	"repairRoot");
+			menuCreateItem("Кабель", 				"Root_Headphones_Сable", 		"Root_repairHeadphones");
+				menuCreateItem("Замена", 			"repair_Headphones_Сable_Replacement", 	"Root_Headphones_Сable");
+				menuCreateItem("Восстановление", 	"repair_Headphones_Сable_Repair", 		"Root_Headphones_Сable");
+			
+			menuCreateItem("Штекер", 				"Root_Headphones_Jack", 		"Root_repairHeadphones");
+				menuCreateItem("Замена", 			"repair_Headphones_Jack_Replacement", 	"Root_Headphones_Jack");
+				//menuCreateItem("Восстановление", 	"repair_Headphones_Jack_Repair", 		"Root_Headphones_Jack");
+
 
 }
