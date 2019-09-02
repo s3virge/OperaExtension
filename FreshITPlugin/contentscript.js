@@ -481,6 +481,13 @@ function processDiagnosisMessage(message){
             $("#form-save-btn").click();
 			break;
 
+        case "diagnostics_OS_setup_required":
+            $("#diag_rez_input, #rem_rez_input").append(" Требуется настройка операционной системы. Учитывая состояние ОС есть вероятность выхода её из строя.");
+            $("#form-save-btn").click();
+            $('#prise-id146').click();	//настройка ос
+            pushAddWorkBtn();			
+            break;
+
         case "diagnosticsKeyboard_do_not_work":
             $("#diag_rez_input, #rem_rez_input").append(" Не все клавиши на клавиатуре работают, необходима её замена.");
             $("#form-save-btn").click();
@@ -1450,6 +1457,3 @@ function processRepairMessage(message){
 				break;
     }
 }
-
-//todo
-/* Требуется настройка операционной системы. Учитывая состояние ОС есть вероятность выхода её из строя. */

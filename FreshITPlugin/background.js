@@ -271,6 +271,7 @@ function CreateDiagnosticsMenu() {
 			menuCreateItem("Не загружается", 		"diagnostics_os_Not_loading", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Не активирована", 		"diagnostics_os_Not_Activated", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Не все драйвера", 		"diagnostics_Not_all_drivers", 	"ROOT_diagnostics_Os");
+            menuCreateItem("Требуется настройка", 		"diagnostics_OS_setup_required", 	"ROOT_diagnostics_Os");
 			menuCreateItem("Медленно загружается", 	"diagnostics_os_Slowly_loaded", "ROOT_diagnostics_Os");
 			menuCreateItem("BSOD при загрузке", 			"diagnostics_Blue_Screen_on_load", 		"ROOT_diagnostics_Os");
 			menuCreateItem("BSOD при работе", 			"diagnostics_Blue_Screen", 		"ROOT_diagnostics_Os");
