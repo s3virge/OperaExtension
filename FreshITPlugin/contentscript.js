@@ -1124,6 +1124,32 @@ case "diagnostics_USB_broken":
             $("#diag_rez_input, #rem_rez_input").append(" Качественное восстановление корпуса невозможно.");
             $("#form-save-btn").click();
 			break;
+			
+		//Headphones /////////////////////////
+		case "diagnostics_Headphones_Сable_Replacement":
+            $("#diag_rez_input, #rem_rez_input").append(" Повреждён кабель, необходима его замена.");
+			$('#prise-id207').click(); //разборка сборка;
+			$('#prise-id551').click(); //замена кабеля
+            $("#form-save-btn").click();
+			break;
+		
+		case "diagnostics_Headphones_Сable_Repair":
+            $("#diag_rez_input, #rem_rez_input").append(" Повреждён кабель, необходимо его восстановление.");
+			$('#prise-id207').click(); //разборка сборка;
+			$('#prise-id206').click(); //восстановление кабеля
+            $("#form-save-btn").click();
+			break;
+		
+		case "diagnostics_Headphones_Jack_Replacement":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправен штекер, необходима его замена.");
+			$('#prise-id354').click(); //Замена штекер;
+            $("#form-save-btn").click();
+			break;
+			
+		case "diagnostics_Headphones_Jack_Repair":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправен штекер, необходимо его восстановление.");
+            $("#form-save-btn").click();
+			break;
     }
 }
 
@@ -1455,5 +1481,31 @@ function processRepairMessage(message){
 				$('#prise-id140').click();	//Восстановление корпуса
 	            pushAddWorkBtn();
 				break;
+
+		//Headphones /////////////////////////
+		case "repair_Headphones_Сable_Replacement":
+            $("#diag_rez_input, #rem_rez_input").append(" Повреждёный кабель заменён на новый.");
+			$('#prise-id207').click(); //разборка сборка;
+			$('#prise-id551').click(); //замена кабеля
+            $("#form-save-btn").click();
+			break;
+		
+		case "repair_Headphones_Сable_Repair":
+            $("#diag_rez_input, #rem_rez_input").append(" Выполнено восстановление кабеля.");
+			$('#prise-id207').click(); //разборка сборка;
+			$('#prise-id206').click(); //восстановление кабеля
+            $("#form-save-btn").click();
+			break;
+		
+		case "repair_Headphones_Jack_Replacement":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправный штекер заменён.");
+			$('#prise-id354').click(); //Замена штекер;
+            $("#form-save-btn").click();
+			break;
+			
+		case "repair_Headphones_Jack_Repair":
+            $("#diag_rez_input, #rem_rez_input").append(" Неисправный штекер восстановлен.");
+            $("#form-save-btn").click();
+			break;
     }
 }
