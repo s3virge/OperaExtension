@@ -391,13 +391,13 @@ function CreateRepairMenu() {
 
 		//Наушники ///////////////////////
 		menuCreateItem("Наушники", 					"Root_repairHeadphones", 	"repairRoot");
-			menuCreateItem("Кабель", 				"Root_Headphones_Сable", 		"Root_repairHeadphones");
-				menuCreateItem("Замена", 			"repair_Headphones_Сable_Replacement", 	"Root_Headphones_Сable");
-				menuCreateItem("Восстановление", 	"repair_Headphones_Сable_Repair", 		"Root_Headphones_Сable");
+			menuCreateItem("Кабель", 				"repair_Root_Headphones_Сable", 		"Root_repairHeadphones");
+				menuCreateItem("Замена", 			"repair_Headphones_Сable_Replacement", 	"repair_Root_Headphones_Сable");
+				menuCreateItem("Восстановление", 	"repair_Headphones_Сable_Repair", 		"repair_Root_Headphones_Сable");
 			
-			menuCreateItem("Штекер", 				"Root_Headphones_Jack", 		"Root_repairHeadphones");
-				menuCreateItem("Замена", 			"repair_Headphones_Jack_Replacement", 	"Root_Headphones_Jack");
-				//menuCreateItem("Восстановление", 	"repair_Headphones_Jack_Repair", 		"Root_Headphones_Jack");
+			menuCreateItem("Штекер", 				"repair_Root_Headphones_Jack", 		"Root_repairHeadphones");
+				menuCreateItem("Замена", 			"repair_Headphones_Jack_Replacement", 	"repair_Root_Headphones_Jack");
+				//menuCreateItem("Восстановление", 	"repair_Headphones_Jack_Repair", 		"repair_Root_Headphones_Jack");
 
 
 }
