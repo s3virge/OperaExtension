@@ -1492,7 +1492,7 @@ function processRepairMessage(message) {
 
         //Headphones /////////////////////////
         case "repair_Headphones_Сable_Replacement":
-            $("#diag_rez_input, #rem_rez_input").append(" Повреждёный кабель заменён на новый.");
+            $("#diag_rez_input, #rem_rez_input").append(" Повреждённый кабель заменён на новый.");
             $("#form-save-btn").click();
             $('#prise-id207').click(); //разборка сборка;
             $('#prise-id551').click(); //замена кабеля
